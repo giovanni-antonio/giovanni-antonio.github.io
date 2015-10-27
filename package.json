@@ -4,7 +4,7 @@
   "description": "A webpage about me/portfolio project including full setup for GulpJS, SASS, JADE, svgstore and BrowserSync",
   "main": "gulpfile.js",
   "author": "Giovanni Lara",
-  "license": "",
+  "license": "none",
   "devDependencies": {
     "gulp-concat": "^2.6.0",
     "gulp-jade": "^1.0.1",
