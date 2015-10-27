@@ -1,0 +1,100 @@
+// Header styles
+.intro
+  // height: 100vh
+  .l-table-center
+    height: 320px
+  #logo
+    @extend .l-push
+    opacity: .7
+    transform: translateZ(0)
+  h1, .subheading, #cta span
+    text-shadow: 1px 1px 0 rgba($black, 0.3)
+    word-wrap: break-word
+    word-break: keep-all
+    transform: translateZ(0)
+  h1
+    color: $gray
+    font-weight: 100
+    text-transform: uppercase
+    letter-spacing: .875em
+  .subheading
+    font-weight: 100
+    text-transform: uppercase
+    letter-spacing: 0.7rem
+#cta span
+  cursor: pointer
+  text-transform: uppercase
+  letter-spacing: .2rem
+  font-weight: 300
+
+// Content styles
+.content
+  h6
+    font-weight: 400
+  p.kilo
+    text-transform: capitalize
+    font-weight: 400
+  p
+    font-weight: 300
+
+// Links
+.social-links
+  word-wrap: break-word
+  word-break: keep-all
+  a
+    margin-right: 1.4rem
+    font-weight: 300
+    text-transform: uppercase
+    letter-spacing: .2rem
+    @extend .milli
+    &:hover
+      text-decoration: line-through
+// Footer
+#footer
+  .quote
+    font-weight: 300
+  p
+    font-weight: 400
+.copyright
+  text-transform: uppercase
+  letter-spacing: .2rem
+
+@media (max-width: 750px)
+  .content p.giga
+    text-align: center
+
+@media (max-width: 400px)
+  .photo
+    float: none
+    margin: $maxMargin auto
+    width: 6 * $base
+    height: 6 * $base
+  .intro
+    h1
+      font-size: 180%
+    .subheading
+      font-size: 1em
+  .content p.giga
+    font-size: 110%
+
+@media (max-device-width: 320px) and (-webkit-device-pixel-ratio: 2)
+  .intro
+    h1
+      font-size: 150%
+    .subheading
+      font-size: 14px
+
+@include iphone6
+  .photo
+    float: none
+    margin: $maxMargin auto
+
+@include iphone6plus
+  .photo
+    float: none
+    margin: $maxMargin auto
+  .intro
+    h1
+      font-size: xx-large
+    .subheading
+      font-size: 1.2em

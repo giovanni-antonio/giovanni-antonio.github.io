@@ -1,0 +1,27 @@
+mixin link(url, name)
+  a(href=url)= name
+    
+mixin icon(title, className)
+  svg( class="icon #{className}" role="img" title=title)
+    use( xlink:href="images/icons.svg#" + title)
+mixin socialIcons(className)
+  each icon in links
+    a(href= icon.link target="_blank" alt= icon.name)
+      +icon(icon.name, className)
+mixin socialLinks()
+  each link in links
+    a(href="#{link.link}" target="_blank") #{link.name}
+    
+mixin contactForm(action, subjectValue)
+  form(action=action method="POST")
+    .row
+      .col.col-half
+        input(type="text" placeholder="NAME" required)
+      .col.col-half
+        input(type="email" name="_replyto" placeholder="EMAIL" required)
+        input(type="hidden" name="_subject" value=subjectValue)
+    .row
+      .col.col-full
+        textarea(name="", cols="30", rows="5" placeholder="MESSAGE")
+        input(type="text" name="_gotcha" style="display: none")  
+        input(type="submit" value="SEND").btn
