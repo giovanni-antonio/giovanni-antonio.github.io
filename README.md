@@ -13,4 +13,5 @@ I wanted to design a simple web page with my background info and  social links t
 - SASS
 - GSAP
 - background image thanks to Samuel Zeller unsplash https://unsplash.com/photos/j0g8taxHZa0
+
 #### Please if you need help with a project or would like to help me with this project feel free to reach out!
