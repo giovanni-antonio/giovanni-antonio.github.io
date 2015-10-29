@@ -372,7 +372,7 @@ html, body {
   box-sizing: inherit; }
 
 body {
-  background-color: #001A1F;
+  background-color: #001118;
   color: #CCC;
   overflow-x: hidden; }
 
@@ -415,10 +415,8 @@ html {
   font-family: "Lato", Helvetica, sans-serif; }
 
 body {
-  background-color: #001118;
   font-weight: 400;
-  line-height: 1.45;
-  color: #CCC; }
+  line-height: 1.45; }
 
 p {
   margin-bottom: 1.3em; }
@@ -641,7 +639,7 @@ small, .milli, .social-links a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #001A1F;
+  background-color: #CCC;
   will-change: transform !important;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
@@ -814,7 +812,7 @@ small, .milli, .social-links a {
 
 .quote {
   font-weight: 300;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.7); }
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
 
 .heading {
   color: #CCC;
@@ -842,16 +840,15 @@ small, .milli, .social-links a {
   word-wrap: break-word;
   word-break: keep-all;
   -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
+  transform: translateZ(0);
+  font-weight: 300; }
 
 .intro h1 {
   color: #CCC;
-  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: .875em; }
 
 .intro .subheading {
-  font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 0.7rem; }
 

@@ -97,7 +97,6 @@
     background.style.opacity = opacity;
     raf = requestAnimationFrame(fadeOutBackground);
   }
-
   // Handlers
   // ===================================================
   // Play animation
