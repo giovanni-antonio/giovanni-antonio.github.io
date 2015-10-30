@@ -13,6 +13,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var jade = require('gulp-jade');
 var uncss = require('gulp-uncss');
+var critical = require('critical').stream;
 // Development Tasks
 // -----------------
 
@@ -31,9 +32,6 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function() {
   return gulp.src('app/sass/**/*.sass') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass
-    // .pipe(uncss({
-    //   html: ['app/*.html']
-    // }))
     .pipe(autoprefixer({
       browsers: ['last 2 version'],
       cascade: false,
@@ -43,6 +41,7 @@ gulp.task('sass', function() {
       stream: true,
     }));
 });
+
 // Jade templates
 gulp.task('jade', function() {
   gulp.src('app/jade/index.jade')
@@ -51,6 +50,14 @@ gulp.task('jade', function() {
     }))
     .pipe(gulp.dest('app/'));
 });
+
+// Generate & Inline Critical-path CSS
+// gulp.task('critical', function () {
+//     return gulp.src('index.html')
+//         .pipe(critical({base: ' ', inline: true, css: ['css/main.min.css']}))
+//         .pipe(gulp.dest(' '));
+// });
+
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('app/sass/**/*.+(scss|sass)', ['sass']);
@@ -110,6 +117,16 @@ gulp.task('clean', function(callback) {
 
 gulp.task('clean:dist', function(callback) {
   del(['css','js', 'images', '!images/**/*', 'index.html'], callback);
+});
+
+// uncss
+gulp.task('uncss', function () {
+    return gulp.src('css/*.css')
+        .pipe(uncss({
+            html: ['index.html']
+        }))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('css'));
 });
 
 // Build Sequences

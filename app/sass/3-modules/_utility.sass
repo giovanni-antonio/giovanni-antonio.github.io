@@ -32,20 +32,22 @@
 .divider
   width: 100%
   height: 1px
-  background-color: rgba($gray, .2)
+  background-color: $alphagray
   margin-top: $maxMargin
 
 .photo
   display: block
-  width: 9.5 * $base
-  height: 9.5 * $base
-  margin: $minMargin * 1.8 auto
-  // margin-right: $maxMargin
+  width: 10 * $base
+  height: 10 * $base
+  margin: $maxMargin * 1.2 auto
+  margin-right: $maxMargin * 1.2
   transition: transform 0.3s ease-in
   background-size: contain
   overflow: hidden
   border-radius: 50%
-
+  @media (max-width: 800px)
+    float: none
+    margin: $maxMargin auto
   img
     width: 100%
     height: auto
