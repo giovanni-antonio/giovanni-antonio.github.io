@@ -585,7 +585,7 @@ small, .milli, .social-links a {
 .l-stack {
   display: block; }
 
-.l-push, .intro #logo {
+.l-push, .intro #logo, #footer {
   margin-bottom: 1.125rem; }
 
 .l-push-bottom {
