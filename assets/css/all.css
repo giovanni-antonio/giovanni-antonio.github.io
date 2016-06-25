@@ -2666,8 +2666,6 @@ th {
 }
 
 html {
-  font-size: 100%;
-  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
@@ -2677,6 +2675,30 @@ html {
 
 @-ms-viewport {
   width: device-width;
+}
+
+h1 {
+  font-size: 3.125em;
+}
+
+h2 {
+  font-size: 2.618em;
+}
+
+h3 {
+  font-size: 1.931em;
+}
+
+h4 {
+  font-size: 1.618;
+}
+
+h5 {
+  font-size: 1.194em;
+}
+
+h6 {
+  font-size: 1em;
 }
 
 a {
@@ -2690,10 +2712,13 @@ a:hover {
 }
 
 body {
+  max-width: 40em;
+  margin: 0 auto;
+  font-size: 100%;
   text-align: center;
   color: white;
   background-color: rgba(33, 33, 33, 0.9);
-  line-height: 1.45;
+  line-height: 1.6;
 }
 
 .pad, .hero__content__heading, .hero__content__blurb {
@@ -2703,15 +2728,13 @@ body {
 
 .bg-hero {
   position: fixed;
-  top: 0;
+  top: auto;
   left: 0;
   right: 0;
   bottom: 0;
   min-width: 100%;
-  min-height: auto;
   background: url("https://unsplash.it/4236/2819?image=1064") no-repeat center center;
   background-size: cover;
-  overflow-y: hidden;
   z-index: -999;
 }
 
@@ -2732,7 +2755,7 @@ body {
   max-width: 32em;
   margin: 0 auto;
   display: table;
-  height: auto;
+  min-height: 32em;
   color: white;
   text-align: center;
 }
@@ -2747,8 +2770,7 @@ body {
 .hero__content__heading {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   font-weight: 400;
-  font-size: 1.25em;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
   margin-top: 1.5rem;
   letter-spacing: .3em;
@@ -2759,7 +2781,6 @@ body {
   max-width: 25rem;
   margin: 1em auto;
   text-align: left;
-  font-size: 1em;
   font-weight: 300;
 }
 
@@ -2793,4 +2814,25 @@ body {
   text-align: center;
   letter-spacing: .1em;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+@media only screen and (min-width: 42em) {
+  h1 {
+    font-size: 6.2em;
+  }
+  h2 {
+    font-size: 4em;
+  }
+  h3 {
+    font-size: 3.125em;
+  }
+  h4 {
+    font-size: 2em;
+  }
+  h5 {
+    font-size: 1.563em;
+  }
+  h6 {
+    font-size: 1em;
+  }
 }
