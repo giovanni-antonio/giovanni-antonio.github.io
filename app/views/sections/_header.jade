@@ -1,14 +1,25 @@
-.l-header
-  h2.u-bold.logo [ g i o ]
-  h1.u-bold.brandign #{author}
+//- .l-header.u-box
   //- h4.u-highlight [ aka #{alias} ]
-  h2!= intro
-
-  h4.u-bold check my code
-  ul
-    li codepen 
-    li github    
-
-  h4.u-bold let's talk
-  p.
-    if you have a project or have a question, advice or simply want to say what’s up, send me a line or a few at <strong><a href="mailto:#{email}">#{email}</a></strong> I’ll be looking for your email, I won’t stuck you, I promise! :)
+.l-header.u-divider
+  //- h2.u-bold.logo [ g i o ]
+  h1.u-callout.u-bold.hire-me #{author} 
+  
+  h2#intro!= intro.replace(/soccer|california|beard|vegetarianism|run|fast|tech|design|programming|front|end/gi, function toBold(w){ return w.bold(); })
+.row  
+  .col-4
+    h3.u-bold check my code
+    p.u-highlight| 
+      a(href="#") Codepen 
+      br
+      a(href="#") GitHub  
+    h3.u-bold resume 
+    
+    p.u-highlight
+      a(href="#") LinkedIn
+      br
+      a(href="#") CV (pdf version)
+      
+  .col-8
+    h3.u-bold let's talk
+    p.
+      If you have a project or have a question, advice or simply want to say what’s up, send me a line or a few at <strong><a href="mailto:#{email}">#{email}</a></strong> I’ll be looking for your email, I won’t stuck you, I promise! :)

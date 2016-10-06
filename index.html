@@ -7,25 +7,63 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Giovanni Lara Front-end Developer</title>
-    <link rel="stylesheet" href="http://localhost:8000/primalCSS/css/normalize.min.css">
-    <link rel="stylesheet" href="http://localhost:8000/primalCSS/css/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Roboto:300,700" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost:8000/primalCSS/css/primal.min.css">
-    <link rel="stylesheet" href="">
+    <style media="screen">
+      #background:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("build/images/shapes-bg.svg");
+        background-repeat: repeat-y;
+        background-position: 50% -20%;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;      
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Roboto Slab";
+      }
+      .hire-me{
+        position: relative;
+      }
+      .hire-me:after {
+        content: "hire me";
+        padding: 8px 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-transform: uppercase;
+        color: #E91E63;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        border: 1px solid #E91E63;  
+        border-radius: 3px;
+      }
+    </style>
   </head>
   <body>
-    <div class="fullpage-container">
-      <div class="l-content-block">
-        <div class="l-header">
-          <h2 class="u-bold logo">[ g i o ]</h2>
-          <h1 class="u-bold brandign">Giovanni Lara</h1>
-          <h2>I'm a <strong>humble front end developer</strong> and geek from California. I have a thing for tech and programming. About him, he plays soccer, has a beard, is vegetarian, he doesn't know how dance (he is not perfect!), runs fast Beep Beep!</h2>
-          <h4 class="u-bold">check my code</h4>
-          <ul>
-            <li>codepen </li>
-            <li>github    </li>
-          </ul>
-          <h4 class="u-bold">let's talk</h4>
-          <p>if you have a project or have a question, advice or simply want to say what’s up, send me a line or a few at <strong><a href="mailto:hello.gioalo@gmail.com">hello.gioalo@gmail.com</a></strong> I’ll be looking for your email, I won’t stuck you, I promise! :)</p>
+    <div id="background" class="fullpage-container">
+      <div class="page">
+        <div class="l-header u-divider">
+          <h1 class="u-callout u-bold hire-me">Giovanni Lara </h1>
+          <h2 id="intro">I'm a humble <b>front</b> <b>end</b> developer from <b>California</b>. I have a thing for <b>tech</b>, <b>design</b> and <b>programming</b>. I play <b>soccer</b>, sometimes I let my <b>beard</b> grow, I coverted to <b>vegetarianism</b>, and I can <b>run</b> <b>fast</b> Beep Beep!</h2>
+        </div>
+        <div class="row"> 
+          <div class="col-4">
+            <h3 class="u-bold">check my code</h3>
+            <p class="u-highlight"> <a href="#">Codepen </a><br><a href="#">GitHub  </a></p>
+            <h3 class="u-bold">resume </h3>
+            <p class="u-highlight"><a href="#">LinkedIn</a><br><a href="#">CV (pdf version)</a></p>
+          </div>
+          <div class="col-8">
+            <h3 class="u-bold">let's talk</h3>
+            <p>If you have a project or have a question, advice or simply want to say what’s up, send me a line or a few at <strong><a href="mailto:hello.gioalo@gmail.com">hello.gioalo@gmail.com</a></strong> I’ll be looking for your email, I won’t stuck you, I promise! :)</p>
+          </div>
         </div>
         <footer class="l-footer"><small>
             &copy; 2016 Giovanni Lara All Rights Not Reserved :)
