@@ -11,52 +11,5 @@ head
   //- link(rel="stylesheet", href=pathToNormalize)
   //- link(rel="stylesheet", href=pathToReset)
   link(rel="stylesheet", href=pathToPrimal)
-  //- link(rel="stylesheet", href=pathToCustomeStyles)
+  link(rel="stylesheet", href=pathToCustomeStyles)
   //- links
-  style(media="screen").
-    .cta {
-      padding-top: 6em;
-      padding-bottom: 6em;
-    }
-    #background:before {
-      content: " ";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-image: url("build/images/blur-portrait.jpg");
-      //- background-repeat: repeat-y;
-      //- background-position: 50% -20%;
-      background-size: cover;
-      background-position: 100%;
-      width: 100%;
-      height: 100%;
-      opacity: 0.5;      
-    }
-    h1, h2, h3, h4, h5, h6 {
-      font-family: "Roboto Slab";
-    }
-    .hire-me{
-      position: relative;
-    }
-    .hire-me:after {
-      content: "hire me";
-      padding: 8px 5px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      text-transform: uppercase;
-      color: #E91E63;
-      font-size: 16px;
-      font-weight: bold;
-      letter-spacing: 0.1em;
-      border: 1px solid #E91E63;  
-      border-radius: 3px;
-    }
-    @media (min-width: 300px) and (max-width: 414px) {
-      .cta {
-        padding-top: 2em;
-        padding-bottom: 2em;
-      }
-    }

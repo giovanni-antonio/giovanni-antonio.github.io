@@ -7,80 +7,31 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Giovanni Lara Front-end Developer</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300i,300,700|Roboto:300i,300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:300i,300,700" rel="stylesheet">
     <link rel="stylesheet" href="http://localhost:8000/primalCSS/css/primal.min.css">
-    <style media="screen">
-      .cta {
-        padding-top: 6em;
-        padding-bottom: 6em;
-      }
-      #background:before {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-image: url("build/images/blur-portrait.jpg");
-        //- background-repeat: repeat-y;
-        //- background-position: 50% -20%;
-        background-size: cover;
-        background-position: 100%;
-        width: 100%;
-        height: 100%;
-        opacity: 0.5;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: "Roboto Slab";
-      }
-      .hire-me{
-        position: relative;
-      }
-      .hire-me:after {
-        content: "hire me";
-        padding: 8px 5px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-transform: uppercase;
-        color: #E91E63;
-        font-size: 16px;
-        font-weight: bold;
-        letter-spacing: 0.1em;
-        border: 1px solid #E91E63;
-        border-radius: 3px;
-      }
-      @media (min-width: 300px) and (max-width: 414px) {
-        .cta {
-          padding-top: 2em;
-          padding-bottom: 2em;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="build/css/styles-dist.css">
   </head>
-  <body>
-    <div id="background" class="fullpage-container">
-      <div class="page">
-        <div class="l-header cta">
-          <h1 class="u-callout u-bold hire-me">Giovanni Lara </h1>
-          <h2 id="intro">I'm a humble <b>front</b> <b>end</b> developer from <b>California</b>. I have a thing for <b>tech</b>, <b>design</b> and <b>programming</b>. I play <b>soccer</b>, sometimes I let my <b>beard</b> grow, I coverted to <b>vegetarianism</b>, and I can <b>run</b> <b>fast</b> Beep Beep!</h2>
-        </div>
-        <div class="row">
-          <div class="col-4">
-            <h3 class="u-bold">check my code</h3>
-            <p class="u-highlight"> <a href="#">Codepen </a><br><a href="#">GitHub  </a></p>
-            <h3 class="u-bold">resume </h3>
-            <p class="u-highlight"><a href="#">LinkedIn</a><br><a href="#">CV (pdf version)</a></p>
+  <body><!-- Header -->
+    <header>
+      <div class="container"><!-- Navigation -->
+        <nav class="nav u-list-inline u-list-inline--reversed u-clearfix"> <a href="#" class="logotype"> 
+            <object type="image/svg+xml" data="build/images/gio-logo.svg"></object><span>Giovanni Lara</span></a>
+          <ul class="nav--items">
+            <li><a href="#aboutme">about me </a></li>
+            <li> <a href="#projects">projects</a></li>
+            <li> <a href="#contact">let's talk </a></li>
+          </ul><!-- END Navigation -->       
+        </nav>
+        <div class="poster-container"> 
+          <div class="poster"> 
+            <div class="ic-square"></div>
+            <div class="ic-triangle"></div>
+            <div class="ic-circle"></div>
           </div>
-          <div class="col-8">
-            <h3 class="u-bold">let's talk</h3>
-            <p>If you have a project or have a question, advice or simply want to say what’s up, send me a line or a few at <strong><a href="mailto:hello.gioalo@gmail.com">hello.gioalo@gmail.com</a></strong> I’ll be looking for your email, I won’t stuck you, I promise! :)</p>
-          </div>
         </div>
-        <footer class="l-footer"><small>
-            &copy; 2016 Giovanni Lara All Rights Not Reserved :)
-            </small></footer>
+        <div class="ic-device"> </div>
       </div>
-    </div>
+    </header><!-- End Header -->
+    <!-- Footer --><!-- End Footer -->
   </body>
 </html>

@@ -1,25 +1,24 @@
-//- .l-header.u-box
-  //- h4.u-highlight [ aka #{alias} ]
-.l-header.cta
-  //- h2.u-bold.logo [ g i o ]
-  h1.u-callout.u-bold.hire-me #{author} 
+//- header
+header
+  .container
+    <!-- Navigation -->
+    nav.nav.u-list-inline.u-list-inline--reversed.u-clearfix 
+      a(href="#").logotype 
+        object(type="image/svg+xml" data="build/images/gio-logo.svg")
+        span= author
+      ul.nav--items
+        li
+          a(href="#aboutme") about me 
+        li 
+          a(href="#projects") projects
+        li 
+          a(href="#contact") let's talk 
+      <!-- END Navigation -->       
+    .poster-container  
+      .poster 
+        .ic-square
+        .ic-triangle
+        .ic-circle
+    .ic-device  
   
-  h2#intro!= intro.replace(/soccer|california|beard|vegetarianism|run|fast|tech|design|programming|front|end/gi, function toBold(w){ return w.bold(); })
-.row  
-  .col-4
-    h3.u-bold check my code
-    p.u-highlight| 
-      a(href="#") Codepen 
-      br
-      a(href="#") GitHub  
-    h3.u-bold resume 
-    
-    p.u-highlight
-      a(href="#") LinkedIn
-      br
-      a(href="#") CV (pdf version)
-      
-  .col-8
-    h3.u-bold let's talk
-    p.
-      If you have a project or have a question, advice or simply want to say what’s up, send me a line or a few at <strong><a href="mailto:#{email}">#{email}</a></strong> I’ll be looking for your email, I won’t stuck you, I promise! :)
+  //- h2#intro!= intro.replace(/soccer|california|beard|vegetarianism|run|fast|tech|design|programming|front|end|pretty|bad!|lol|/gi, function toBold(w){ return w.bold(); })

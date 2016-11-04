@@ -1,0 +1,278 @@
+/*
+*  Custome Styles
+*/
+/*
+* Header styles
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Abel", sans-serif;
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+.nav {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+.nav--items {
+  float: right;
+  font-family: "Abel", sans-serif;
+}
+
+.nav--items li {
+  margin-left: 6em;
+}
+
+.nav--items a {
+  color: #000;
+  position: relative;
+}
+
+.nav--items a:after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 30px;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(90deg, #361FF9 32%, rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.45s;
+}
+
+.nav--items a:hover {
+  color: #361FF9;
+}
+
+.nav--items a:hover:after {
+  opacity: 1;
+}
+
+.logotype {
+  font-family: "Abel", sans-serif;
+  padding-top: 1em;
+  float: left;
+}
+
+.logotype span {
+  color: #000;
+}
+
+.logotype object {
+  width: 1em;
+  margin-right: 1em;
+}
+
+.poster-container {
+  height: 30em;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.poster {
+  width: 250px;
+  height: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ic-square {
+  width: 1em;
+  height: 1em;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+}
+
+.ic-square:before, .ic-square:after {
+  content: '';
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 0;
+}
+
+.ic-square:before {
+  right: .5em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ic-square:after {
+  left: .5em;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.ic-circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  background-color: #000;
+  position: absolute;
+  right: 0;
+}
+
+.ic-circle:before, .ic-circle:after {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.ic-circle:before {
+  right: .5em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ic-circle:after {
+  left: .5em;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.ic-triangle {
+  width: 0;
+  height: 0;
+  border-left: .5em solid transparent;
+  border-right: .5em solid transparent;
+  border-bottom: 1em solid black;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+.ic-triangle:before, .ic-triangle:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.ic-triangle:before {
+  right: .1em;
+  border-left: .5em solid transparent;
+  border-right: .5em solid transparent;
+  border-bottom: 1em solid rgba(0, 0, 0, 0.5);
+}
+
+.ic-triangle:after {
+  left: .1em;
+  border-left: .5em solid transparent;
+  border-right: .5em solid transparent;
+  border-bottom: 1em solid rgba(0, 0, 0, 0.25);
+}
+
+.ic-device {
+  height: 14px;
+  width: 21px;
+  position: relative;
+  right: 4em;
+  float: right;
+  border: 1px solid black;
+}
+
+.ic-device:before {
+  content: 'desktop';
+  position: absolute;
+  left: 24px;
+  bottom: -8px;
+  float: right;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-size: 11px;
+}
+
+.ic-device:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 6px;
+  margin: 0 auto;
+  width: 7px;
+  height: 4px;
+  background-color: #F8F8F8;
+}
+
+@media (min-width: 300px) and (max-width: 426px) {
+  .poster-container {
+    display: none;
+  }
+  .logotype {
+    text-align: center;
+    width: 100%;
+    font-size: 1.6em;
+  }
+  .logotype object {
+    margin-right: 0;
+  }
+  .logotype span {
+    display: block;
+    margin-top: 1em;
+  }
+  .nav--items {
+    text-align: center;
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .nav--items li {
+    font-size: 1.35em;
+    float: none;
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 768px) {
+  .ic-device {
+    height: 14px;
+    width: 7px;
+    position: relative;
+    right: 4em;
+    float: right;
+    border: 1px solid black;
+  }
+  .ic-device:before {
+    content: 'mobile';
+    position: absolute;
+    left: 18px;
+    bottom: -8px;
+    float: right;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    font-size: 11px;
+  }
+  .ic-device:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 2px;
+    margin: 0 auto;
+    width: 1px;
+    height: 4px;
+    background-color: #F8F8F8;
+  }
+}
