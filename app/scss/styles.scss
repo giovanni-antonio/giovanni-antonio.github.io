@@ -339,6 +339,7 @@ header {
   img {
     height: auto;
     overflow: hidden;
+    backface-visibility: hidden;
   }
 }
 

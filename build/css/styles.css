@@ -365,6 +365,8 @@ header > .menu {
 .gallery img {
   height: auto;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .profile-image {
