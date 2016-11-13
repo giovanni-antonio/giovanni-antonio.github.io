@@ -1,0 +1,71 @@
+section.page--content#profile
+  .ic 
+    .ic-circle
+  br
+  h4 profile
+  .row 
+    .l-content.l-centered
+      h4= author
+        br
+        span= title
+      img(src="/build/images/profile-pic.jpg", alt="Giovanni Lara").profile-image
+      
+      h4 I'm human friendly
+      p!= intro.replace(/california|tech|design|programming|front end|/gi, function toBold(w){ return w.bold(); })
+      
+      .row
+        ul.cv 
+          li.col-6
+            span.cv--heading skills
+            ul.cv--content 
+              li html/5 (ninja)
+              li css/3 &amp; sass 
+              li bem, smacss &amp; oocss
+              li js 
+              li jquery &amp; alike plugins!
+              li frameworks foundation, bootstrap &amp; primalcss
+              li wireframing/prototype
+              li adobe design suite
+              li mvc* (novice)
+              li cms (novice &amp; r.i.p php)
+              li Responsive Web design (expert)
+              li nodejs** (npm scripts &amp; gulpjs)
+              li git
+              li terminal (linux rocks!)
+          li.col-6
+            span.cv--heading Interests / hobbies 
+            ul.cv--content
+              li web programming
+              li digital/multimedia arts
+              li minimalism 
+              li football (aka soccer)
+              li social &amp; human rights
+              li running
+              li cooking
+              li vegetarian
+              li latin music, blues, soul, r&amp;b, &amp; jazz
+              li novelas
+              li sci-fi , dragons and zombies in that order
+              li manga &amp; anime
+          li.col-12 
+            span.cv--heading languages
+            ul.cv--content
+              li Spanish &dash; mother language
+              li english &dash; fluent 
+          li.col-12 
+            span.cv--heading education 
+            ul.cv--content
+              li
+                span.cv--date 2016
+                span.cv--title web development
+                span.cv--place San jose city college , san jose ca
+             
+              li
+                span.cv--date 2008
+                span.cv--title Graphic design vocational certification
+                span.cv--place Metropolitan education distric of santa clara, san jose ca
+              li 
+                span.cv--date 2008
+                span.cv--title h.s diploma
+                span.cv--place Mount pleasant h.s , san jose ca
+               
