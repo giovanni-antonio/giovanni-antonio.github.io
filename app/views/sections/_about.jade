@@ -3,18 +3,15 @@ section.page--content#profile
     .ic-circle
   br
   h4 profile
-  .row 
+  .row
     .l-content.l-centered
-      h4= author
-        br
-        span= title
-      img(src="/build/images/profile-pic.jpg", alt="Giovanni Lara").profile-image
-      
-      h4 I'm human friendly
-      p!= intro.replace(/california|tech|design|programming|front end|/gi, function toBold(w){ return w.bold(); })
-      
-      .row
-        ul.cv 
+        h2
+          b.u-upper #{author} 
+          br
+        h3 &dash; #{title}
+        //- h4 I'm human friendly
+        h3!= intro.replace(/california|tech|design|programming|front end|/gi, function toBold(w){ return w.bold(); })
+        ul.cv
           li.col-6
             span.cv--heading skills
             ul.cv--content 
@@ -47,12 +44,12 @@ section.page--content#profile
               li novelas
               li sci-fi , dragons and zombies in that order
               li manga &amp; anime
-          li.col-12 
+          li.col-12
             span.cv--heading languages
             ul.cv--content
               li Spanish &dash; mother language
               li english &dash; fluent 
-          li.col-12 
+          li.col-12
             span.cv--heading education 
             ul.cv--content
               li
@@ -68,4 +65,4 @@ section.page--content#profile
                 span.cv--date 2008
                 span.cv--title h.s diploma
                 span.cv--place Mount pleasant h.s , san jose ca
-               
+             

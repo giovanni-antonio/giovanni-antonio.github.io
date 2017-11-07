@@ -11,9 +11,10 @@ $light-red : #FEEAEA;
 $light-green : #EAFEEA;
 $light-blue : #EAEAFE;
 $light-yellow : #EAEAAA;
-$space : 2em;
+$space : 1.77em * 2;
 $kernel : 0.25em;
 $brand-kernel : 0.75em;
+$width : 1200px;
 // Helpers
 
 @mixin gradient($angle, $color1, $percentage, $color2, $alpha) {
@@ -37,13 +38,18 @@ $brand-kernel : 0.75em;
 * Reset styles
 */
 
+html { font-size: 100%;}
+body {
+  background-color: $grey;
+  font-family: $font-body;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $font;
 }
 
-body {
-  background-color: $grey;
-  font-family: $font-body;
+.container {
+  max-width: $width;
 }
 
 // Icons & buttons
@@ -175,67 +181,69 @@ body {
 // Header Styles
 
 header {
-  &.container {
-    margin-top: $space;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  >.container {
+    margin-top: $space / 2;
+    height: 100%;
   }
   >.brand {
     position: relative;
     z-index: 333;
-  }
-  >.menu {
-    margin-top: $space;
   }
 }
 
 // Navigation Styles
 
 .menu {
-  width: 100%;
-  min-height: 30em;
-  margin-bottom: $space + 1;
+  position: relative;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  padding-top: $space;
   &--items {
+    position: relative;
+    height: 100%;
     text-transform: uppercase;
     text-align: center;
     font-family: $font;
     color: #000;
-    height: 30em;
-    margin-top: $space;
+
     li {
-      height: 100%;
       padding-top: 0;
       transition: background-color 0.45s;
-      .ic {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        i {
-          top: 30%;
-          margin-left: auto;
-          margin-right: auto;
-        }
-      }
-      &:nth-child(1) {
-        background-color: $light-red;
-        &:hover {
-          background-color: darken($light-red, 5%);
-        }
-      }
-      &:nth-child(2) {
-        background-color: $light-green;
-        &:hover {
-          background-color: darken($light-green, 5%);
-        }
-      }
-      &:nth-child(3) {
-        background-color: $light-blue;
-        &:hover {
-          background-color: darken($light-blue, 5%);
-        }
-      }
       a {
         color: #000;
       }
+    }
+
+    li:nth-child(1) {
+      position: absolute;
+      left: 0;
+      top: 40%;
+      bottom: 40%;
+      width: 20%;
+      transform: rotate(-90deg);
+    }
+    li:nth-child(2) {
+      position: absolute;
+      width: 20%;
+      text-align: center;
+      margin: 0 auto;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    li:nth-child(3) {
+      position: absolute;
+      right: 0;
+      top: 40%;
+      bottom: 40%;
+      width: 20%;
+      transform: rotate(90deg);
     }
   }
 }
@@ -251,10 +259,10 @@ header {
     margin-bottom: $space * 2;
     margin-top: 0;
     padding: $space;
-    overflow: auto;
+    // overflow: auto;
     // box-shadow: 0 5px 20px rgba(0,0,0, 0.2);
-    // backface-visibility: hidden;
-    background-color: #fff;
+    backface-visibility: hidden;
+    // background-color: #fff;
     .ic {
       top: 2em;
       left: 1em;
@@ -284,6 +292,7 @@ header {
 .cv {
   list-style: none;
   font-family: $font;
+  // padding-left: $space;
   &--heading {
     letter-spacing: normal;
     padding-bottom: $kernel;
@@ -303,7 +312,7 @@ header {
     text-transform: uppercase;
     letter-spacing: normal;
     line-height: 1em;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
   }
   &--content {
     list-style: none;
@@ -350,7 +359,10 @@ header {
   margin-top: $space;
   display: block;
 }
-
+.profile-bio {
+  padding-left: $space;
+  padding-right: $space;
+}
 #profile, #projects, #contact {
   transition: all .45s;
   opacity: 1;
@@ -362,7 +374,7 @@ header {
   h1 {
     padding-top: 0;
     letter-spacing: $kernel;
-    a { color: darken($light-blue, 15%);}
+    a { color: #000;}
   }
 }
 
@@ -383,6 +395,10 @@ header {
 // Media Breakpoints
 
 @media (min-width: 300px) and (max-width: 736px) {
+  .profile-bio { padding: 0;}
+  .cv {
+    padding-left: 0;
+  }
   header, footer { text-align: center;}
   .main.container {
     width: 100%;
@@ -390,9 +406,9 @@ header {
   .page--content {
     padding: $space $space / 2;
   }
-  .menu--items li{
-    height: 50%;
-  }
+  // .menu--items li{
+  //   height: 50%;
+  // }
   .cv li {
     text-indent: 0;
   }
@@ -439,15 +455,15 @@ header {
 }
 
 @media (min-width: 737px) {
-  .menu--items li{
-    margin-top: 12%;
-    height: 60%;
-  }
+  // .menu--items li{
+  //   margin-top: 12%;
+  //   height: 60%;
+  // }
 }
 
 @media (min-width: 1024px) {
-  .menu--items li{
-    height: 50%;
-    margin-top: 12%;
-  }
+  // .menu--items li{
+  //   height: 50%;
+  //   margin-top: 12%;
+  // }
 }
