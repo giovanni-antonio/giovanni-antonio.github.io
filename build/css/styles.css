@@ -92,6 +92,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.card--hire {
+  min-height: 25em;
+  background-color: #ffefd5;
+}
+
+.card--org {
+  min-height: 25em;
+  background-color: #ffc0cb;
+}
+
 @media (min-width: 300px) and (max-width: 736px) {
   .brand--logo {
     font-size: 2.8rem;

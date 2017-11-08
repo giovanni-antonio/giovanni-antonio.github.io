@@ -93,6 +93,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 // CV module
 
+// Cards
+.card {
+  &--hire {
+    min-height: 25em;
+    background-color: #ffefd5;
+  }
+  &--org  {
+    min-height: 25em;
+    background-color: #ffc0cb;}
+}
 // Media Breakpoints
 
 @media (min-width: 300px) and (max-width: 736px) {
