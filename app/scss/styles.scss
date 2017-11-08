@@ -4,6 +4,8 @@
 // Variables
 $font : "Abel";
 $font-body : "Open Sans";
+$font-custome :'Libre Barcode 39 Text', cursive;
+
 $blue : #361FF9 ;
 $grey : #F8F8F8 ;
 $grey-cloud : #F5F5F5 ;
@@ -13,7 +15,7 @@ $light-blue : #EAEAFE;
 $light-yellow : #EAEAAA;
 $space : 1.77em * 2;
 $kernel : 0.25em;
-$brand-kernel : 0.75em;
+$brand-kernel : 0.075em;
 $width : 1200px;
 // Helpers
 
@@ -52,115 +54,18 @@ h1, h2, h3, h4, h5, h6 {
   max-width: $width;
 }
 
-// Icons & buttons
-
-.ic {
-  position: relative;
-}
-
-.ic-square {
-  width: 2em;
-  height: 2em;
-  background-color: #000;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-  &:before, &:after {
-    content: '';
-    width: inherit;
-    height: inherit;
-    position: absolute;
-  }
-  &:before {
-    right: 1em;
-    background-color: rgba(#000, 0.50);
-  }
-  &:after {
-    left: 1em;
-    background-color: rgba(#000, 0.25);
-  }
-}
-.ic-circle {
-  width: 2em;
-  height: 2em;
-  border-radius: 100%;
-  background-color: #000;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-  &:before, &:after {
-    content: '';
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    border-radius: inherit;
-  }
-  &:before {
-    right: 1em;
-    background-color: rgba(#000, 0.50);
-  }
-  &:after {
-    left: 1em;
-    background-color: rgba(#000, 0.25);
-  }
-}
-.ic-triangle {
-  width: 0;
-  height: 0;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-bottom: 2em solid black;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-  &:before, &:after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-  }
-  &:before {
-    right: .25em;
-    border-left: 1em solid transparent;
-    border-right: 1em solid transparent;
-    border-bottom: 2em solid rgba(black, .50);
-  }
-  &:after {
-    left: .25em;
-    border-left: 1em solid transparent;
-    border-right: 1em solid transparent;
-    border-bottom: 2em solid rgba(black, .25);
-  }
-}
-
 // Branding
-
 .brand {
-  padding: $brand-kernel 0;
-  text-transform: uppercase;
-  transition: all .45s;
-  letter-spacing: $brand-kernel;
-  font-size: small;
-  font-family: $font;
-  color: #000;
-
-  border: 1px solid #000;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: $space;
   &--logo {
-    color: #fff;
-    background-color: #000;
-  }
-  span {
-    padding: $brand-kernel;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
+    font-size: 4.8rem;
+    font-family: $font-custome;
+    text-transform: uppercase;
+    letter-spacing: $brand-kernel;
   }
 }
-
 // Footer copy
 
 .legal {
@@ -168,302 +73,42 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font;
 }
 
-// Homepage Styles
-
-.main {
-  margin-top: 1em;
-  backface-visibility: hidden;
-  &.container {
-    backface-visibility: hidden;
-  }
-}
-
-// Header Styles
-
-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  >.container {
-    margin-top: $space / 2;
-    height: 100%;
-  }
-  >.brand {
-    position: relative;
-    z-index: 333;
-  }
-}
-
-// Navigation Styles
-
+// Menu Styles
 .menu {
-  position: relative;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  padding-top: $space;
-  &--items {
-    position: relative;
-    height: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: $font;
+  text-transform: uppercase;
+  font-family: Abel;
+  &--items li {
+    font-weight: bold;
+  }
+  &--items li a {
     color: #000;
-
-    li {
-      padding-top: 0;
-      transition: background-color 0.45s;
-      a {
-        color: #000;
-      }
-    }
-
-    li:nth-child(1) {
-      position: absolute;
-      left: 0;
-      top: 40%;
-      bottom: 40%;
-      width: 20%;
-      transform: rotate(-90deg);
-    }
-    li:nth-child(2) {
-      position: absolute;
-      width: 20%;
-      text-align: center;
-      margin: 0 auto;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-    li:nth-child(3) {
-      position: absolute;
-      right: 0;
-      top: 40%;
-      bottom: 40%;
-      width: 20%;
-      transform: rotate(90deg);
-    }
-  }
-}
-
-// Page content styles
-
-.page {
-  width: 100%;
-  padding-bottom: 0;
-  &--content {
-    width: 100%;
-    height: 100%;
-    margin-bottom: $space * 2;
-    margin-top: 0;
-    padding: $space;
-    // overflow: auto;
-    // box-shadow: 0 5px 20px rgba(0,0,0, 0.2);
-    backface-visibility: hidden;
-    // background-color: #fff;
-    .ic {
-      top: 2em;
-      left: 1em;
-    }
-    h4 {
-      text-transform: uppercase;
-      text-align: left;
-      letter-spacing: $kernel;
-      font-size: small;
-      margin-top: $space;
-    }
-    .ic {
-      .ic-triangle,
-      .ic-square,
-      .ic-circle {
-        float: left;
-        left: 0;
-        bottom: 0;
-      }
-    }
-  }
-}
-
-
-// CV module
-
-.cv {
-  list-style: none;
-  font-family: $font;
-  // padding-left: $space;
-  &--heading {
-    letter-spacing: normal;
-    padding-bottom: $kernel;
-    line-height: 3;
-    position: relative;
-    &:after {
-      content: '';
-      width: $space;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      border-bottom: 1px solid;
-    }
-  }
-  li {
-    font-size: medium;
-    text-transform: uppercase;
-    letter-spacing: normal;
-    line-height: 1em;
-    // margin-bottom: 1em;
-  }
-  &--content {
-    list-style: none;
-    li {
-      color: #000;
-      font-size: smaller;
-      text-decoration: none;
-      // margin-top: $space;
-    }
-  }
-  &--date, &--title, &--place {
-    padding: .75em;
-    line-height: 3;
-  }
-  &--date {
-    font-size: medium;
-    background-color: #000;
-    color: #fff;
-  }
-  &--title {
-    font-size: medium;
-  }
-  &--place {
-    text-transform: capitalize;
-    color: darken($grey, 50%);
-  }
-}
-
-// Projects styles
-
-.gallery {
-  li { list-style: none;}
-  img {
-    height: auto;
-    overflow: hidden;
-    backface-visibility: hidden;
-  }
-}
-
-// Sections styles
-
-.profile-image {
-  width: 100%;
-  margin-top: $space;
-  display: block;
-}
-.profile-bio {
-  padding-left: $space;
-  padding-right: $space;
-}
-#profile, #projects, #contact {
-  transition: all .45s;
-  opacity: 1;
-}
-
-#contact {
-  margin-bottom: $space;
-  // background-color: $light-blue;
-  h1 {
-    padding-top: 0;
     letter-spacing: $kernel;
-    a { color: #000;}
   }
 }
 
-// Target sections
+// Profile
 
-#profile:target,
-#projects:target,
-#contact:target {
-  animation: fadeIn 1s forwards;
+.profile-img img {
+  width: 100%;
 }
-
-// Cards
-
-.card--content {
-  max-width: 100%;
-}
+// CV module
 
 // Media Breakpoints
 
 @media (min-width: 300px) and (max-width: 736px) {
-  .profile-bio { padding: 0;}
-  .cv {
-    padding-left: 0;
-  }
-  header, footer { text-align: center;}
-  .main.container {
-    width: 100%;
-  }
-  .page--content {
-    padding: $space $space / 2;
-  }
-  // .menu--items li{
-  //   height: 50%;
-  // }
-  .cv li {
-    text-indent: 0;
-  }
-  .cv--place, .cv--title {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    line-height: normal;
-    padding-bottom: 0;
+  .brand--logo {
+    font-size: 2.8rem;
   }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
 
-  .ic-device {
-    height: 14px;
-    width: 7px;
-    position: relative;
-    right: 4em;
-    float: right;
-    border: 1px solid black;
-
-    &:before {
-      content: 'mobile';
-      position: absolute;
-      left: 18px;
-      bottom: -8px;
-      float: right;
-      text-transform: uppercase;
-      letter-spacing: .25em;
-      font-size: 11px;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 2px;
-      margin: 0 auto;
-      width: 1px;
-      height: 4px;
-      background-color: $grey;
-    }
-  }
 }
 
 @media (min-width: 737px) {
-  // .menu--items li{
-  //   margin-top: 12%;
-  //   height: 60%;
-  // }
+
 }
 
 @media (min-width: 1024px) {
-  // .menu--items li{
-  //   height: 50%;
-  //   margin-top: 12%;
-  // }
+
 }

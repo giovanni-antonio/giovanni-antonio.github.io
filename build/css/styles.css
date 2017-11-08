@@ -56,122 +56,17 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
 }
 
-.ic {
-  position: relative;
-}
-
-.ic-square {
-  width: 2em;
-  height: 2em;
-  background-color: #000;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-}
-
-.ic-square:before, .ic-square:after {
-  content: '';
-  width: inherit;
-  height: inherit;
-  position: absolute;
-}
-
-.ic-square:before {
-  right: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.ic-square:after {
-  left: 1em;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.ic-circle {
-  width: 2em;
-  height: 2em;
-  border-radius: 100%;
-  background-color: #000;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-}
-
-.ic-circle:before, .ic-circle:after {
-  content: '';
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  border-radius: inherit;
-}
-
-.ic-circle:before {
-  right: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.ic-circle:after {
-  left: 1em;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.ic-triangle {
-  width: 0;
-  height: 0;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-bottom: 2em solid black;
-  position: absolute;
-  bottom: 0;
-  left: 1em;
-  right: 1em;
-}
-
-.ic-triangle:before, .ic-triangle:after {
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-
-.ic-triangle:before {
-  right: .25em;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-bottom: 2em solid rgba(0, 0, 0, 0.5);
-}
-
-.ic-triangle:after {
-  left: .25em;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-bottom: 2em solid rgba(0, 0, 0, 0.25);
-}
-
 .brand {
-  padding: 0.75em 0;
-  text-transform: uppercase;
-  transition: all .45s;
-  letter-spacing: 0.75em;
-  font-size: small;
-  font-family: "Abel";
-  color: #000;
-  border: 1px solid #000;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 3.54em;
 }
 
 .brand--logo {
-  color: #fff;
-  background-color: #000;
-}
-
-.brand span {
-  padding: 0.75em;
-}
-
-.brand:hover {
-  color: #fff;
-  background-color: #000;
+  font-size: 4.8rem;
+  font-family: "Libre Barcode 39 Text", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
 }
 
 .legal {
@@ -179,293 +74,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Abel";
 }
 
-.main {
-  margin-top: 1em;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.main.container {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-header > .container {
-  margin-top: 1.77em;
-  height: 100%;
-}
-
-header > .brand {
-  position: relative;
-  z-index: 333;
-}
-
 .menu {
-  position: relative;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  padding-top: 3.54em;
-}
-
-.menu--items {
-  position: relative;
-  height: 100%;
   text-transform: uppercase;
-  text-align: center;
-  font-family: "Abel";
-  color: #000;
+  font-family: Abel;
 }
 
 .menu--items li {
-  padding-top: 0;
-  transition: background-color 0.45s;
+  font-weight: bold;
 }
 
 .menu--items li a {
   color: #000;
-}
-
-.menu--items li:nth-child(1) {
-  position: absolute;
-  left: 0;
-  top: 40%;
-  bottom: 40%;
-  width: 20%;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-.menu--items li:nth-child(2) {
-  position: absolute;
-  width: 20%;
-  text-align: center;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.menu--items li:nth-child(3) {
-  position: absolute;
-  right: 0;
-  top: 40%;
-  bottom: 40%;
-  width: 20%;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.page {
-  width: 100%;
-  padding-bottom: 0;
-}
-
-.page--content {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 7.08em;
-  margin-top: 0;
-  padding: 3.54em;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.page--content .ic {
-  top: 2em;
-  left: 1em;
-}
-
-.page--content h4 {
-  text-transform: uppercase;
-  text-align: left;
-  letter-spacing: 0.25em;
-  font-size: small;
-  margin-top: 3.54em;
-}
-
-.page--content .ic .ic-triangle,
-.page--content .ic .ic-square,
-.page--content .ic .ic-circle {
-  float: left;
-  left: 0;
-  bottom: 0;
-}
-
-.cv {
-  list-style: none;
-  font-family: "Abel";
-}
-
-.cv--heading {
-  letter-spacing: normal;
-  padding-bottom: 0.25em;
-  line-height: 3;
-  position: relative;
-}
-
-.cv--heading:after {
-  content: '';
-  width: 3.54em;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  border-bottom: 1px solid;
-}
-
-.cv li {
-  font-size: medium;
-  text-transform: uppercase;
-  letter-spacing: normal;
-  line-height: 1em;
-}
-
-.cv--content {
-  list-style: none;
-}
-
-.cv--content li {
-  color: #000;
-  font-size: smaller;
-  text-decoration: none;
-}
-
-.cv--date, .cv--title, .cv--place {
-  padding: .75em;
-  line-height: 3;
-}
-
-.cv--date {
-  font-size: medium;
-  background-color: #000;
-  color: #fff;
-}
-
-.cv--title {
-  font-size: medium;
-}
-
-.cv--place {
-  text-transform: capitalize;
-  color: #787878;
-}
-
-.gallery li {
-  list-style: none;
-}
-
-.gallery img {
-  height: auto;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-.profile-image {
-  width: 100%;
-  margin-top: 3.54em;
-  display: block;
-}
-
-.profile-bio {
-  padding-left: 3.54em;
-  padding-right: 3.54em;
-}
-
-#profile, #projects, #contact {
-  transition: all .45s;
-  opacity: 1;
-}
-
-#contact {
-  margin-bottom: 3.54em;
-}
-
-#contact h1 {
-  padding-top: 0;
   letter-spacing: 0.25em;
 }
 
-#contact h1 a {
-  color: #000;
-}
-
-#profile:target,
-#projects:target,
-#contact:target {
-  -webkit-animation: fadeIn 1s forwards;
-          animation: fadeIn 1s forwards;
-}
-
-.card--content {
-  max-width: 100%;
+.profile-img img {
+  width: 100%;
 }
 
 @media (min-width: 300px) and (max-width: 736px) {
-  .profile-bio {
-    padding: 0;
-  }
-  .cv {
-    padding-left: 0;
-  }
-  header, footer {
-    text-align: center;
-  }
-  .main.container {
-    width: 100%;
-  }
-  .page--content {
-    padding: 3.54em 1.77em;
-  }
-  .cv li {
-    text-indent: 0;
-  }
-  .cv--place, .cv--title {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    line-height: normal;
-    padding-bottom: 0;
-  }
-}
-
-@media (min-width: 300px) and (max-width: 768px) {
-  .ic-device {
-    height: 14px;
-    width: 7px;
-    position: relative;
-    right: 4em;
-    float: right;
-    border: 1px solid black;
-  }
-  .ic-device:before {
-    content: 'mobile';
-    position: absolute;
-    left: 18px;
-    bottom: -8px;
-    float: right;
-    text-transform: uppercase;
-    letter-spacing: .25em;
-    font-size: 11px;
-  }
-  .ic-device:after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 2px;
-    margin: 0 auto;
-    width: 1px;
-    height: 4px;
-    background-color: #F8F8F8;
+  .brand--logo {
+    font-size: 2.8rem;
   }
 }
