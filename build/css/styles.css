@@ -21,9 +21,6 @@ a:hover {
 .container {
   max-width: 900px; }
 
-.main section {
-  margin-bottom: 7.08em; }
-
 .t-display-sub {
   padding-top: 1.77em;
   padding-bottom: 3em;
@@ -57,54 +54,6 @@ a:hover {
   background-image: linear-gradient(45deg, #04030a 45%, rgba(4, 3, 10, 0.7));
   padding-bottom: 7.08em; }
 
-.contact-card {
-  margin-top: 7.08em;
-  padding-top: 1.77em;
-  padding-left: 12px;
-  padding-right: 12px;
-  background-color: white;
-  -webkit-box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
-  box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
-  text-align: center; }
-  .contact-card h1 {
-    letter-spacing: .25em;
-    text-transform: lowercase;
-    padding-top: 1.77em;
-    padding-bottom: 1.77em; }
-    .contact-card h1:hover {
-      opacity: .5; }
-    .contact-card h1 a {
-      color: #04030a; }
-  .contact-card h4 {
-    text-transform: uppercase; }
-  .contact-card .fa-icons {
-    padding-top: 1.77em;
-    padding-bottom: 3.54em; }
-    .contact-card .fa-icons li a {
-      color: #04030a; }
-      .contact-card .fa-icons li a:hover {
-        opacity: .5; }
-
-.banner {
-  padding-top: 1.77em;
-  max-width: 90%; }
-  .banner h4 {
-    padding-top: 0;
-    text-transform: uppercase;
-    font-size: 2.8rem;
-    letter-spacing: 0.25em;
-    color: #FAFAFA; }
-  .banner--display {
-    color: #BADA55;
-    padding-top: 0.354em;
-    font-size: 4.8rem;
-    font-family: "Rajdhani", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.085em; }
-
-.legal {
-  font-family: "Rajdhani", sans-serif; }
-
 .menu {
   text-transform: uppercase;
   font-family: "Rajdhani", sans-serif; }
@@ -113,6 +62,26 @@ a:hover {
     letter-spacing: 0.25em; }
     .menu--items li a:hover {
       color: #BADA55; }
+
+.banner {
+  padding-top: 1.77em;
+  max-width: 90%; }
+  .banner h4 {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: 0.085em;
+    color: #FAFAFA; }
+  .banner--display {
+    color: #BADA55;
+    padding-top: 0.354em;
+    font-size: 4.8em;
+    font-family: "Rajdhani", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.085em; }
+
+.main section {
+  margin-bottom: 7.08em; }
 
 .profile {
   position: relative;
@@ -171,6 +140,8 @@ a:hover {
     color: inherit;
     border-color: inherit;
     margin-bottom: 1.77em; }
+    .card .button-secondary:hover {
+      background-color: rgba(0, 0, 0, 0.2); }
   .card--hire {
     background-image: -webkit-linear-gradient(45deg, #006064 45%, rgba(0, 96, 100, 0.7));
     background-image: -o-linear-gradient(45deg, #006064 45%, rgba(0, 96, 100, 0.7));
@@ -197,14 +168,47 @@ a:hover {
     font-family: "Rajdhani", sans-serif;
     text-transform: uppercase; }
 
-@media (min-width: 300px) and (max-width: 736px) {
-  .banner--display {
-    font-size: 3.4rem; }
-  .t-display-sub {
-    max-width: 100%; }
+.contact-card {
+  margin-top: 7.08em;
+  padding-top: 1.77em;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: white;
+  -webkit-box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
+  box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
+  text-align: center; }
   .contact-card h1 {
-    font-size: 2.2em; }
+    letter-spacing: .25em;
+    text-transform: lowercase;
+    padding-top: 1.77em;
+    padding-bottom: 1.77em; }
+    .contact-card h1:hover {
+      opacity: .5; }
+    .contact-card h1 a {
+      color: #04030a; }
+  .contact-card h4 {
+    text-transform: uppercase; }
+  .contact-card .social-menu {
+    padding-top: 1.77em;
+    padding-bottom: 3.54em; }
+    .contact-card .social-menu li a {
+      color: #04030a; }
+      .contact-card .social-menu li a:hover {
+        opacity: .5; }
+
+.legal {
+  font-family: "Rajdhani", sans-serif; }
+
+@media (min-width: 300px) and (max-width: 736px) {
+  .banner h4 {
+    font-size: 2.4em; }
+  .banner--display {
+    font-size: 2.4em; }
   .menu--items li {
     font-size: 12px; }
+  .t-display-sub {
+    max-width: 100%; }
   .profile--title {
-    width: 374px; } }
+    width: 374px; }
+  .contact-card h1 {
+    font-size: 2.2em; } }

@@ -67,11 +67,7 @@ a:hover {color: $badass;}
 .container {
   max-width: $width;
 }
-.main {
-  section {
-    margin-bottom: $space * 2;
-  }
-}
+
 .t-display-sub {
   padding-top: $space/2;
   padding-bottom: 3em;
@@ -102,64 +98,6 @@ a:hover {color: $badass;}
   @include gradient(45deg, $background-color, 45%, $background-color, 0.7);
   padding-bottom: $space * 2;
 }
-
-// Contact
-.contact-card {
-  margin-top: $space * 2;
-  padding-top: $space / 2;
-  padding-left: 12px;
-  padding-right: 12px;
-  background-color: white;
-  box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
-  text-align: center;
-  h1 {
-    letter-spacing: .25em;
-    text-transform: lowercase;
-    padding-top: $space / 2;
-    padding-bottom: $space / 2;
-    &:hover {
-      opacity: .5;
-    }
-    a {
-      color: $background-color;
-    }
-  }
-  h4 {text-transform: uppercase;}
-  .fa-icons {
-    padding-top: $space / 2;
-    padding-bottom: $space;
-    li a {
-      color: $background-color;
-      &:hover {opacity: .5;}
-    }
-  }
-}
-// Branding
-.banner {
-  padding-top: $space / 2;
-  max-width: 90%;
-  h4 {
-    padding-top: 0;
-    text-transform: uppercase;
-    font-size: 2.8rem;
-    letter-spacing: $kernel;
-    color: $grey;
-  }
-  &--display {
-    color: $badass;
-    padding-top: $space / 10;
-    font-size: 4.8rem;
-    font-family: $font-custome;
-    text-transform: uppercase;
-    letter-spacing: $brand-kernel;
-  }
-}
-// Footer copy
-
-.legal {
-  font-family: $font-custome;
-}
-
 // Menu Styles
 .menu {
   text-transform: uppercase;
@@ -170,6 +108,33 @@ a:hover {color: $badass;}
     &:hover {
       color: $badass;
     }
+  }
+}
+
+// Branding
+.banner {
+  padding-top: $space / 2;
+  max-width: 90%;
+  h4 {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: $brand-kernel;
+    color: $grey;
+  }
+  &--display {
+    color: $badass;
+    padding-top: $space / 10;
+    font-size: 4.8em;
+    font-family: $font-custome;
+    text-transform: uppercase;
+    letter-spacing: $brand-kernel;
+  }
+}
+
+.main {
+  section {
+    margin-bottom: $space * 2;
   }
 }
 
@@ -199,6 +164,7 @@ a:hover {color: $badass;}
     }
   }
 }
+
 // CV module
 .cv {
     padding-bottom: $space / 2;
@@ -228,6 +194,7 @@ a:hover {color: $badass;}
     text-transform: capitalize;
     padding-bottom: $space/2;}
 }
+
 // Cards
 .card {
   padding-top: $space;
@@ -235,6 +202,9 @@ a:hover {color: $badass;}
     color: inherit;
     border-color: inherit;
     margin-bottom: $space / 2;
+    &:hover {
+      background-color: rgba(black, 0.2);
+    }
   }
   &--hire {
     @include style-card($green);
@@ -259,14 +229,53 @@ a:hover {color: $badass;}
   }
 }
 
+// Contact
+.contact-card {
+  margin-top: $space * 2;
+  padding-top: $space / 2;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: white;
+  box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
+  text-align: center;
+  h1 {
+    letter-spacing: .25em;
+    text-transform: lowercase;
+    padding-top: $space / 2;
+    padding-bottom: $space / 2;
+    &:hover {
+      opacity: .5;
+    }
+    a {
+      color: $background-color;
+    }
+  }
+  h4 {text-transform: uppercase;}
+  .social-menu {
+    padding-top: $space / 2;
+    padding-bottom: $space;
+    li a {
+      color: $background-color;
+      &:hover {opacity: .5;}
+    }
+  }
+}
+
+// Footer copy
+
+.legal {
+  font-family: $font-custome;
+}
+
 // Media Breakpoints
 
 @media (min-width: 300px) and (max-width: 736px) {
-  .banner--display {font-size: 3.4rem;}
-  .t-display-sub {max-width: 100%;}
-  .contact-card h1 {font-size: 2.2em;}
+  .banner h4 {font-size: 2.4em;}
+  .banner--display {font-size: 2.4em;}
   .menu--items li {font-size: 12px;}
+  .t-display-sub {max-width: 100%;}
   .profile--title {width: 374px;}
+  .contact-card h1 {font-size: 2.2em;}
 }
 
 // @media (min-width: 300px) and (max-width: 768px) {

@@ -5,21 +5,21 @@ section#contact
       .card--hire.u-box
         h4.card--title hire me please!
         p Have a project to discuss with me, I'm available for hire!  
-        a(href="mailto:" + email + "?Subject=Hello%20Giovanni" target="_top").button-secondary hire me
+        a(href=linkToContactForm rel="noopener").button-secondary hire me
     .grid-4.card
       .card--org.u-box
         h4.card--title I do Pro-bono work  
         p If you are a non-profit organization with a good cause that helps our communities strive and do great things for those in need, I'm here to help too, please get in touch let's make something awesome together!
-        a(href="mailto:" + email + "?Subject=Hello%20Giovanni%20I%20Need%20Help" target="_top").button-secondary help me!
+        a(href=linkToContactForm rel="noopener").button-secondary help me!
   
 section#sayhello
   h4.t-display-sub say hello
   .contact-card
     h1
-      a(href="mailto:"+email target="_top") hello.giolara@gmail.com
+      a(href="mailto:"+email rel="noopener") hello.giolara@gmail.com
     h4 follow me on 
-    ul.u-list-inline.fa-icons
+    ul.u-list-inline.social-menu
       each link in links
         li 
-          a(href=link.href) 
+          a(href=link.href aria-label=link.id) 
             i(class="fa fa-" + link.id + " fa-lg")
