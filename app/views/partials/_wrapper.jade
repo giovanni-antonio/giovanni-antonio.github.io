@@ -7,28 +7,23 @@ include ../_config.jade
 
 //- Get components
 doctype html
-html
+html(lang="en")
   include _head.jade
   //- body
   body
-    //- <!-- Main Page -->
+    include ../sections/_header.jade
+    <!-- Main Page -->
     .main.container
-      include ../sections/_header.jade
       include ../sections/_about.jade
+      include ../sections/_projects.jade
       include ../sections/_contact.jade
-      
+        
       <!-- Footer -->
       include _foot.jade
       <!-- End Footer -->
-      
-    //- <!-- End Main Page -->
+        
+      <!-- End Main Page -->
     <!-- Main Content -->
-    //- Includes sections 
-    //- .page.container
-        include ../sections/_about.jade
-        include ../sections/_projects.jade
-        include ../sections/_contact.jade
-        <!-- End Main content -->
     
   
   

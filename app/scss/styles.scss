@@ -4,36 +4,49 @@
 // Variables
 $font : "Abel";
 $font-body : "Open Sans";
-$font-custome :'Libre Barcode 39 Text', cursive;
+// $font-custome :'Libre Barcode 39 Text', cursive;
+$font-custome :'Rajdhani', sans-serif;
 
-$blue : #361FF9 ;
-$grey : #F8F8F8 ;
-$grey-cloud : #F5F5F5 ;
-$light-red : #FEEAEA;
-$light-green : #EAFEEA;
-$light-blue : #EAEAFE;
-$light-yellow : #EAEAAA;
+
+$blue : #1A237E;
+$background-color : #04030a;
+$grey : #FAFAFA ;
+$badass : #BADA55;
+$teal : #004D40;
+$pink : #880E4F;
+$green : #006064;
 $space : 1.77em * 2;
 $kernel : 0.25em;
-$brand-kernel : 0.075em;
-$width : 1200px;
+$brand-kernel : 0.085em;
+$width : 900px;
 // Helpers
 
 @mixin gradient($angle, $color1, $percentage, $color2, $alpha) {
   background-image: linear-gradient($angle, $color1 $percentage, rgba($color2, $alpha));
 }
 
-// Animations
-
-
-@keyframes fadeIn {
-  0% { opacity: 0;}
-  100% { opacity: 1;}
+@mixin style-card($fillColor) {
+  @include gradient(45deg, $fillColor, 45% , $fillColor, .7);
+  @if (lightness($fillColor) > 40){
+    color: $background-color;}
+  @else { color: $grey;}
 }
 
-@keyframes fadeOut {
-  0% { opacity: 1;}
-  100% { opacity: 0;}
+@mixin shadow-level($level) {
+  @if $level == 1 {
+    box-shadow: 0 1px 1.5px rgba(#000, .12), 0 1px 1px rgba(#000, .24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 3px rgba(#000, .16), 0 3px 3px rgba(#000, .23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 10px rgba(#000, .19), 0 3px 6px rgba(#000, .23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 14px rgba(#000, .25), 0 10px 5px rgba(#000, .22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 19px rgba(#000, .30), 0 15px 6px rgba(#000, .22);
+  } // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, value you enter is invalid try to enter a integer number between 1 and 5.";
+  }
 }
 
 /*
@@ -44,22 +57,97 @@ html { font-size: 100%;}
 body {
   background-color: $grey;
   font-family: $font-body;
+  color: $background-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $font;
+  font-family: $font-custome;
 }
-
+a:hover {color: $badass;}
 .container {
   max-width: $width;
 }
+.main {
+  section {
+    margin-bottom: $space * 2;
+  }
+}
+.t-display-sub {
+  padding-top: $space/2;
+  padding-bottom: 3em;
+  max-width: 300px;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2em;
+  height: 1em;
+  letter-spacing: $kernel;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: $background-color;
+  color: $badass;
+  box-shadow: 0px 30px 50px -20px rgba(92,92,92,0.6);
+}
 
+.u-capitalize {text-transform: capitalize;}
+.u-highlight {
+  font-weight: bold;
+  color: $background-color;
+  border-bottom: 3px solid $background-color;
+}
+
+.masthead {
+  text-align: left;
+  color: $grey;
+  @include gradient(45deg, $background-color, 45%, $background-color, 0.7);
+  padding-bottom: $space * 2;
+}
+
+// Contact
+.contact-card {
+  margin-top: $space * 2;
+  padding-top: $space / 2;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: white;
+  box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
+  text-align: center;
+  h1 {
+    letter-spacing: .25em;
+    text-transform: lowercase;
+    padding-top: $space / 2;
+    padding-bottom: $space / 2;
+    &:hover {
+      opacity: .5;
+    }
+    a {
+      color: $background-color;
+    }
+  }
+  h4 {text-transform: uppercase;}
+  .fa-icons {
+    padding-top: $space / 2;
+    padding-bottom: $space;
+    li a {
+      color: $background-color;
+      &:hover {opacity: .5;}
+    }
+  }
+}
 // Branding
-.brand {
-  margin: 0 auto;
-  width: 80%;
-  padding-top: $space;
-  &--logo {
+.banner {
+  padding-top: $space / 2;
+  max-width: 90%;
+  h4 {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: $kernel;
+    color: $grey;
+  }
+  &--display {
+    color: $badass;
+    padding-top: $space / 10;
     font-size: 4.8rem;
     font-family: $font-custome;
     text-transform: uppercase;
@@ -69,56 +157,126 @@ h1, h2, h3, h4, h5, h6 {
 // Footer copy
 
 .legal {
-  margin-bottom: $space;
-  font-family: $font;
+  font-family: $font-custome;
 }
 
 // Menu Styles
 .menu {
   text-transform: uppercase;
-  font-family: Abel;
-  &--items li {
-    font-weight: bold;
-  }
+  font-family: $font-custome;
   &--items li a {
-    color: #000;
+    color: $grey;
     letter-spacing: $kernel;
+    &:hover {
+      color: $badass;
+    }
   }
 }
 
 // Profile
 
-.profile-img img {
-  width: 100%;
+.profile {
+  position: relative;
+  margin-top: 10%;
+  &--image {
+    padding-top: 90%;
+    background-image: url(../images/profile.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 60px 80px -50px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  &--title {
+    position: absolute;
+    width: 605px;
+    top: -40px;
+    right: 172px;
+    left: 0;
+  }
+  &--blurb {
+    margin-top: $space;
+    h2 {
+      text-transform: capitalize;
+    }
+  }
 }
 // CV module
-
+.cv {
+    padding-bottom: $space / 2;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: white;
+    box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
+  &--heading {
+    padding-top: $space;
+    font-family: $font-custome;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: $kernel;
+    color: $background-color;
+  }
+  .grid-1 {margin-top: $space/2;}
+  &--content {padding-top: $space/2;}
+  &--title {
+    text-transform: uppercase;
+    font-family: $font-custome;}
+  &--date {
+    font-family: $font-custome;
+    letter-spacing: $kernel;
+    font-weight: bold;}
+  &--place {
+    text-transform: capitalize;
+    padding-bottom: $space/2;}
+}
 // Cards
 .card {
+  padding-top: $space;
+  .button-secondary {
+    color: inherit;
+    border-color: inherit;
+    margin-bottom: $space / 2;
+  }
   &--hire {
-    min-height: 25em;
-    background-color: #ffefd5;
+    @include style-card($green);
   }
   &--org  {
-    min-height: 25em;
-    background-color: #ffc0cb;}
+    @include style-card($pink);
+  }
+  &--project {
+    @include style-card($teal);
+    .button-secondary {
+      color: inherit;
+      border-color: inherit;
+    }
+  }
+  &--title {
+    color: inherit;
+    letter-spacing: $kernel;
+    text-transform: uppercase;}
+  &--date {
+    font-family: $font-custome;
+    text-transform: uppercase;
+  }
 }
+
 // Media Breakpoints
 
 @media (min-width: 300px) and (max-width: 736px) {
-  .brand--logo {
-    font-size: 2.8rem;
-  }
+  .banner--display {font-size: 3.4rem;}
+  .t-display-sub {max-width: 100%;}
+  .contact-card h1 {font-size: 2.2em;}
+  .menu--items li {font-size: 12px;}
+  .profile--title {width: 374px;}
 }
 
-@media (min-width: 300px) and (max-width: 768px) {
-
-}
-
-@media (min-width: 737px) {
-
-}
-
-@media (min-width: 1024px) {
-
-}
+// @media (min-width: 300px) and (max-width: 768px) {
+//
+// }
+//
+// @media (min-width: 737px) {
+//
+// }
+//
+// @media (min-width: 1024px) {
+//
+// }

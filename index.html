@@ -1,122 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#000">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#04030a">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <title>Giovanni Lara Knows Tech Stuff</title>
-    <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:300i,300,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost:8000/primalCSS/css/primal.min.css">
+    <title>Giovanni Lara Knows Tech Stuff</title><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69834211-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-69834211-1');
+      
+    </script>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="icon" type="image/png" href="../build/images/favicon-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani|Open+Sans:300i,300,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:7880/css/primal.min.css">
     <link rel="stylesheet" href="build/css/styles-dist.css">
+    <script src="https://use.fontawesome.com/358b678f79.js"></script>
   </head>
-  <body>
-    <div class="main container"><!-- Header -->
-      <header role="banner"> <!-- Navigation -->
-        <nav role="navigation" class="menu u-list-inline"> 
-          <ul class="menu--items">
-            <li><a href="#profile">profile </a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">let's talk </a></li>
-          </ul>
-        </nav><!-- END Navigation -->       
-        <div class="brand"><span class="brand--logo">IN THE BEGINNING THERE WAS ONE</span></div>
-      </header><!-- End Header -->
-      <section id="profile" class="page--content group">
-        <h4>profile</h4>
-        <div class="grid-2 grid-mobile-full profile-img"><img src="build/images/profile-img.jpg" alt="Giovanni"></div>
-        <div class="grid-2 grid-mobile-full">
-          <h1><b>Giovanni Lara</b><br></h1>
-          <h2>Knows Tech Stuff. Geek. SciFi junkie. Crazy football fan.</h2>
-          <p><b></b>H<b></b>e<b></b>l<b></b>l<b></b>o<b></b> <b></b>t<b></b>h<b></b>e<b></b>r<b></b>e<b></b>!<b></b> <b></b>I<b></b>'<b></b>m<b></b> <b></b>a<b></b> <b></b>h<b></b>o<b></b>p<b></b>e<b></b>f<b></b>u<b></b>l<b></b> <b>front-end</b><b></b> <b></b>d<b></b>e<b></b>v<b></b>e<b></b>l<b></b>o<b></b>p<b></b>e<b></b>r<b></b> <b></b>f<b></b>r<b></b>o<b></b>m<b></b> <b>California</b><b></b>.<b></b> <b></b>I<b></b> <b></b>d<b></b>o<b></b> <b>tech</b><b></b>,<b></b> <b>design</b><b></b>,<b></b> <b>programming</b><b></b> <b></b>s<b></b>t<b></b>u<b></b>f<b></b>f<b></b> <b></b>a<b></b>n<b></b>d<b></b> <b></b>e<b></b>v<b></b>e<b></b>r<b></b>y<b></b>t<b></b>h<b></b>i<b></b>n<b></b>g<b></b> <b></b>i<b></b>n<b></b> <b></b>t<b></b>h<b></b>e<b></b> <b></b>m<b></b>i<b></b>d<b></b>d<b></b>l<b></b>e<b></b>.<b></b></p>
+  <body><!-- Header -->
+    <div class="masthead">
+      <div class="container">
+        <header role="banner"> <!-- Navigation -->
+          <nav class="menu u-list-inline" role="navigation"> 
+            <ul class="menu--items">
+              <li><a href="#profile">profile </a></li>
+              <li><a href="#projects">projects</a></li>
+              <li><a href="#contact">let's talk </a></li>
+              <li><a href="#sayhello">say hello </a></li>
+            </ul>
+          </nav><!-- END Navigation -->       
+        </header>
+        <div class="banner">
+          <h4>[ME]</h4>
+          <h1 class="banner--display">bada55. Geek. SciFi Junkie. Knows Tech Stuff. Crazy Football Fan.</h1>
+        </div>
+      </div><!-- End Header -->
+    </div><!-- Main Page -->
+    <div class="main container">
+      <section id="profile">
+        <h4 class="t-display-sub">profile</h4>
+        <div class="profile l-content l-centered"> 
+          <div class="profile--image"></div>
+          <div class="profile--blurb">
+            <h2>Hello there, I'm Giovanni Lara enthuciastic front-end developer from California.</h2>
+            <p>I do tech, design, programming stuff and almost everything in between. I have experience in web technologies such as HTML5, CSS3 and JavaScript.</p>
+            <p>If you like to hire me, I'm available!<a href="#contact"> <b class="u-highlight">Let's talk! </b></a></p>
+          </div>
         </div>
       </section>
-      <section id="cv" class="group cv">
-        <div class="grid-1"><span class="cv--heading">skills</span>
-          <ul class="cv--content"> 
-            <li>html/5 (ninja)</li>
-            <li>css/3 &amp; sass </li>
-            <li>bem, smacss &amp; oocss</li>
-            <li>js - can get by</li>
-            <li>jquery &amp; alike plugins!</li>
-            <li>frameworks foundation, bootstrap &amp; primalcss</li>
-            <li>wireframing/prototype</li>
-            <li>adobe design suite</li>
-            <li>Responsive Web design (expert)</li>
-            <li>git</li>
-            <li>terminal (linux/unix!)</li>
-          </ul>
-        </div>
-        <div class="grid-1"><span class="cv--heading">languages</span>
-          <ul class="cv--content">
-            <li>Spanish &dash; mother language</li>
-            <li>english &dash; can get by </li>
-          </ul>
-        </div>
-        <div class="grid-1"><span class="cv--heading">Interests / hobbies </span>
-          <ul class="cv--content">
-            <li>web programming</li>
-            <li>arts</li>
-            <li>minimalism </li>
-            <li>football (aka soccer)</li>
-            <li>wheelchair rugby aka murderball</li>
-            <li>social &amp; human rights</li>
-            <li>running</li>
-            <li>cooking</li>
-            <li>latin music, blues, soul, r&amp;b &amp; jazz</li>
-            <li>novelas</li>
-            <li>sciFi junkie</li>
-            <li>manga, anime and alike animation</li>
-          </ul>
-        </div>
-        <div class="grid-1"><span class="cv--heading">education </span>
-          <ul class="cv--content">
-            <li><span class="cv--date">2016</span><span class="cv--title">web development</span><span class="cv--place">San jose city college , san jose ca</span></li>
-            <li><span class="cv--date">2008</span><span class="cv--title">Graphic design vocational certification</span><span class="cv--place">Metropolitan education distric of santa clara, san jose ca</span></li>
-            <li> <span class="cv--date">2008</span><span class="cv--title">h.s diploma</span><span class="cv--place">Mount pleasant h.s , san jose ca</span></li>
-          </ul>
+      <section id="cv">
+        <div class="group cv">
+          <div class="grid-1"><span class="cv--heading">skills</span>
+            <ul class="cv--content"> 
+              <li>HTML5</li>
+              <li>CSS3 &amp; SASS </li>
+              <li>BEM, SMACS &amp; OOCSS</li>
+              <li>JS - can get by</li>
+              <li>jQuery &amp; alike plugins!</li>
+              <li>Frameworks: Foundation, Bootstrap &amp; primalCSS</li>
+              <li>Wireframing/Prototype</li>
+              <li>ADOBE design </li>
+              <li>Responsive Web Design</li>
+              <li>GIT</li>
+              <li>Terminal (linux/unix!)</li>
+            </ul>
+          </div>
+          <div class="grid-1"><span class="cv--heading">Interests  </span>
+            <ul class="cv--content u-capitalize">
+              <li>web programming</li>
+              <li>arts</li>
+              <li>minimalism </li>
+              <li>football (aka soccer)</li>
+              <li>wheelchair rugby aka murderball</li>
+              <li>social &amp; human rights</li>
+              <li>running</li>
+              <li>cooking</li>
+              <li>latin music, blues, soul, r&amp;b &amp; jazz</li>
+              <li>novelas</li>
+              <li>sciFi junkie</li>
+              <li>manga, anime and alike animation</li>
+            </ul>
+          </div>
+          <div class="grid-1"><span class="cv--heading">education </span>
+            <ul class="cv--content">
+              <li>
+                <div class="cv--date">2016</div>
+                <div class="cv--title">web development</div>
+                <div class="cv--place">San jose city college, san jose ca</div>
+              </li>
+              <li>
+                <div class="cv--date">2008</div>
+                <div class="cv--title">Graphic design vocational certification</div>
+                <div class="cv--place">Metropolitan education district of santa clara, san jose ca</div>
+              </li>
+              <li> 
+                <div class="cv--date">2008</div>
+                <div class="cv--title">h.s diploma</div>
+                <div class="cv--place">Mount pleasant h.s, san jose ca</div>
+              </li>
+            </ul>
+          </div>
+          <div class="grid-1"><span class="cv--heading">languages</span>
+            <ul class="cv--content">
+              <li>SPANISH &colon; mother language</li>
+              <li>ENGLISH &colon; can get by </li>
+            </ul>
+          </div>
         </div>
       </section>
-      <section id="contact" class="page--content"> 
-        <h4>Let's talk</h4><br>
+      <section id="projects">
+        <h4 class="t-display-sub">Projects</h4>
+        <ul class="group card">
+          <li class="grid-4 card--project u-box">
+            <h4 class="card--title">primalCSS</h4>
+            <p class="card--date">nov 2016</p>
+            <p>Minimal css framework designed to survive responsive web development</p><a class="button-secondary" href="http://www.giovannilara.com/primalCSS/"> Visit project</a>
+          </li>
+        </ul>
+      </section>
+      <section id="contact"> 
+        <h4 class="t-display-sub">Let's talk</h4>
         <div class="group"> 
-          <div class="grid-2">
-            <div class="card">
-              <div class="card--hire u-box">
-                <h4 class="card--content--title">hire me please!</h4>
-                <p>If you would like to hire me for your next awesome project, I'm available!</p>
-                <button class="button-secondary">hire me</button>
-              </div>
+          <div class="grid-4 card">
+            <div class="card--hire u-box">
+              <h4 class="card--title">hire me please!</h4>
+              <p>Have a project to discuss with me, I'm available for hire!  </p><a class="button-secondary" href="mailto:hello.giolara@gmail.com?Subject=Hello%20Giovanni" target="_top">hire me</a>
             </div>
           </div>
-          <div class="grid-2">
-            <div class="card">
-              <div class="card--org u-box">
-                <h4 class="card--content--title">I do Pro-bono work  </h4>
-                <p>If you are a non-profit organization with a good cause that helps our communities strive and do great things for those in need, I'm here to help too, please get in touch let's make something awesome together!</p>
-                <button class="button-secondary">help me!</button>
-              </div>
+          <div class="grid-4 card">
+            <div class="card--org u-box">
+              <h4 class="card--title">I do Pro-bono work  </h4>
+              <p>If you are a non-profit organization with a good cause that helps our communities strive and do great things for those in need, I'm here to help too, please get in touch let's make something awesome together!</p><a class="button-secondary" href="mailto:hello.giolara@gmail.com?Subject=Hello%20Giovanni%20I%20Need%20Help" target="_top">help me!</a>
             </div>
           </div>
         </div>
       </section>
-      <div class="group">
-        <p class="t-body l-content l-centered u-align-center">if you have a question, advice or simply want to say whatz up! send me a line or a few, I'll be looking for your email, I won't stuck you I promise! ;)</p><br>
-        <h1 class="u-upper u-align-center"><a href="hello.giolara@gmail.com">hello.giolara@gmail.com</a></h1>
-      </div><br>
-      <h4>check my interweb stuff </h4>
-      <ul>
-        <li>codepen</li>
-        <li>github</li>
-        <li>instagram</li>
-        <li>youtube</li>
-      </ul><!-- Footer -->
+      <section id="sayhello">
+        <h4 class="t-display-sub">say hello</h4>
+        <div class="contact-card">
+          <h1><a href="mailto:hello.giolara@gmail.com" target="_top">hello.giolara@gmail.com</a></h1>
+          <h4>follow me on </h4>
+          <ul class="u-list-inline fa-icons">
+            <li> <a href="https://github.com/gioalo"> <i class="fa fa-github fa-lg"></i></a></li>
+            <li> <a href="http://codepen.io/Giovanni"> <i class="fa fa-codepen fa-lg"></i></a></li>
+            <li> <a href="https://www.instagram.com/giorivas1010/"> <i class="fa fa-instagram fa-lg"></i></a></li>
+            <li> <a href="https://www.youtube.com/user/2media10"> <i class="fa fa-youtube-play fa-lg"></i></a></li>
+            <li> <a href="https://www.linkedin.com/in/giovanni-lara-0101"> <i class="fa fa-linkedin fa-lg"></i></a></li>
+          </ul>
+        </div>
+      </section><!-- Footer -->
       <footer>
-        <p class="legal"> <small>&copy; 2017 Giovanni Lara All Rights Not Reserved :)</small></p>
+        <p class="legal"><small>&copy; 2017 Giovanni Lara All Rights Not Reserved :)</small></p>
       </footer><!-- End Footer -->
+<!-- End Main Page -->
     </div><!-- Main Content -->
   </body>
 </html>

@@ -1,15 +1,9 @@
-section.page--content#projects
-  .ic 
-    .ic-triangle
-  br
-  h4 Projects
-  br
-  ul.gallery.row
-    li
-      img(src="build/images/projects/" + projects[0].img, alt=projects[0].id).col-6
-      img(src="build/images/projects/" + projects[1].img, alt=projects[1].id).col-6
-    li
-      img(src="build/images/projects/" + projects[2].img, alt=projects[2].id).col-12
-    li
-      img(src="build/images/projects/" + projects[7].img, alt=projects[7].id).col-6
-      img(src="build/images/projects/" + projects[8].img, alt=projects[8].id).col-6    
+section#projects
+  h4.t-display-sub Projects
+  ul.group.card
+    li.grid-4.card--project.u-box
+      h4.card--title primalCSS
+      p.card--date nov 2016
+      p Minimal css framework designed to survive responsive web development
+      a(href=primalcssLink).button-secondary  Visit project
+    
