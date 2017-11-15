@@ -4,11 +4,39 @@
 /*
 * Reset styles
 */
-h2, h3, h5, h6 {
+html {
+  font-size: 100%; }
+
+body {
+  background-color: #FAFAFA;
+  font-family: "Open Sans";
+  color: #04030a; }
+
+h1, h2, h3, h4, h5, h6 {
   font-family: "Rajdhani", sans-serif; }
 
 a:hover {
   color: #BADA55; }
+
+.container {
+  max-width: 900px; }
+
+.t-display-sub {
+  padding-top: 1.77em;
+  padding-bottom: 3em;
+  max-width: 300px;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2em;
+  height: 1em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #04030a;
+  color: #BADA55;
+  -webkit-box-shadow: 0px 30px 50px -20px rgba(92, 92, 92, 0.6);
+  box-shadow: 0px 30px 50px -20px rgba(92, 92, 92, 0.6); }
 
 .u-capitalize {
   text-transform: capitalize; }
@@ -18,15 +46,49 @@ a:hover {
   color: #04030a;
   border-bottom: 3px solid #04030a; }
 
-.menu--items li a:hover {
-  color: #BADA55; }
+.masthead {
+  text-align: left;
+  color: #FAFAFA;
+  background-image: -webkit-linear-gradient(45deg, #04030a 45%, rgba(4, 3, 10, 0.7));
+  background-image: -o-linear-gradient(45deg, #04030a 45%, rgba(4, 3, 10, 0.7));
+  background-image: linear-gradient(45deg, #04030a 45%, rgba(4, 3, 10, 0.7));
+  padding-bottom: 7.08em; }
+
+.menu {
+  text-transform: uppercase;
+  font-family: "Rajdhani", sans-serif; }
+  .menu--items li a {
+    color: #FAFAFA;
+    letter-spacing: 0.25em; }
+    .menu--items li a:hover {
+      color: #BADA55; }
+
+.banner {
+  padding-top: 1.77em;
+  max-width: 90%; }
+  .banner h4 {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: 0.085em;
+    color: #FAFAFA; }
+  .banner--display {
+    color: #BADA55;
+    padding-top: 0.354em;
+    font-size: 4.8em;
+    font-family: "Rajdhani", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.085em; }
+
+.main section {
+  margin-bottom: 7.08em; }
 
 .profile {
   position: relative;
   margin-top: 10%; }
   .profile--image {
     padding-top: 90%;
-    background-image: url(../images/profile.jpg);
+    background-image: url(../build/images/profile.jpg);
     background-size: cover;
     background-position: center;
     -webkit-box-shadow: 0px 60px 80px -50px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -138,6 +200,14 @@ a:hover {
   font-family: "Rajdhani", sans-serif; }
 
 @media (min-width: 300px) and (max-width: 736px) {
+  .banner h4 {
+    font-size: 2.4em; }
+  .banner--display {
+    font-size: 2.4em; }
+  .menu--items li {
+    font-size: 12px; }
+  .t-display-sub {
+    max-width: 100%; }
   .profile--title {
     width: 374px; }
   .contact-card h1 {

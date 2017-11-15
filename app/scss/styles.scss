@@ -53,37 +53,37 @@ $width : 900px;
 * Reset styles
 */
 
-// html { font-size: 100%;}
-// body {
-//   background-color: $grey;
-//   font-family: $font-body;
-//   color: $background-color;
-// }
+html { font-size: 100%;}
+body {
+  background-color: $grey;
+  font-family: $font-body;
+  color: $background-color;
+}
 
-h2, h3, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $font-custome;
 }
 a:hover {color: $badass;}
-// .container {
-//   max-width: $width;
-// }
+.container {
+  max-width: $width;
+}
 
-// .t-display-sub {
-//   padding-top: $space/2;
-//   padding-bottom: 3em;
-//   max-width: 300px;
-//   margin-top: 2.2rem;
-//   margin-bottom: 2.2em;
-//   height: 1em;
-//   letter-spacing: $kernel;
-//   text-transform: uppercase;
-//   text-align: center;
-//   font-weight: bold;
-//   font-size: 24px;
-//   background-color: $background-color;
-//   color: $badass;
-//   box-shadow: 0px 30px 50px -20px rgba(92,92,92,0.6);
-// }
+.t-display-sub {
+  padding-top: $space/2;
+  padding-bottom: 3em;
+  max-width: 300px;
+  margin-top: 2.2rem;
+  margin-bottom: 2.2em;
+  height: 1em;
+  letter-spacing: $kernel;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: $background-color;
+  color: $badass;
+  box-shadow: 0px 30px 50px -20px rgba(92,92,92,0.6);
+}
 
 .u-capitalize {text-transform: capitalize;}
 .u-highlight {
@@ -92,52 +92,51 @@ a:hover {color: $badass;}
   border-bottom: 3px solid $background-color;
 }
 
-// .masthead {
-//   text-align: left;
-//   color: $grey;
-//   @include gradient(45deg, $background-color, 45%, $background-color, 0.7);
-//   padding-bottom: $space * 2;
-// }
+.masthead {
+  text-align: left;
+  color: $grey;
+  @include gradient(45deg, $background-color, 45%, $background-color, 0.7);
+  padding-bottom: $space * 2;
+}
 // Menu Styles
 .menu {
-  // text-transform: uppercase;
-  // font-family: $font-custome;
+  text-transform: uppercase;
+  font-family: $font-custome;
   &--items li a {
-    // color: $grey;
-    // letter-spacing: $kernel;
+    color: $grey;
+    letter-spacing: $kernel;
     &:hover {
       color: $badass;
     }
   }
 }
 
-// Branding
-// .banner {
-//   padding-top: $space / 2;
-//   max-width: 90%;
-//   h4 {
-//     padding-top: 0;
-//     text-transform: uppercase;
-//     font-size: 2.8rem;
-//     letter-spacing: $brand-kernel;
-//     color: $grey;
-//   }
-//   &--display {
-//     color: $badass;
-//     padding-top: $space / 10;
-//     font-size: 4.8em;
-//     font-family: $font-custome;
-//     text-transform: uppercase;
-//     letter-spacing: $brand-kernel;
-//   }
-// }
+.banner {
+  padding-top: $space / 2;
+  max-width: 90%;
+  h4 {
+    padding-top: 0;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: $brand-kernel;
+    color: $grey;
+  }
+  &--display {
+    color: $badass;
+    padding-top: $space / 10;
+    font-size: 4.8em;
+    font-family: $font-custome;
+    text-transform: uppercase;
+    letter-spacing: $brand-kernel;
+  }
+}
 
 // Main
-// .main {
-//   section {
-//     margin-bottom: $space * 2;
-//   }
-// }
+.main {
+  section {
+    margin-bottom: $space * 2;
+  }
+}
 
 // Profile
 
@@ -146,7 +145,7 @@ a:hover {color: $badass;}
   margin-top: 10%;
   &--image {
     padding-top: 90%;
-    background-image: url(../images/profile.jpg);
+    background-image: url(../build/images/profile.jpg);
     background-size: cover;
     background-position: center;
     box-shadow: 0px 60px 80px -50px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
@@ -271,10 +270,10 @@ a:hover {color: $badass;}
 // Media Breakpoints
 
 @media (min-width: 300px) and (max-width: 736px) {
-  // .banner h4 {font-size: 2.4em;}
-  // .banner--display {font-size: 2.4em;}
-  // .menu--items li {font-size: 12px;}
-  // .t-display-sub {max-width: 100%;}
+  .banner h4 {font-size: 2.4em;}
+  .banner--display {font-size: 2.4em;}
+  .menu--items li {font-size: 12px;}
+  .t-display-sub {max-width: 100%;}
   .profile--title {width: 374px;}
   .contact-card h1 {font-size: 2.2em;}
 }
