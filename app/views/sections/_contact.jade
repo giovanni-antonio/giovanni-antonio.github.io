@@ -22,4 +22,6 @@ section#sayhello
       each link in links
         li 
           a(href=link.href aria-label=link.id) 
-            i(class="fa fa-" + link.id + " fa-lg")
+            //- i(class="fa fa-" + link.id + " fa-lg")
+            svg
+              use(xlink:href="#" + link.id)
