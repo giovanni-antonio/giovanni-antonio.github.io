@@ -2,7 +2,6 @@
 *  Custome Styles
 */
 // Variables
-$font : "Abel";
 $font-body : "Open Sans";
 // $font-custome :'Libre Barcode 39 Text', cursive;
 $font-custome :'Rajdhani', sans-serif;
@@ -53,15 +52,20 @@ $width : 900px;
 * Reset styles
 */
 
+html.wf-active {
+  font-family: $font-body;
+}
+
 html { font-size: 100%;}
 body {
   background-color: $grey;
   font-family: $font-body;
   color: $background-color;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-custome;
+.wf-active {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-custome;
+  }
 }
 a:hover {color: $badass;}
 .container {
@@ -212,6 +216,13 @@ a:hover {color: $badass;}
   &--org  {
     @include style-card($pink);
   }
+  &--project-badass {
+    @include style-card($badass);
+    .button-secondary {
+      color: inherit;
+      border-color: inherit;
+    }
+  }
   &--project {
     @include style-card($teal);
     .button-secondary {
@@ -254,13 +265,16 @@ a:hover {color: $badass;}
   .social-menu {
     padding-top: $space / 2;
     padding-bottom: $space;
+    li svg {
+      width: 1.2em;
+      height: 1.2em
+    }
     li a {
       color: $background-color;
       &:hover {opacity: .5;}
     }
   }
 }
-
 // Footer copy
 
 .legal {

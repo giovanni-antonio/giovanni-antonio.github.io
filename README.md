@@ -1,6 +1,6 @@
 # Personal website of Giovanni Lara aka Gio
 
-Personal website crafted from scratch with a minimal design mindset. Design, develop and maintained by @gioalo. 
+Personal website crafted from scratch with a minimal design mindset. Design, develop and maintained by @gioalo.
 
 ### Development
 
@@ -17,8 +17,8 @@ Personal website crafted from scratch with a minimal design mindset. Design, dev
 2. Job skills
 3. Projects
 4. Get in touch:
-  - Hire me!
-  - Pro-bono work!
+    - Hire me!
+    - Pro-bono work!
 
 ### Support
 
