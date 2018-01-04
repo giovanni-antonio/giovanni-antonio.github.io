@@ -1,16 +1,10 @@
 section#projects
-  h4.t-display-sub Projects
-  ul.group
-    li.grid-4.card
-      .card--project.u-box
-        h4.card--title primalCSS
-        p.card--date nov 2016
-        p Minimal css framework designed to survive responsive web development
-        a(href=primalcssLink).button-secondary  Visit project
-    li.grid-4.card
-      .card--project-badass.u-box
-        h4.card--title Primal Web boilerplate kit v1
-        p.card--date nov 2017
-        p Get up and running fast. Boilerplate design with PugJS, PrimalCSS and Google Fonts. Design. Code. Run. Repeat!
-        a(href=webKit).button-secondary  Visit project
-      
+  +section-heading('Projects')
+  ul
+    each prod in projects
+      li.group
+        div(class="card card--project-"+ prod.theme +" u-box")
+          h4.card--title= prod.title
+          p.card--date= prod.date 
+          p= prod.description
+          a(href=prod.link).button-secondary  Visit project 

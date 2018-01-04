@@ -1,61 +1,14 @@
 section#profile
-  h4.t-display-sub profile
-  .profile.l-content.l-centered 
-    .profile--image
-    .profile--blurb
-      h2= lead
-      p= intro
-      p If you like to hire me, 
-        em I'm available!
-        a(href="#contact") 
-          b.u-highlight Let's talk! 
-section#cv
-  .group.cv
-    .grid-1
-      span.cv--heading skills
-      ul.cv--content 
-        li HTML5
-        li CSS3 &amp; SASS 
-        li BEM, SMACS &amp; OOCSS
-        li JS - can get by
-        li jQuery &amp; alike plugins!
-        li Frameworks: Foundation, Bootstrap &amp; primalCSS
-        li Wireframing/Prototype
-        li ADOBE design 
-        li Responsive Web Design
-        li GIT
-        li Terminal (linux/unix!)
-    .grid-1
-      span.cv--heading Interests  
-      ul.cv--content.u-capitalize
-        li web programming
-        li arts
-        li minimalism 
-        li football (aka soccer)
-        li wheelchair rugby aka murderball
-        li social &amp; human rights
-        li running
-        li latin music, blues, soul, r&amp;b &amp; jazz
-        li sciFi junkie
-        li manga, anime and alike animation
-    .grid-1
-      span.cv--heading education 
-      ul.cv--content
-        li
-          .cv--date 2016
-          .cv--title web development a.a
-          .cv--place San jose city college, san jose ca
-       
-        li
-          .cv--date 2008
-          .cv--title Graphic design vocational certification
-          .cv--place Metropolitan education district of santa clara, san jose ca
-        li 
-          .cv--date 2008
-          .cv--title h.s diploma
-          .cv--place Mount pleasant h.s, san jose ca
-    .grid-1
-      span.cv--heading languages
-      ul.cv--content
-        li SPANISH &colon; mother language
-        li ENGLISH &colon; can get by 
+  .container.l-content.l-centered
+    .group
+      .grid-2.grid-mobile-full
+        +section-heading('profile')
+        .profile--blurb
+          +section-lead(lead)
+          p= intro
+          p.
+            If you like to hire me,
+            #[em I'm available!] 
+          a(href="#contact").button-primary.button-ghost Let's talk!
+      .grid-2.grid-mobile-full
+        .profile--image

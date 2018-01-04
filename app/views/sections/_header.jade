@@ -1,10 +1,11 @@
 //- Homepage
 <!-- Header -->
-.masthead
+header(role="banner").masthead#home
   .container
-    header(role="banner") 
-      include ../partials/_navigation.jade
-    .banner
-      h4 [ME]
-      h1.banner--display Geek. SciFi Junkie. #{title}. Programmer. Design. Crazy About Football.
+    include ../partials/_navigation.jade
+    .hero
+      h1.hero--title 
+        span.hero--name #{author}
+        br
+        span.hero--sub-title Geek. SciFi Junkie. #{title}. Programmer. Designer.
   <!-- End Header -->

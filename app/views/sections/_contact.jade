@@ -1,27 +1,30 @@
 section#contact 
-  h4.t-display-sub Let's talk
+  +section-heading("Let's talk")
   .group 
-    .grid-4.card
+    .card
       .card--hire.u-box
         h4.card--title hire me please!
         p Have a project to discuss with me, I'm available for hire!  
         a(href=linkToContactForm rel="noopener").button-secondary hire me
-    .grid-4.card
+  .group  
+    .card
       .card--org.u-box
         h4.card--title I do Pro-bono work  
         p If you are a non-profit organization with a good cause that helps our communities strive and do great things for those in need, I'm here to help too, please get in touch let's make something awesome together!
         a(href=linkToContactForm rel="noopener").button-secondary help me!
   
 section#sayhello
-  h4.t-display-sub say hello
+  +section-heading("say hello")
   .contact-card
-    h1
-      a(href="mailto:"+email rel="noopener") hello.giolara@gmail.com
-    h4 follow me on 
+    h5.big-email 
+      a(href="mailto:"+email rel="noopener") 
+        object(alt="gmail email link" id="email-handle" type="image/svg+xml"   data="./build/images/email.svg")
+          div
+      
+    +section-display('follow me on')
     ul.u-list-inline.social-menu
       each link in links
         li 
           a(href=link.href aria-label=link.id) 
-            //- i(class="fa fa-" + link.id + " fa-lg")
             svg
               use(xlink:href="#" + link.id)

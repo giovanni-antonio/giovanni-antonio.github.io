@@ -1,7 +1,12 @@
 //- footer
-footer
+footer.theme-footer
+  hr
+  a(href="#home").brand-logo
   p.legal
-    small &copy; #{year} #{author} All Rights Not Reserved :)
+    small 
+      | &copy; #{year} 
+      a(href="#about")= author 
+      |  | All Rights Not Reserved.
   
 //- scripts
 //- script(type="application/javascript", src=pathToJs)

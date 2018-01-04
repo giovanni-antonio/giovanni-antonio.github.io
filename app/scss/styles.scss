@@ -2,50 +2,52 @@
 *  Custome Styles
 */
 // Variables
-$font-body : "Open Sans";
-// $font-custome :'Libre Barcode 39 Text', cursive;
-$font-custome :'Rajdhani', sans-serif;
+
+$font-body : "Roboto";
+$font-custome :'Playfair Display', serif;
 
 
-$blue : #1A237E;
-$background-color : #04030a;
-$grey : #FAFAFA ;
+$background-color : #0D0D0D;
+
+$dark-theme: #212121;
+$dark-theme-text: #FAFAFA;
+$light-theme: #FAFAFA;
+$light-theme-text: #000;
+
+$dark-grey: #818181;
+$slategray: #EBEBEB;
+$grey : #FAFAFA;
+$snow: #FFF;
+
+$icecube : #1565C0;
 $badass : #BADA55;
-$teal : #004D40;
+$fire: #F44336;
+$teal : #008080;
 $pink : #880E4F;
 $green : #006064;
-$space : 1.77em * 2;
+
+
+$space : 1.45em*2;
+$apart : $space / 2;
 $kernel : 0.25em;
 $brand-kernel : 0.085em;
 $width : 900px;
+
+
 // Helpers
 
 @mixin gradient($angle, $color1, $percentage, $color2, $alpha) {
   background-image: linear-gradient($angle, $color1 $percentage, rgba($color2, $alpha));
 }
 
+@mixin box-shadow {
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+}
 @mixin style-card($fillColor) {
   @include gradient(45deg, $fillColor, 45% , $fillColor, .7);
   @if (lightness($fillColor) > 40){
     color: $background-color;}
   @else { color: $grey;}
-}
-
-@mixin shadow-level($level) {
-  @if $level == 1 {
-    box-shadow: 0 1px 1.5px rgba(#000, .12), 0 1px 1px rgba(#000, .24);
-  } @else if $level == 2 {
-    box-shadow: 0 3px 3px rgba(#000, .16), 0 3px 3px rgba(#000, .23);
-  } @else if $level == 3 {
-    box-shadow: 0 10px 10px rgba(#000, .19), 0 3px 6px rgba(#000, .23);
-  } @else if $level == 4 {
-    box-shadow: 0 14px 14px rgba(#000, .25), 0 10px 5px rgba(#000, .22);
-  } @else if $level == 5 {
-    box-shadow: 0 19px 19px rgba(#000, .30), 0 15px 6px rgba(#000, .22);
-  } // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, value you enter is invalid try to enter a integer number between 1 and 5.";
-  }
 }
 
 /*
@@ -60,99 +62,183 @@ html { font-size: 100%;}
 body {
   background-color: $grey;
   font-family: $font-body;
-  color: $background-color;
+  font-weight: 300;
+  color: $light-theme-text;
 }
 .wf-active {
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3 {
     font-family: $font-custome;
   }
 }
-a:hover {color: $badass;}
-.container {
-  max-width: $width;
+
+.box-shadow{
+  @include box-shadow;
 }
 
-.t-display-sub {
-  padding-top: $space/2;
-  padding-bottom: 3em;
-  max-width: 300px;
-  margin-top: 2.2rem;
-  margin-bottom: 2.2em;
-  height: 1em;
-  letter-spacing: $kernel;
-  text-transform: uppercase;
+.min-height{
+  min-height: 23rem;
+}
+
+.nopb{padding-bottom: 0;}
+
+.section-heading{
+  color: $light-theme-text;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.section-lead{
+  color: $light-theme-text;
+}
+
+.section-display{
+  color: $dark-theme-text;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-family: $font-custome;
+}
+
+.button-ghost{
+  border-color: inherit;
+  &:hover{
+    background-color: #283593;
+  }
+}
+
+#email-handle {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-  background-color: $background-color;
-  color: $badass;
-  box-shadow: 0px 30px 50px -20px rgba(92,92,92,0.6);
-}
-
-.u-capitalize {text-transform: capitalize;}
-.u-highlight {
-  font-weight: bold;
-  color: $background-color;
-  border-bottom: 3px solid $background-color;
-}
+  margin-top: $apart;
+  margin-bottom: $apart;
+  svg{
+    text{
+      font-family: $font-custome;
+    }
+  }
+  div {
+    max-width: 100%;
+    width: 736px;
+    height: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("../build/images/email.png");
+}}
 
 .masthead {
   text-align: left;
-  color: $grey;
-  @include gradient(45deg, $background-color, 45%, $background-color, 0.7);
-  padding-bottom: $space * 2;
+  background-color: $light-theme;
+  padding-bottom: $space*2;
+  min-height: 620px/2;
 }
+
+.brand-logo{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: $light-theme-text;
+  box-shadow: 0 2px 5px 1px rgba(#000,.25);
+}
+
 // Menu Styles
 .menu {
-  text-transform: uppercase;
-  font-family: $font-custome;
+  padding-top: 10px;
+  border-bottom: 1px solid $slategray;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+  text-align: right;
+  li {margin-right: 0;}
+  li:last-child a {
+    color: $pink;
+    font-weight: 400;
+  }
   &--items li a {
-    color: $grey;
-    letter-spacing: $kernel;
+    color: $dark-theme;
+    font-size: small;
+    font-weight: 300;
+    margin-left: $space;
+    margin-right: 0;
+    position: relative;
+    transition: all .25s ease-in;
+    &:after{
+      content: '';
+      position: absolute;
+      top: -7px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      transition: all .25s ease-in;
+    }
     &:hover {
-      color: $badass;
+      color: $icecube;
+      &:after{
+        background-color: $icecube;
+      }
+    }
+  }
+  .brand-logo{
+    transition: all .45s ease-in;
+    &:hover{
+      transform: scale(1.25);
+      background-color: $icecube;
     }
   }
 }
 
-.banner {
-  padding-top: $space / 2;
-  max-width: 90%;
-  h4 {
-    padding-top: 0;
-    text-transform: uppercase;
-    font-size: 2.8rem;
-    letter-spacing: $brand-kernel;
-    color: $grey;
-  }
-  &--display {
-    color: $badass;
-    padding-top: $space / 10;
-    font-size: 4.8em;
-    font-family: $font-custome;
-    text-transform: uppercase;
-    letter-spacing: $brand-kernel;
+.hero {
+  padding-top: $space;
+  max-width: 900px;
+  min-height: 500px;
+  &--title{padding-top: $apart/2;color: $light-theme-text;}
+  &--name{
+    font-weight: 900;
+    line-height: 2;
   }
 }
 
 // Main
 .main {
-  section {
-    margin-bottom: $space * 2;
-  }
+  background-color: $light-theme;
+  section{padding-top: $space;}
 }
 
 // Profile
-
+#profile{
+  padding-bottom: $apart;
+  background-color: $icecube;
+  min-height: 480px;
+  color: $snow;
+  .section-lead,
+  .section-heading {color: $snow;}
+}
 .profile {
-  position: relative;
-  margin-top: 10%;
   &--image {
-    padding-top: 90%;
-    background-image: url(../build/images/profile.jpg);
-    background-size: cover;
+    width: 360px;
+    height: 480px;
+    margin-bottom: $apart;
+    margin-top: $space*2;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../build/images/profile-noir-1x.jpg);
     background-position: center;
-    box-shadow: 0px 60px 80px -50px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    &::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 5px 5px 25px 0px rgba($dark-theme, 0.3);
+    }
   }
   &--title {
     position: absolute;
@@ -161,44 +247,57 @@ a:hover {color: $badass;}
     right: 172px;
     left: 0;
   }
-  &--blurb {
-    margin-top: $space;
-    h2 {
-      text-transform: capitalize;
-    }
-  }
 }
 
 // CV module
-.cv {
-    padding-bottom: $space / 2;
-    padding-left: 12px;
-    padding-right: 12px;
-    background-color: white;
-    box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
-  &--heading {
-    padding-top: $space;
-    font-family: $font-custome;
-    font-size: 1.25em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: $kernel;
-    color: $background-color;
+#cv{
+  .group{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
   }
-  .grid-1 {margin-top: $space/2;}
-  &--content {padding-top: $space/2;}
-  &--title {
-    text-transform: uppercase;
+}
+.cv {
+    margin-top: $space;
+    background-color: $teal;
+    color: $dark-theme;
+    @extend .box-shadow;
+    li{
+      padding-bottom: $apart/2;
+    }
+  &--heading {
+    text-align: center;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: $snow;
+    margin: 0 $apart;
+  }
+  &--content {
+    text-transform: capitalize;
+    padding-top: $space;
+    padding-left: $apart;
+    padding-right: $apart;
+    padding-bottom: $apart;
+    background-color: white;
+    li {list-style: none}
+  }
+  &--degree {
+    font-weight: 700;
     font-family: $font-custome;}
   &--date {
     font-family: $font-custome;
-    letter-spacing: $kernel;
-    font-weight: bold;}
+    }
   &--place {
-    text-transform: capitalize;
-    padding-bottom: $space/2;}
+    text-transform: capitalize;}
 }
 
+#projects {
+  .group{
+    @extend .box-shadow;
+    margin-top: $space;
+    .card{padding-top: 0;}
+  }
+}
 // Cards
 .card {
   padding-top: $space;
@@ -207,14 +306,16 @@ a:hover {color: $badass;}
     border-color: inherit;
     margin-bottom: $space / 2;
     &:hover {
-      background-color: rgba(black, 0.2);
+      background-color: rgba($snow, 0.2);
     }
   }
   &--hire {
-    @include style-card($green);
+    border-bottom: 12px solid $fire;
+    background-color: $snow;
   }
   &--org  {
-    @include style-card($pink);
+    border-bottom: 12px solid $pink;
+    background-color: $snow;
   }
   &--project-badass {
     @include style-card($badass);
@@ -223,8 +324,8 @@ a:hover {color: $badass;}
       border-color: inherit;
     }
   }
-  &--project {
-    @include style-card($teal);
+  &--project-icecube {
+    @include style-card($icecube);
     .button-secondary {
       color: inherit;
       border-color: inherit;
@@ -232,64 +333,91 @@ a:hover {color: $badass;}
   }
   &--title {
     color: inherit;
-    letter-spacing: $kernel;
-    text-transform: uppercase;}
-  &--date {
     font-family: $font-custome;
+    font-weight: 900;
+    text-transform: capitalize;}
+  &--date {
     text-transform: uppercase;
   }
 }
 
 // Contact
+#contact {
+  .group{
+    @extend .box-shadow;
+    margin-bottom: $space;
+    margin-top: $apart;
+    .card{padding-top: 0;}
+    }
+}
 .contact-card {
-  margin-top: $space * 2;
-  padding-top: $space / 2;
-  padding-left: 12px;
-  padding-right: 12px;
-  background-color: white;
-  box-shadow: 0px 38px 54px -23px rgba(92, 92, 92, 0.65);
   text-align: center;
-  h1 {
-    letter-spacing: .25em;
+  .section-display{color: $light-theme-text;}
+  .big-email {
+    font-size: 4em;
+    font-family: $font-custome;
+    font-weight: 900;
     text-transform: lowercase;
-    padding-top: $space / 2;
-    padding-bottom: $space / 2;
+    margin-top: $apart/2;
     &:hover {
-      opacity: .5;
+      opacity: .75
     }
     a {
-      color: $background-color;
+      color: $grey;
     }
   }
-  h4 {text-transform: uppercase;}
+
   .social-menu {
-    padding-top: $space / 2;
+    padding-top: $space;
     padding-bottom: $space;
+    margin-bottom: $space*2;
+    li{margin-left: $apart;}
     li svg {
-      width: 1.2em;
-      height: 1.2em
+      width: 32px;
+      height: 32px;
+      fill: $dark-grey;
     }
     li a {
-      color: $background-color;
-      &:hover {opacity: .5;}
+      transition: all .45s ease-in;
+      &:hover svg{
+        fill: $icecube;
+      }
     }
   }
 }
 // Footer copy
-
+footer hr {opacity: .25}
 .legal {
   font-family: $font-custome;
+  color: $light-theme-text;
+  padding-left: $space;
+  a{color: inherit; text-decoration: underline;}
 }
 
 // Media Breakpoints
 
-@media (min-width: 300px) and (max-width: 736px) {
-  .banner h4 {font-size: 2.4em;}
-  .banner--display {font-size: 2.4em;}
+@media (max-width: 48em) {
+  .hero--title {font-size: 2.4em;}
   .menu--items li {font-size: 12px;}
-  .t-display-sub {max-width: 100%;}
   .profile--title {width: 374px;}
-  .contact-card h1 {font-size: 2.2em;}
+  .contact-card .big-email{
+    margin-top: 0;
+  }
+  #email-handle{
+    margin-top: $apart/2;
+    margin-bottom: $apart/2;
+  }
+  .hero{
+    min-height: 360px;
+  }
+}
+
+@media (min-width:48em) {
+  #cv{
+    .group{
+      display: flex;
+    }
+  }
 }
 
 // @media (min-width: 300px) and (max-width: 768px) {

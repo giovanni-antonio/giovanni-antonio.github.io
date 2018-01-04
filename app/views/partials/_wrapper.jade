@@ -4,7 +4,7 @@
 //- Get configuration data
 
 include ../_config.jade
-
+include ../_mixins.jade
 //- Get components
 doctype html
 html(lang="en")
@@ -14,37 +14,18 @@ html(lang="en")
     include _svg-icons.jade
     include ../sections/_header.jade
     <!-- Main Page -->
-    .main.container
-      include ../sections/_about.jade
-      include ../sections/_projects.jade
-      include ../sections/_contact.jade
+    include ../sections/_about.jade
+    .main
+      .container.l-content.l-centered
+        include ../sections/_cv.jade
+        include ../sections/_projects.jade
+        include ../sections/_contact.jade
         
-      <!-- Footer -->
-      include _foot.jade
-      <!-- End Footer -->
+        <!-- Footer -->
+        include _foot.jade
+        <!-- End Footer -->
         
       <!-- End Main Page -->
     <!-- Main Content -->
-    script.
-      WebFontConfig = {
-       google: {families: ['Rajdhani:400', 'Open Sans:300,300i,400']}
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-          '://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })(); 
-    noscript.
-      <link href="https://fonts.googleapis.com/css?family=Rajdhani|Open+Sans:300i,300,700" rel="stylesheet">
-    script.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'UA-69834211-1');
-  
+    include _scripts.jade
   
