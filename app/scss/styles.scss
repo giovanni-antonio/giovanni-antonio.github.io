@@ -259,7 +259,7 @@ body {
 }
 .cv {
     margin-top: $space;
-    background-color: $teal;
+    background-color: $icecube;
     color: $dark-theme;
     @extend .box-shadow;
     li{
@@ -310,12 +310,30 @@ body {
     }
   }
   &--hire {
-    border-bottom: 12px solid $fire;
     background-color: $snow;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 12px solid $fire;
+    }
   }
   &--org  {
-    border-bottom: 12px solid $pink;
     background-color: $snow;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 12px solid $pink;
+    }
   }
   &--project-badass {
     @include style-card($badass);
@@ -325,7 +343,7 @@ body {
     }
   }
   &--project-icecube {
-    @include style-card($icecube);
+    @include style-card($teal);
     .button-secondary {
       color: inherit;
       border-color: inherit;
@@ -352,7 +370,7 @@ body {
 }
 .contact-card {
   text-align: center;
-  .section-display{color: $light-theme-text;}
+  .section-display{color: $dark-grey;}
   .big-email {
     font-size: 4em;
     font-family: $font-custome;
@@ -369,9 +387,8 @@ body {
 
   .social-menu {
     padding-top: $space;
-    padding-bottom: $space;
-    margin-bottom: $space*2;
-    li{margin-left: $apart;}
+    margin-bottom: $space;
+    li{margin-left: $space;margin-right: $space;margin-bottom: $apart;}
     li svg {
       width: 32px;
       height: 32px;

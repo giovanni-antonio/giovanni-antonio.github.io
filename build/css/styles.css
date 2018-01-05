@@ -194,7 +194,7 @@ body {
 
 .cv {
   margin-top: 2.9em;
-  background-color: #008080;
+  background-color: #1565C0;
   color: #212121; }
   .cv li {
     padding-bottom: 0.725em; }
@@ -235,11 +235,27 @@ body {
     .card .button-secondary:hover {
       background-color: rgba(255, 255, 255, 0.2); }
   .card--hire {
-    border-bottom: 12px solid #F44336;
-    background-color: #FFF; }
+    background-color: #FFF;
+    position: relative; }
+    .card--hire:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 12px solid #F44336; }
   .card--org {
-    border-bottom: 12px solid #880E4F;
-    background-color: #FFF; }
+    background-color: #FFF;
+    position: relative; }
+    .card--org:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 12px solid #880E4F; }
   .card--project-badass {
     background-image: -webkit-linear-gradient(45deg, #BADA55 45%, rgba(186, 218, 85, 0.7));
     background-image: -o-linear-gradient(45deg, #BADA55 45%, rgba(186, 218, 85, 0.7));
@@ -249,10 +265,10 @@ body {
       color: inherit;
       border-color: inherit; }
   .card--project-icecube {
-    background-image: -webkit-linear-gradient(45deg, #1565C0 45%, rgba(21, 101, 192, 0.7));
-    background-image: -o-linear-gradient(45deg, #1565C0 45%, rgba(21, 101, 192, 0.7));
-    background-image: linear-gradient(45deg, #1565C0 45%, rgba(21, 101, 192, 0.7));
-    color: #0D0D0D; }
+    background-image: -webkit-linear-gradient(45deg, #008080 45%, rgba(0, 128, 128, 0.7));
+    background-image: -o-linear-gradient(45deg, #008080 45%, rgba(0, 128, 128, 0.7));
+    background-image: linear-gradient(45deg, #008080 45%, rgba(0, 128, 128, 0.7));
+    color: #FAFAFA; }
     .card--project-icecube .button-secondary {
       color: inherit;
       border-color: inherit; }
@@ -273,7 +289,7 @@ body {
 .contact-card {
   text-align: center; }
   .contact-card .section-display {
-    color: #000; }
+    color: #818181; }
   .contact-card .big-email {
     font-size: 4em;
     font-family: "Playfair Display", serif;
@@ -286,10 +302,11 @@ body {
       color: #FAFAFA; }
   .contact-card .social-menu {
     padding-top: 2.9em;
-    padding-bottom: 2.9em;
-    margin-bottom: 5.8em; }
+    margin-bottom: 2.9em; }
     .contact-card .social-menu li {
-      margin-left: 1.45em; }
+      margin-left: 2.9em;
+      margin-right: 2.9em;
+      margin-bottom: 1.45em; }
     .contact-card .social-menu li svg {
       width: 32px;
       height: 32px;
