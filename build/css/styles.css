@@ -106,7 +106,7 @@ body {
     .menu--items li a:after {
       content: '';
       position: absolute;
-      top: -7px;
+      top: 28px;
       left: 0;
       right: 0;
       width: 100%;
@@ -295,7 +295,8 @@ body {
     font-family: "Playfair Display", serif;
     font-weight: 900;
     text-transform: lowercase;
-    margin-top: 0.725em; }
+    margin-top: 0.725em;
+    cursor: pointer; }
     .contact-card .big-email:hover {
       opacity: .75; }
     .contact-card .big-email a {

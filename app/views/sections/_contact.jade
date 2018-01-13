@@ -15,11 +15,10 @@ section#contact
   
 section#sayhello
   +section-heading("say hello,")
-  .contact-card
-    h5.big-email 
-      a(href="mailto:"+email rel="noopener") 
-        object(alt="gmail email link" id="email-handle" type="image/svg+xml"   data="./build/images/email.svg")
-          div
+  .contact-card 
+    .big-email 
+      object(alt="gmail email link" id="email-handle" type="image/svg+xml"   data="/build/images/email.svg")
+        div
       
     +section-display('follow me on')
     ul.u-list-inline.social-menu

@@ -167,7 +167,7 @@ body {
     &:after{
       content: '';
       position: absolute;
-      top: -7px;
+      top: 28px;
       left: 0;
       right: 0;
       width: 100%;
@@ -377,6 +377,7 @@ body {
     font-weight: 900;
     text-transform: lowercase;
     margin-top: $apart/2;
+    cursor: pointer;
     &:hover {
       opacity: .75
     }
