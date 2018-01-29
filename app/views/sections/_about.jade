@@ -1,8 +1,11 @@
 section#profile
   .container.l-content.l-centered
+    +section-heading('profile')
     .group
       .grid-2.grid-mobile-full
-        +section-heading('profile')
+        .img
+          .profile--image
+      .grid-2.grid-mobile-full
         .profile--blurb
           +section-lead(lead)
           p= intro
@@ -10,5 +13,4 @@ section#profile
             If you like to hire me,
             #[em I'm available!] 
           a(href="#contact").button-primary.button-ghost Let's talk!
-      .grid-2.grid-mobile-full
-        .profile--image
+    

@@ -91,7 +91,7 @@ body {
   .menu li {
     margin-right: 0; }
   .menu li:last-child a {
-    color: #880E4F;
+    color: #1565C0;
     font-weight: 400; }
   .menu--items li a {
     color: #212121;
@@ -145,7 +145,7 @@ body {
     padding-top: 2.9em; }
 
 #profile {
-  padding-bottom: 1.45em;
+  padding-bottom: 2.9em;
   background-color: #1565C0;
   min-height: 480px;
   color: #FFF; }
@@ -154,44 +154,40 @@ body {
     color: #FFF; }
 
 .profile--image {
-  width: 337px;
-  height: 400px;
-  margin-bottom: 1.45em;
-  margin-top: 5.8em;
+  max-width: 100%;
+  min-height: 400px;
+  margin-top: 2.9em;
   margin-left: auto;
   margin-right: auto;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: relative; }
-  .profile--image::before {
+  position: relative;
+  -webkit-box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1); }
+  .profile--image:before, .profile--image:after {
     content: '';
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    -webkit-box-shadow: 5px 5px 25px 0px rgba(33, 33, 33, 0.3);
-    box-shadow: 5px 5px 25px 0px rgba(33, 33, 33, 0.3);
-    background-image: url(../build/images/pro-01.jpg);
-    -webkit-filter: grayscale(1%);
-    filter: grayscale(1%); }
-  .profile--image::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-image: url(../build/images/pro-02.jpg);
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-color: #1565c0;
+    background-blend-mode: overlay; }
+  .profile--image::before {
+    background-image: url(../build/images/pro-01.jpg);
+    -webkit-filter: brightness(1.75);
+    filter: brightness(1.75); }
+  .profile--image::after {
+    background-image: url(../build/images/pro-02.jpg);
     -webkit-transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
     -o-transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
     transition: all 0.5s cubic-bezier(0, 0, 0.2, 1);
+    -webkit-box-shadow: 0 5px 16px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 16px 6px rgba(0, 0, 0, 0.1);
+    -webkit-filter: brightness(1.85);
+    filter: brightness(1.85);
     opacity: 0; }
   .profile--image:hover:after {
     opacity: 1; }
@@ -329,8 +325,8 @@ body {
       margin-right: 2.9em;
       margin-bottom: 1.45em; }
     .contact-card .social-menu li svg {
-      width: 32px;
-      height: 32px;
+      width: 1.45em;
+      height: 1.45em;
       fill: #818181; }
     .contact-card .social-menu li a {
       -webkit-transition: all .45s ease-in;
@@ -370,3 +366,8 @@ footer hr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
+
+@media (max-width: 48em) {
+  .contact-card .social-menu li {
+    margin-left: 1.45em;
+    margin-right: 1.45em; } }
