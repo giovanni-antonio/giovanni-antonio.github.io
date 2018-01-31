@@ -12,6 +12,7 @@ html(lang="en")
   //- body
   body
     include _svg-icons.jade
+    .background-shape
     include ../sections/_header.jade
     <!-- Main Page -->
     include ../sections/_about.jade
@@ -20,11 +21,9 @@ html(lang="en")
         include ../sections/_cv.jade
         include ../sections/_projects.jade
         include ../sections/_contact.jade
-        
         <!-- Footer -->
         include _foot.jade
         <!-- End Footer -->
-        
       <!-- End Main Page -->
     <!-- Main Content -->
     include _scripts.jade

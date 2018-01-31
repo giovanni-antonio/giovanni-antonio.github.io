@@ -1,0 +1,20 @@
+{
+  "name": "gioalo.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "critical": "critical dev.index.html --base  ./ > index.html -i -m --ignore @font-face"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gioalo/gioalo.github.io.git"
+  },
+  "author": "Giovanni Lara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gioalo/gioalo.github.io/issues"
+  },
+  "homepage": "https://github.com/gioalo/gioalo.github.io#readme"
+}
