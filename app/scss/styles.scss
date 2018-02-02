@@ -402,7 +402,7 @@ body {
     }
   }
   &--project-icecube {
-    @include style-card($teal);
+    @include style-card($icecube);
     .button-secondary {
       color: inherit;
       border-color: inherit;
