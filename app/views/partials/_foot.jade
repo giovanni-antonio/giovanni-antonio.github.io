@@ -1,12 +1,25 @@
 //- footer
-footer.theme-footer
-  hr
-  a(href="#home").brand-logo
-  p.legal
-    small 
-      | &copy; #{year} 
-      a(href="#about")= author 
-      |  | All Rights Not Reserved.
+footer.section_ligthslate.u-pad-top
+  .container
+    .group
+      .grid-1
+        .brand-logo_grey
+          a(href="#home" aria-label="logo") 
+                svg
+                  use(xlink:href="#logo-grey")
+      .grid-2
+        span.footer--blurb Follow me on:
+        ul.u-list-inline.footer--social
+          each link in links
+            li 
+              a(href=link.href aria-label=link.id) 
+                svg
+                  use(xlink:href="#" + link.id)
+      .grid-1
+        p.footer--legal
+          | #{year} Made by
+          a(href="#about") <strong> #{author} </strong>
+          |. All Rights Reserved.
   
 //- scripts
 //- script(type="application/javascript", src=pathToJs)

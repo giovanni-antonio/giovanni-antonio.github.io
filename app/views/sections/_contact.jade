@@ -1,29 +1,24 @@
-section#contact 
-  +section-heading("Let's talk")
-  .group 
-    .card
-      .card--hire.u-box
-        h4.card--title hire me please!
-        p Have a project to discuss with me, I'm available for hire!  
-        a(href=linkToContactForm rel="noopener").button-secondary hire me
-  .group  
-    .card
-      .card--org.u-box
-        h4.card--title I do Pro-bono work  
-        p If you are a non-profit organization with a good cause that helps our communities strive and do great things for those in need, I'm here to help too, please get in touch let's make something awesome together!
-        a(href=linkToContactForm rel="noopener").button-secondary help me!
-  
-section#sayhello
-  +section-heading("say hello,")
-  .contact-card 
-    .big-email 
-      object(alt="email" aria-label="email" id="email-handle" type="image/svg+xml"   data="/build/images/email.svg")
-        div
+section#contact.section.section_ligthslate
+  .container 
+    +section-heading("Let's talk")
+    .group 
+      .grid-2.contact
+        .contact--content
+          h3.contact--title.contact--title_hire hire me please!
+          p Have a project to discuss with me, I'm available for hire!  
+          a(href=linkToContactForm rel="noopener").button-secondary hire me
       
-    +section-display('follow me on')
-    ul.u-list-inline.social-menu
-      each link in links
-        li 
-          a(href=link.href aria-label=link.id) 
-            svg
-              use(xlink:href="#" + link.id)
+      .grid-2.contact
+        .contact--content
+          h3.contact--title.contact--title_org I do Pro-bono work  
+          p If you are a non-profit organization with a good cause that helps our communities strive and do great things for those in need, I'm here to help too, please get in touch let's make something awesome together!
+          a(href=linkToContactForm rel="noopener").button-secondary help me!
+
+section#sayhello.section
+  .container
+    +section-heading("say hello")
+    h3.contact--email
+      a(href="mailto:"+email) hello.giolara@gmail.com
+        
+        
+     

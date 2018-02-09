@@ -1,16 +1,16 @@
-section#profile
-  .container.l-content.l-centered
-    +section-heading('profile')
-    .group
-      .grid-2.grid-mobile-full
-        .img
-          .profile--image
-      .grid-2.grid-mobile-full
-        .profile--blurb
-          +section-lead(lead)
-          p= intro
-          p.
-            If you like to hire me,
-            #[em I'm available!] 
-          a(href="#contact").button-primary.button-ghost Let's talk!
+#profile.group.profile
+  .grid-2.grid-mobile-full
+    .image-wrapper
+      .profile--image
+  .grid-2.grid-mobile-full
+    h1.hero-headline= lead
+      
+    h3.hero-sub-heading Jr. Front End Dev. Designer. Geek. SciFi Junkie &amp; aficionado of "The Beautiful Game" aka soccer.
     
+    p.
+      #{intro}
+      If you like to hire me,
+      #[em I'm available!] 
+
+    a(href="#contact").button-primary.button-round.button-cta HIRE ME
+
