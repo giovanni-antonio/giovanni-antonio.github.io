@@ -90,7 +90,18 @@ body {
   padding-bottom: $section-gutter-bottom;
 }
 .u-box-shadow{
-  @include box-shadow;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1em;
+    display: block;
+    box-shadow: 0px 10px 27px 1px rgba($icecube, 0.45),0px 10px 16px 1px rgba(#000, 0.3);
+    z-index: -1;
+  }
 }
 
 .nopb{padding-bottom: 0;}
@@ -117,14 +128,29 @@ body {
   font-weight: bold;
   margin-top: $gutter;
   min-width: $gutter*7;
-  box-shadow: 5px 10px 35px 5px rgba(#000,.25);
+  box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.45), 0px 5px 30px 1px rgba(0, 0, 0, 0.3);
   &:hover{
-    box-shadow: 1px 1px 15px 2px rgba(#000,.35);
+    transform: translate(0,-10%);
   }
 }
-.button-secondary:hover{
-  box-shadow: 5px 10px 35px 5px rgba(#000,.25);
+.button-shadow{
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1em;
+    display: block;
+    z-index: -1;
+    transition: all .45s ease-in;
+  }
+  &:hover{
+    box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.45), 0px 10px 40px -5px rgba(0, 0, 0, 0.3);
+ }
 }
+
 // Branding
 
 .brand-logo{
@@ -223,6 +249,16 @@ body {
     max-width: 500px;
     height: 500px;
     width: 100%;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      width: 90%;
+      height: 5em;
+      display: block;
+      box-shadow: 0px 17px 90px 1px rgba($icecube, 0.75), 0px 17px 100px 1px rgba(0, 0, 0, 0.45);
+    }
   }
   &--image {
     object-fit: contain;
@@ -235,11 +271,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    box-shadow: 5px 10px 35px 5px rgba(#000,.25);
     transition: all .45s ease-in;
-    &:hover {
-      box-shadow: 5px 5px 16px 4px rgba(#000,.15);
-    }
     &:before,&:after{
       content: '';
       max-width: 100%;
