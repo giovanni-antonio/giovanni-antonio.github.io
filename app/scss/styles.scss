@@ -24,7 +24,7 @@ $icecube : #1565C0;
 $badass : #BADA55;
 $fire: #F44336;
 $teal : #008080;
-$pink : #880E4F;
+$pink : #d81b60;
 $green : #006064;
 $lightgreen: #4CAF50;
 $slateteal : #3D4D65;
@@ -81,6 +81,8 @@ body {
   }
 }
 
+/* Site Styles */ 
+
 .l-content{
   max-width: 570px;
 }
@@ -89,6 +91,11 @@ body {
 .u-pad-bottom-double {
   padding-bottom: $section-gutter-bottom;
 }
+
+.u-pad-bottom-half{
+  padding-bottom: $section-gutter-bottom/2;
+}
+
 .u-box-shadow{
   position: relative;
   &:before{
@@ -154,8 +161,8 @@ body {
 // Branding
 
 .brand-logo{
-  width: 32px;
-  height: 32px;
+  width: 2em;
+  height: 2em;
   float: left;
   transition: all .45s ease-in;
   &:hover{
@@ -209,20 +216,22 @@ body {
   min-height: $header-height;
   padding-top: $gutter;
 }
+
 .menu{
-  // display: none;
+  padding-top: $apart/2;
+  height: 2em;
   text-align: right;
-  // float: right;
-  @media (max-width:26.5625em) {
-    text-align: left;
-  }
   li{
     &:first-of-type{
       margin-left: 0;
     }
+    margin-left: $gutter*2;
     display: inline-block;
-    margin-left: $gutter;
     text-transform: capitalize;
+    @media (max-width:30em) {
+      margin-left: 1.25em;
+      font-size: 15px;
+    }
     a{
       padding-bottom: $apart;
       border-bottom: 4px solid transparent;
@@ -252,9 +261,10 @@ body {
     &:before{
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 5%;
-      width: 90%;
+      bottom: 3%;
+      left: 10%;
+      // width: 90%;
+      right: 10%;
       height: 5em;
       display: block;
       box-shadow: 0px 17px 90px 1px rgba($icecube, 0.75), 0px 17px 100px 1px rgba(0, 0, 0, 0.45);
@@ -327,6 +337,9 @@ body {
     @media (max-width: 26.5625em) {
       padding-left: $gutter;
     }
+    @media (min-width:75em ) {
+      font-size: 1.2em;
+    }
     li{
       margin-bottom: $apart;
       text-transform: capitalize;
@@ -365,7 +378,8 @@ body {
       color: $icecube;
     }
     &_badass{
-      color: $badass;
+      // color: $badass;
+      color: $teal;
     }
   }
 }
@@ -381,7 +395,8 @@ body {
       color: $fire;
     }
     &_org{
-      color: $lightgreen;
+      // color: $lightgreen;
+      color: $pink;
     }
   }
   &--email{
@@ -428,14 +443,17 @@ body {
   }
 }
 
-
-
 // Media Breakpoints
 
 @media (max-width: 20em) {
   .profile .image-wrapper{
     max-width: 320px;
     height: 320px;
+    &::before{
+      left: 20%;
+      right: 20%;
+      bottom: 10%;
+    }
   }
 }
 
@@ -446,16 +464,11 @@ body {
   .profile .image-wrapper{
     margin: 0 auto;
   }
+  .profile--blurb{
+    text-align: center;
+  }
+  .u-center-mobile{
+    margin: $gutter auto;
+    display: table;
+  }
 }
-
-// @media (min-width: 300px) and (max-width: 768px) {
-//
-// }
-//
-// @media (max-width: 48em) {
-
-// }
-//
-// @media (min-width: 1024px) {
-//
-// }

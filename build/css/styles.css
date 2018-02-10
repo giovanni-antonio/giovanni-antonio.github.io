@@ -22,11 +22,15 @@ body {
 .wf-active .hero-sub-heading {
   font-family: "Roboto"; }
 
+/* Site Styles */
 .l-content {
   max-width: 570px; }
 
 .u-pad-bottom-double {
   padding-bottom: 7.25em; }
+
+.u-pad-bottom-half {
+  padding-bottom: 3.625em; }
 
 .u-box-shadow {
   position: relative; }
@@ -86,8 +90,8 @@ body {
     box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.45), 0px 10px 40px -5px rgba(0, 0, 0, 0.3); }
 
 .brand-logo, .brand-logo_grey svg {
-  width: 32px;
-  height: 32px;
+  width: 2em;
+  height: 2em;
   float: left;
   -webkit-transition: all .45s ease-in;
   -o-transition: all .45s ease-in;
@@ -148,16 +152,19 @@ body {
   padding-top: 1.45em; }
 
 .menu {
+  padding-top: 0.3625em;
+  height: 2em;
   text-align: right; }
-  @media (max-width: 26.5625em) {
-    .menu {
-      text-align: left; } }
   .menu li {
+    margin-left: 2.9em;
     display: inline-block;
-    margin-left: 1.45em;
     text-transform: capitalize; }
     .menu li:first-of-type {
       margin-left: 0; }
+    @media (max-width: 30em) {
+      .menu li {
+        margin-left: 1.25em;
+        font-size: 15px; } }
     .menu li a {
       padding-bottom: 0.725em;
       border-bottom: 4px solid transparent;
@@ -181,9 +188,9 @@ body {
     .profile .image-wrapper:before {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 5%;
-      width: 90%;
+      bottom: 3%;
+      left: 10%;
+      right: 10%;
       height: 5em;
       display: block;
       -webkit-box-shadow: 0px 17px 90px 1px rgba(21, 101, 192, 0.75), 0px 17px 100px 1px rgba(0, 0, 0, 0.45);
@@ -250,6 +257,9 @@ body {
   @media (max-width: 26.5625em) {
     .cv--content {
       padding-left: 1.45em; } }
+  @media (min-width: 75em) {
+    .cv--content {
+      font-size: 1.2em; } }
   .cv--content li {
     margin-bottom: 0.725em;
     text-transform: capitalize; }
@@ -280,7 +290,7 @@ body {
     .project--title_icecube {
       color: #1565C0; }
     .project--title_badass {
-      color: #BADA55; }
+      color: #008080; }
 
 .contact--title {
   font-weight: 700;
@@ -289,7 +299,7 @@ body {
   .contact--title_hire {
     color: #F44336; }
   .contact--title_org {
-    color: #4CAF50; }
+    color: #d81b60; }
 
 .contact--email {
   color: #1565C0;
@@ -329,10 +339,19 @@ body {
 @media (max-width: 20em) {
   .profile .image-wrapper {
     max-width: 320px;
-    height: 320px; } }
+    height: 320px; }
+    .profile .image-wrapper::before {
+      left: 20%;
+      right: 20%;
+      bottom: 10%; } }
 
 @media (max-width: 48em) {
   .hero-headline {
     padding-top: 0.725em; }
   .profile .image-wrapper {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .profile--blurb {
+    text-align: center; }
+  .u-center-mobile {
+    margin: 1.45em auto;
+    display: table; } }
