@@ -332,5 +332,7 @@ body {
     height: 320px; } }
 
 @media (max-width: 48em) {
+  .hero-headline {
+    padding-top: 0.725em; }
   .profile .image-wrapper {
     margin: 0 auto; } }

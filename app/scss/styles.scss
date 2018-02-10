@@ -440,6 +440,9 @@ body {
 }
 
 @media (max-width:48em) {
+  .hero-headline {
+    padding-top: $apart;
+  }
   .profile .image-wrapper{
     margin: 0 auto;
   }
