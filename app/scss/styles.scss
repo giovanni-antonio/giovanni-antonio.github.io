@@ -1,15 +1,13 @@
 /*
 *  Custome Styles
 */
+
 // Variables
-
-$font-body : "Roboto";
-$font-custome :'Playfair Display', serif;
-
+$font-body: "Roboto";
+$font-custome :'Playfair Display',
+serif;
 // Colors
-
-$background-color : #0D0D0D;
-
+$background-color: #0D0D0D;
 $dark-theme: #212121;
 $dark-theme-text: #FAFAFA;
 $light-theme: #FAFAFA;
@@ -17,30 +15,25 @@ $light-theme-text: #000;
 $hover-color: #104d92;
 $dark-grey: #333333;
 $slategray: #EBEBEB;
-$grey : #FAFAFA;
+$grey: #FAFAFA;
 $snow: #FFF;
-
-$icecube : #1565C0;
-$badass : #BADA55;
+$icecube: #1565C0;
+$badass: #BADA55;
 $fire: #F44336;
-$teal : #008080;
-$pink : #d81b60;
-$green : #006064;
+$teal: #008080;
+$pink: #d81b60;
+$green: #006064;
 $lightgreen: #4CAF50;
-$slateteal : #3D4D65;
-
-$gutter : 1.45em;
-$apart : $gutter / 2;
+$slateteal: #3D4D65;
+$gutter: 1.45em;
+$apart: $gutter / 2;
 $header-height: $apart*3;
-$section-gutter-top : $gutter * 3;
-$section-gutter-bottom : $gutter * 5;
-$kernel : 0.25em;
-$brand-kernel : 0.085em;
-$width : 900px;
-
-
+$section-gutter-top: $gutter * 3;
+$section-gutter-bottom: $gutter * 5;
+$kernel: 0.25em;
+$brand-kernel: 0.085em;
+$width: 900px;
 // Helpers
-
 @mixin gradient($angle, $color1, $percentage, $color2, $alpha) {
   background-image: linear-gradient($angle, $color1 $percentage, rgba($color2, $alpha));
 }
@@ -48,11 +41,15 @@ $width : 900px;
 @mixin box-shadow {
   box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 }
+
 @mixin style-card($fillColor) {
-  @include gradient(45deg, $fillColor, 45% , $fillColor, .7);
-  @if (lightness($fillColor) > 40){
-    color: $background-color;}
-  @else { color: $grey;}
+  @include gradient(45deg, $fillColor, 45%, $fillColor, .7);
+  @if (lightness($fillColor) > 40) {
+    color: $background-color;
+  }
+  @else {
+    color: $grey;
+  }
 }
 
 /*
@@ -63,27 +60,34 @@ html.wf-active {
   font-family: $font-body;
 }
 
-html { font-size: 100%;}
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: $snow;
   font-family: $font-body;
   font-weight: 300;
   color: $dark-grey;
 }
+
 .wf-active {
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: $font-custome, Georgia, 'Times New Roman', Times, serif;
   }
 }
+
 .wf-active {
-  .hero-sub-heading{
+  .hero-sub-heading {
     font-family: $font-body;
   }
 }
 
-/* Site Styles */ 
+/* Site Styles */
 
-.l-content{
+.l-content {
   max-width: 570px;
 }
 
@@ -92,13 +96,13 @@ body {
   padding-bottom: $section-gutter-bottom;
 }
 
-.u-pad-bottom-half{
+.u-pad-bottom-half {
   padding-bottom: $section-gutter-bottom/2;
 }
 
-.u-box-shadow{
+.u-box-shadow {
   position: relative;
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -106,21 +110,22 @@ body {
     width: 90%;
     height: 1em;
     display: block;
-    box-shadow: 0px 10px 27px 1px rgba($icecube, 0.45),0px 10px 16px 1px rgba(#000, 0.3);
+    box-shadow: 0px 10px 27px 1px rgba($icecube, 0.45), 0px 10px 16px 1px rgba(#000, 0.3);
     z-index: -1;
   }
 }
 
-.nopb{padding-bottom: 0;}
+.nopb {
+  padding-bottom: 0;
+}
 
 // Sections / themes / special headings 
-
-.section{
+.section {
   padding: $section-gutter-top 0 $section-gutter-bottom;
-  &_ligthslate{
+  &_ligthslate {
     background-color: $grey;
   }
-  &--heading{
+  &--heading {
     padding-bottom: $gutter * 2;
     color: $slateteal;
     font-weight: 900;
@@ -130,19 +135,19 @@ body {
 }
 
 // Buttons custome
-
-.button-cta{
+.button-cta {
   font-weight: bold;
   margin-top: $gutter;
   min-width: $gutter*7;
   box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.45), 0px 5px 30px 1px rgba(0, 0, 0, 0.3);
-  &:hover{
-    transform: translate(0,-10%);
+  &:hover {
+    transform: translate(0, -10%);
   }
 }
-.button-shadow{
+
+.button-shadow {
   position: relative;
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -153,58 +158,63 @@ body {
     z-index: -1;
     transition: all .45s ease-in;
   }
-  &:hover{
+  &:hover {
     box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.45), 0px 10px 40px -5px rgba(0, 0, 0, 0.3);
- }
+  }
 }
 
 // Branding
-
-.brand-logo{
+.brand-logo {
   width: 2em;
   height: 2em;
   float: left;
   transition: all .45s ease-in;
-  &:hover{
+  &:hover {
     animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    perspective: 1000px; 
+    perspective: 1000px;
   }
-  &_grey{
+  &_grey {
     svg {
       @extend .brand-logo;
-      path {fill-opacity: 0;}
+      path {
+        fill-opacity: 0;
+      }
     }
   }
 }
+
 // Logo shake logo animation
 @keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
-
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-4px, 0, 0);
   }
-
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(4px, 0, 0);
   }
 }
-// Hero / masthead
 
-.hero-headline{
+// Hero / masthead
+.hero-headline {
   padding-top: 0;
   color: $icecube;
   font-weight: bold;
 }
-.hero-sub-heading{
+
+.hero-sub-heading {
   color: $dark-grey;
   padding-top: $apart;
   font-family: $font-body;
@@ -212,17 +222,17 @@ body {
 }
 
 // Header / menu Styles
-.main-header{
+.main-header {
   min-height: $header-height;
   padding-top: $gutter;
 }
 
-.menu{
+.menu {
   padding-top: $apart/2;
   height: 2em;
   text-align: right;
-  li{
-    &:first-of-type{
+  li {
+    &:first-of-type {
       margin-left: 0;
     }
     margin-left: $gutter*2;
@@ -232,11 +242,11 @@ body {
       margin-left: 1.25em;
       font-size: 15px;
     }
-    a{
+    a {
       padding-bottom: $apart;
       border-bottom: 4px solid transparent;
       transition: all .45s ease-in;
-      &:hover{
+      &:hover {
         border-bottom-color: $hover-color;
       }
     }
@@ -244,12 +254,10 @@ body {
 }
 
 // Main body content
-
-
 // Profile
-.profile{
+.profile {
   padding-top: $apart;
-  .image-wrapper{
+  .image-wrapper {
     position: relative;
     top: 0;
     bottom: 0;
@@ -258,12 +266,11 @@ body {
     max-width: 500px;
     height: 500px;
     width: 100%;
-    &:before{
+    &:before {
       content: '';
       position: absolute;
       bottom: 3%;
-      left: 10%;
-      // width: 90%;
+      left: 10%; // width: 90%;
       right: 10%;
       height: 5em;
       display: block;
@@ -282,7 +289,8 @@ body {
     left: 0;
     right: 0;
     transition: all .45s ease-in;
-    &:before,&:after{
+    &:before,
+    &:after {
       content: '';
       max-width: 100%;
       height: 100%;
@@ -296,33 +304,32 @@ body {
       background-color: $icecube;
       background-blend-mode: overlay;
     }
-    &::before{
+    &::before {
       background-image: url(../build/images/01profile500px.jpg);
       filter: brightness(1.75);
     }
-    &::after{
+    &::after {
       background-image: url(../build/images/02profile500px.jpg);
       transition: all .5s cubic-bezier(0, 0, 0.2, 1);
       filter: brightness(1.85);
       opacity: 0;
     }
-    &:hover{
-        &:after{
-          opacity: 1
-        }
+    &:hover {
+      &:after {
+        opacity: 1
+      }
     }
   }
 }
 
 // CV
-
-.cv{
-  &--heading{
+.cv {
+  &--heading {
     position: relative;
     color: $slateteal;
     font-weight: 700;
     text-transform: capitalize;
-    &:before{
+    &:before {
       content: '';
       position: absolute;
       top: $apart;
@@ -332,52 +339,51 @@ body {
       background-color: $slateteal;
     }
   }
-  &--content{
+  &--content {
     padding-left: $gutter*4.5;
     @media (max-width: 26.5625em) {
       padding-left: $gutter;
     }
-    @media (min-width:75em ) {
+    @media (min-width:75em) {
       font-size: 1.2em;
     }
-    li{
+    li {
       margin-bottom: $apart;
       text-transform: capitalize;
     }
   }
-  &--date{
+  &--date {
     font-weight: bold;
     margin-bottom: $apart;
   }
-  &--title{
+  &--title {
     font-family: $font-custome;
     margin-bottom: $apart;
   }
-  &--blurb{
+  &--blurb {
     margin-bottom: $apart*2.5;
   }
 }
 
 // Projects
-
-.project{
+.project {
   margin-bottom: $section-gutter-bottom/2;
   &:last-of-type {
     margin-bottom: 0;
   }
-  &--date{
+  &--date {
     padding-top: 0;
     font-weight: bold;
     color: $dark-grey;
   }
-  &--title{
+  &--title {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700;
-    &_icecube{
+    &_icecube {
       color: $icecube;
     }
-    &_badass{
+    &_badass {
       // color: $badass;
       color: $teal;
     }
@@ -385,21 +391,20 @@ body {
 }
 
 // Contact
-
-.contact{
-  &--title{
+.contact {
+  &--title {
     font-weight: 700;
     font-family: $font-custome;
     text-transform: capitalize;
-    &_hire{
+    &_hire {
       color: $fire;
     }
-    &_org{
+    &_org {
       // color: $lightgreen;
       color: $pink;
     }
   }
-  &--email{
+  &--email {
     color: $icecube;
     font-weight: normal;
     font-family: $font-custome;
@@ -410,14 +415,13 @@ body {
   }
 }
 
-
 // Footer 
-.footer{
+.footer {
   &--social {
     color: $dark-grey;
     float: left;
-    li{
-      margin: 0 $gutter*2 0 0;  
+    li {
+      margin: 0 $gutter*2 0 0;
       svg {
         width: $gutter/1.25;
         height: $gutter/1.25;
@@ -425,16 +429,16 @@ body {
       }
       a {
         transition: all .45s ease-in;
-        &:hover svg{
+        &:hover svg {
           fill: $icecube;
         }
       }
     }
   }
-  &--legal{
+  &--legal {
     font-size: 1em;
   }
-  &--blurb{
+  &--blurb {
     float: left;
     margin-right: $gutter*2;
     padding-bottom: $gutter/1.5;
@@ -444,12 +448,11 @@ body {
 }
 
 // Media Breakpoints
-
 @media (max-width: 20em) {
-  .profile .image-wrapper{
+  .profile .image-wrapper {
     max-width: 320px;
     height: 320px;
-    &::before{
+    &::before {
       left: 20%;
       right: 20%;
       bottom: 10%;
@@ -461,13 +464,13 @@ body {
   .hero-headline {
     padding-top: $apart;
   }
-  .profile .image-wrapper{
+  .profile .image-wrapper {
     margin: 0 auto;
   }
-  .profile--blurb{
+  .profile--blurb {
     text-align: center;
   }
-  .u-center-mobile{
+  .u-center-mobile {
     margin: $gutter auto;
     display: table;
   }
