@@ -123,6 +123,7 @@ body {
 .section {
   padding: $section-gutter-top 0 $section-gutter-bottom;
   &_ligthslate {
+    @extend .section;
     background-color: $grey;
   }
   &--heading {
@@ -139,7 +140,7 @@ body {
   font-weight: bold;
   margin-top: $gutter;
   min-width: $gutter*7;
-  box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.45), 0px 5px 30px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.35), 0px 5px 30px 1px rgba(0, 0, 0, 0.2);
   &:hover {
     transform: translate(0, -10%);
   }
@@ -159,7 +160,7 @@ body {
     transition: all .45s ease-in;
   }
   &:hover {
-    box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.45), 0px 10px 40px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.25), 0px 10px 40px -5px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -340,7 +341,7 @@ body {
     }
   }
   &--content {
-    padding-left: $gutter*4.5;
+    padding-left: $gutter*3.5;
     @media (max-width: 26.5625em) {
       padding-left: $gutter;
     }
@@ -381,10 +382,11 @@ body {
     text-transform: capitalize;
     font-weight: 700;
     &_icecube {
+      @extend .project--title;
       color: $icecube;
     }
-    &_badass {
-      // color: $badass;
+    &_teal {
+      @extend .project--title;
       color: $teal;
     }
   }
@@ -397,12 +399,16 @@ body {
     font-family: $font-custome;
     text-transform: capitalize;
     &_hire {
+      @extend .contact--title;
       color: $fire;
     }
     &_org {
-      // color: $lightgreen;
+      @extend .contact--title;
       color: $pink;
     }
+  }
+  &--content {
+    max-width: 32em;
   }
   &--email {
     color: $icecube;
@@ -458,7 +464,7 @@ body {
       bottom: 10%;
     }
   }
-  .hero-headline{
+  .hero-headline {
     font-size: 2.15733em;
   }
 }

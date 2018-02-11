@@ -51,7 +51,7 @@ body {
 .nopb {
   padding-bottom: 0; }
 
-.section {
+.section, .section_ligthslate {
   padding: 4.35em 0 7.25em; }
   .section_ligthslate {
     background-color: #FAFAFA; }
@@ -66,8 +66,8 @@ body {
   font-weight: bold;
   margin-top: 1.45em;
   min-width: 10.15em;
-  -webkit-box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.45), 0px 5px 30px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.45), 0px 5px 30px 1px rgba(0, 0, 0, 0.3); }
+  -webkit-box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.35), 0px 5px 30px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px 1px rgba(21, 101, 192, 0.35), 0px 5px 30px 1px rgba(0, 0, 0, 0.2); }
   .button-cta:hover {
     -webkit-transform: translate(0, -10%);
     -ms-transform: translate(0, -10%);
@@ -88,8 +88,8 @@ body {
     -o-transition: all .45s ease-in;
     transition: all .45s ease-in; }
   .button-shadow:hover {
-    -webkit-box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.45), 0px 10px 40px -5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.45), 0px 10px 40px -5px rgba(0, 0, 0, 0.3); }
+    -webkit-box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.25), 0px 10px 40px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.25), 0px 10px 40px -5px rgba(0, 0, 0, 0.1); }
 
 .brand-logo, .brand-logo_grey svg {
   width: 2em;
@@ -265,7 +265,7 @@ body {
     background-color: #3D4D65; }
 
 .cv--content {
-  padding-left: 6.525em; }
+  padding-left: 5.075em; }
   @media (max-width: 26.5625em) {
     .cv--content {
       padding-left: 1.45em; } }
@@ -295,16 +295,16 @@ body {
     padding-top: 0;
     font-weight: bold;
     color: #333333; }
-  .project--title {
+  .project--title, .project--title_icecube, .project--title_teal {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700; }
     .project--title_icecube {
       color: #1565C0; }
-    .project--title_badass {
+    .project--title_teal {
       color: #008080; }
 
-.contact--title {
+.contact--title, .contact--title_hire, .contact--title_org {
   font-weight: 700;
   font-family: "Playfair Display", serif;
   text-transform: capitalize; }
@@ -312,6 +312,9 @@ body {
     color: #F44336; }
   .contact--title_org {
     color: #d81b60; }
+
+.contact--content {
+  max-width: 32em; }
 
 .contact--email {
   color: #1565C0;
