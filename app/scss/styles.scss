@@ -448,15 +448,18 @@ body {
 }
 
 // Media Breakpoints
-@media (max-width: 20em) {
+@media (max-width: 26.5625em) {
   .profile .image-wrapper {
     max-width: 320px;
     height: 320px;
     &::before {
-      left: 20%;
-      right: 20%;
+      left: 15%;
+      right: 15%;
       bottom: 10%;
     }
+  }
+  .hero-headline{
+    font-size: 2.15733em;
   }
 }
 
