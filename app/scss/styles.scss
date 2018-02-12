@@ -336,7 +336,7 @@ body {
       top: $apart;
       left: 0;
       width: $gutter*2.5;
-      height: 4px;
+      height: 4%;
       background-color: $slateteal;
     }
   }
@@ -373,7 +373,7 @@ body {
     margin-bottom: 0;
   }
   &--date {
-    padding-top: 0;
+    padding-top: 2.576em;
     font-weight: bold;
     color: $dark-grey;
   }
@@ -414,7 +414,7 @@ body {
     color: $icecube;
     font-weight: normal;
     font-family: $font-custome;
-    font-size: 62px;
+    font-size: 3.875em;
     text-align: center;
     padding: 0 0 $apart;
     overflow-wrap: break-word;

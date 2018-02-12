@@ -261,7 +261,7 @@ body {
     top: 0.725em;
     left: 0;
     width: 3.625em;
-    height: 4px;
+    height: 4%;
     background-color: #3D4D65; }
 
 .cv--content {
@@ -292,7 +292,7 @@ body {
   .project:last-of-type {
     margin-bottom: 0; }
   .project--date {
-    padding-top: 0;
+    padding-top: 2.576em;
     font-weight: bold;
     color: #333333; }
   .project--title, .project--title_icecube, .project--title_teal {
@@ -320,7 +320,7 @@ body {
   color: #1565C0;
   font-weight: normal;
   font-family: "Playfair Display", serif;
-  font-size: 62px;
+  font-size: 3.875em;
   text-align: center;
   padding: 0 0 0.725em;
   overflow-wrap: break-word; }
