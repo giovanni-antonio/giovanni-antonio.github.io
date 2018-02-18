@@ -295,14 +295,16 @@ body {
     padding-top: 2.576em;
     font-weight: bold;
     color: #333333; }
-  .project--title, .project--title_icecube, .project--title_teal {
+  .project--title, .project--title_dec, .project--title_nov, .project--title_feb {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700; }
-    .project--title_icecube {
+    .project--title_dec {
       color: #1565C0; }
-    .project--title_teal {
+    .project--title_nov {
       color: #008080; }
+    .project--title_feb {
+      color: #ff5722; }
 
 .contact--title, .contact--title_hire, .contact--title_org {
   font-weight: 700;

@@ -25,6 +25,7 @@ $pink: #d81b60;
 $green: #006064;
 $lightgreen: #4CAF50;
 $slateteal: #3D4D65;
+$february: #ff5722;
 $gutter: 1.45em;
 $apart: $gutter / 2;
 $header-height: $apart*3;
@@ -381,13 +382,17 @@ body {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700;
-    &_icecube {
+    &_dec {
       @extend .project--title;
       color: $icecube;
     }
-    &_teal {
+    &_nov {
       @extend .project--title;
       color: $teal;
+    }
+    &_feb{
+      @extend .project--title;
+      color: $february;
     }
   }
 }
