@@ -1,0 +1,51 @@
+// Variables
+$font-body: "Roboto";
+$font-custome :'Playfair Display',
+serif;
+// Colors
+$background-color: #0D0D0D;
+$dark-theme: #212121;
+$dark-theme-text: #FAFAFA;
+$light-theme: #FAFAFA;
+$light-theme-text: #000;
+$hover-color: #104d92;
+$dark-grey: #333333;
+$slategray: #EBEBEB;
+$grey: #FAFAFA;
+$snow: #FFF;
+$icecube: #1565C0;
+$badass: #BADA55;
+$fire: #F44336;
+$teal: #008080;
+$pink: #d81b60;
+$green: #006064;
+$lightgreen: #4CAF50;
+$slateteal: #3D4D65;
+$february: #ff5722;
+// Sizing/Spacing
+$gutter: 1.45em;
+$apart: $gutter / 2;
+$header-height: $apart*3;
+$section-gutter-top: $gutter * 3;
+$section-gutter-bottom: $gutter * 5;
+$kernel: 0.25em;
+$brand-kernel: 0.085em;
+$width: 900px;
+// Helpers
+@mixin gradient($angle, $color1, $percentage, $color2, $alpha) {
+  background-image: linear-gradient($angle, $color1 $percentage, rgba($color2, $alpha));
+}
+
+@mixin box-shadow {
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+}
+
+@mixin style-card($fillColor) {
+  @include gradient(45deg, $fillColor, 45%, $fillColor, .7);
+  @if (lightness($fillColor) > 40) {
+    color: $background-color;
+  }
+  @else {
+    color: $grey;
+  }
+}
