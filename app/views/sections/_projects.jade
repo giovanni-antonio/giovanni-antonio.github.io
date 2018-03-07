@@ -5,6 +5,6 @@ section#projects.section
       each prod in projects
         li.project
           h4.project--date= prod.date 
-          h3(class="project--title_" + prod.theme)= prod.title
+          h3(class="project--title project--title_" + prod.theme)= prod.title
           p= prod.description
           a(href=prod.link).button-secondary.button-shadow  Visit project 

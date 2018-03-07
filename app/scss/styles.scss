@@ -327,22 +327,16 @@ body {
     padding-top: 2.576em;
     font-weight: bold;
     color: $dark-grey;
+    text-transform: capitalize;
   }
   &--title {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700;
-    &_dec {
-      @extend .project--title;
-      color: $icecube;
-    }
-    &_nov {
-      @extend .project--title;
-      color: $teal;
-    }
-    &_feb {
-      @extend .project--title;
-      color: $february;
+    @each $color-key, $color-value in $colors {
+      &_#{$color-key}{
+        color: $color-value;
+      }
     }
   }
 }

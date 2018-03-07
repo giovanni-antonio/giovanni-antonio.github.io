@@ -294,17 +294,36 @@ body {
   .project--date {
     padding-top: 2.576em;
     font-weight: bold;
-    color: #333333; }
-  .project--title, .project--title_dec, .project--title_nov, .project--title_feb {
+    color: #333333;
+    text-transform: capitalize; }
+  .project--title {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700; }
-    .project--title_dec {
-      color: #1565C0; }
-    .project--title_nov {
-      color: #008080; }
+    .project--title_jan {
+      color: #1a7cfc; }
     .project--title_feb {
-      color: #ff5722; }
+      color: #9b233b; }
+    .project--title_march {
+      color: #1762d9; }
+    .project--title_april {
+      color: #765; }
+    .project--title_may {
+      color: #987; }
+    .project--title_june {
+      color: #002366; }
+    .project--title_july {
+      color: #191970; }
+    .project--title_aug {
+      color: #f5de50; }
+    .project--title_sept {
+      color: #f56; }
+    .project--title_oct {
+      color: #c2185b; }
+    .project--title_nov {
+      color: #bada55; }
+    .project--title_dec {
+      color: #cc0000; }
 
 .contact--title, .contact--title_hire, .contact--title_org {
   font-weight: 700;
