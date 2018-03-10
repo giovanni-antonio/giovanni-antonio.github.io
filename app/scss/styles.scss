@@ -120,13 +120,25 @@ body {
   width: 2em;
   height: 2em;
   float: left;
-  transition: all .45s ease-in;
-  &:hover {
-    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+  &:hover span {
+    transform: translateY(0);
+    opacity: 1;
+  
+  }
+  span {
+    position: absolute;
+    left: 50px;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    top: 10%;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-family: $font-custome;
+    color: $icecube;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all .45s ease .15s;
   }
   &_grey {
     svg {
@@ -333,8 +345,9 @@ body {
     padding-top: 0;
     text-transform: capitalize;
     font-weight: 700;
-    @each $color-key, $color-value in $colors {
-      &_#{$color-key}{
+    @each $color-key,
+    $color-value in $colors {
+      &_#{$color-key} {
         color: $color-value;
       }
     }

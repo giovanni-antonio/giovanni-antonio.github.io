@@ -94,19 +94,30 @@ body {
 .brand-logo, .brand-logo_grey svg {
   width: 2em;
   height: 2em;
-  float: left;
-  -webkit-transition: all .45s ease-in;
-  -o-transition: all .45s ease-in;
-  transition: all .45s ease-in; }
-  .brand-logo:hover, .brand-logo_grey svg:hover {
-    -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    perspective: 1000px; }
+  float: left; }
+  .brand-logo:hover span, .brand-logo_grey svg:hover span {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1; }
+  .brand-logo span, .brand-logo_grey svg span {
+    position: absolute;
+    left: 50px;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    top: 10%;
+    font-weight: 900;
+    text-transform: capitalize;
+    font-family: "Playfair Display", serif;
+    color: #1565C0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+    -webkit-transition: all .45s ease .15s;
+    -o-transition: all .45s ease .15s;
+    transition: all .45s ease .15s; }
   .brand-logo_grey svg path {
     fill-opacity: 0; }
 
