@@ -69,7 +69,9 @@ body {
 .nopb {
   padding-bottom: 0;
 }
-
+.u-pad-sides{
+  padding: 0 4em 0;
+}
 // Sections / themes / special headings 
 .section {
   padding: $section-gutter-top 0 $section-gutter-bottom;
@@ -114,7 +116,30 @@ body {
     box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.25), 0px 10px 40px -5px rgba(0, 0, 0, 0.1);
   }
 }
-
+.back-home{
+  position: sticky;
+  top: 10%;
+  right: 5%;
+  float: right;
+  width: 2.625em;
+  height: 2.625em;
+  background-color: $icecube;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 1.12em;
+  box-shadow: 0 0 25px -1px rgba(0, 0, 0, 0.5);
+  transition: all .45s ease-in;
+  &:hover{
+    box-shadow: 0 0 25px -2px rgba(0, 0, 0, 0.15);
+  }
+  a{
+    color: #fff;
+  }
+}
 // Branding
 .brand-logo {
   width: 2em;
