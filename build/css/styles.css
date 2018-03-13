@@ -51,9 +51,6 @@ body {
 .nopb {
   padding-bottom: 0; }
 
-.u-pad-sides {
-  padding: 0 4em 0; }
-
 .section, .section_ligthslate {
   padding: 4.35em 0 7.25em; }
   .section_ligthslate {
@@ -95,36 +92,26 @@ body {
     box-shadow: 0px 10px 20px -3px rgba(21, 101, 192, 0.25), 0px 10px 40px -5px rgba(0, 0, 0, 0.1); }
 
 .back-home {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10%;
+  position: fixed;
+  bottom: 0;
   right: 5%;
   float: right;
   width: 2.625em;
   height: 2.625em;
   background-color: #1565C0;
-  text-align: center;
-  z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: 100;
-  font-size: 1.12em;
+  z-index: 10;
   -webkit-box-shadow: 0 0 25px -1px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 25px -1px rgba(0, 0, 0, 0.5);
   -webkit-transition: all .45s ease-in;
   -o-transition: all .45s ease-in;
-  transition: all .45s ease-in; }
+  transition: all .45s ease-in;
+  text-align: center; }
   .back-home:hover {
     -webkit-box-shadow: 0 0 25px -2px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 25px -2px rgba(0, 0, 0, 0.15); }
   .back-home a {
+    font-weight: 100;
+    font-size: 1.666em;
     color: #fff; }
 
 .brand-logo, .brand-logo_grey svg {
@@ -194,6 +181,11 @@ body {
   60% {
     -webkit-transform: translate3d(4px, 0, 0);
     transform: translate3d(4px, 0, 0); } }
+
+#home {
+  position: relative;
+  z-index: 11;
+  background-color: inherit; }
 
 .hero-headline {
   padding-top: 0;
