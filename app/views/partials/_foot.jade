@@ -2,12 +2,12 @@
 footer.footer.u-pad-top
   .container
     .group
-      .grid-1
+      .grid-2
         .brand-logo_grey
           a(href="#home" aria-label="logo") 
                 svg
                   use(xlink:href="#logo-grey")
-      .grid-2
+      .grid-3
         span.footer--blurb Follow me on:
         ul.u-list-inline.footer--social
           each link in links
@@ -15,7 +15,7 @@ footer.footer.u-pad-top
               a(href=link.href aria-label=link.id) 
                 svg
                   use(xlink:href="#" + link.id)
-      .grid-1
+      .grid-3
         p.footer--legal
           | #{year} Made by
           <strong> #{author}</strong>

@@ -119,8 +119,9 @@ body {
   bottom: 0;
   right: 5%;
   float: right;
-  width: 2.625em;
-  height: 2.625em;
+  width: 48px;
+  height:48px;
+  border-radius: 100%;
   background-color: $icecube;
   z-index: 10;
   box-shadow: 0 0 25px -1px rgba(0, 0, 0, 0.5);
@@ -213,18 +214,16 @@ body {
 // Header / menu Styles
 .main-header {
   min-height: $header-height;
-  padding-top: $gutter;
 }
 
 .menu {
-  padding-top: $apart/2;
   height: 2em;
   text-align: right;
   li {
     &:first-of-type {
       margin-left: 0;
     }
-    margin-left: $gutter*2;
+    margin-left: $gutter*4;
     display: inline-block;
     text-transform: capitalize;
     @media (max-width:30em) {
@@ -245,7 +244,6 @@ body {
 // Main body content
 // Profile
 .profile {
-  padding-top: $apart;
   .image-wrapper {
     position: relative;
     top: 0;
