@@ -8,7 +8,7 @@ footer.footer.u-pad-top
                   svg
                     use(xlink:href="#logo-grey")
       .grid-4
-        span.footer--blurb Say hi @
+        span.footer--blurb Contact me @
         ul.u-list-inline.footer--social
           each link in links
             li 
@@ -17,9 +17,10 @@ footer.footer.u-pad-top
                   use(xlink:href="#" + link.id)
       .grid-4
         p.footer--legal
-          | 
-          <strong>2018 #{author}</strong>
-          | . All Rights Reserved.
+          | Say hi, 
+          a(href="https://twitter.com/GiovanniDeAndre")
+            <strong>@GiovanniDeAndre</strong>
+     
   
 //- scripts
 //- script(type="application/javascript", src=pathToJs)
