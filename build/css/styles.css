@@ -39,7 +39,7 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-    min-height: 100vh; }
+    height: 100%; }
   .poster--content {
     min-height: 10em;
     display: -webkit-box;
