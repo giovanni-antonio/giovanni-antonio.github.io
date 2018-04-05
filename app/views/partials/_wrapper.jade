@@ -12,18 +12,26 @@ html(lang="en")
   //- body
   body
     include _svg-icons.jade
-    #home.u-pad-bottom-double
+    //- #home.u-pad-bottom-double
+    //-   .container
+    //-     include ../sections/_header.jade
+    //-     include ../sections/_about.jade
+    //- <!-- Main Page -->
+    //- include ../sections/_cv.jade
+    //- include ../sections/_projects.jade
+    //- include ../sections/_contact.jade
+    main.poster
       .container
-        include ../sections/_header.jade
-        include ../sections/_about.jade
-    <!-- Main Page -->
-    include ../sections/_cv.jade
-    include ../sections/_projects.jade
-    include ../sections/_contact.jade
-    <!-- Footer -->
-    include _foot.jade
-    .back-home 
-      a(href="#home") &uarr;
+        .poster--content
+          h2.poster--type Giovanni Lara
+            br
+            span(style="font-size: 16px") &mdash; Jr. Front End Dev
+
+      <!-- Footer -->
+      include _foot.jade
+    //- Photo by Jeremy Bishop on Unsplash
+    //- .back-home 
+      //- a(href="#home") &uarr;
     <!-- End Footer -->
     <!-- End Main Page -->
     <!-- Main Content -->

@@ -35,7 +35,43 @@ body {
     font-family: $font-body;
   }
 }
+// POSTER
 
+.poster{
+
+  position: relative;
+  background-color: rgba(#000, 0.99);
+  &:before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: url("build/images/jeremy-bishop.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    background-color: rgba($dark-grey, .7);
+    background-blend-mode: multiply;
+  }
+  &--content{
+   height: 60vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  &--type{
+    color: #fff;
+  }
+  footer{
+    background-color: rgba($color: #000000, $alpha: .45);
+    color: #fff;
+    font-family: $font-custome;
+    font-size: 12px;
+    text-align: center;
+  }
+}
 /* Site Styles */
 
 .l-content {
@@ -417,12 +453,12 @@ body {
       svg {
         width: $gutter/1.25;
         height: $gutter/1.25;
-        fill: $dark-grey;
+        fill: #ddd;
       }
       a {
         transition: all .45s ease-in;
         &:hover svg {
-          fill: $icecube;
+          fill: #fff;
         }
       }
     }
