@@ -1,21 +1,21 @@
 //- footer
 footer.footer.group
-  .grid-4
-    ul.footer--social
-      li.footer--legal Follow me @
-      each link in links
-        li 
-          a(style="color:white" href=link.href aria-label=link.id) 
-            svg
-              use(xlink:href="#" + link.id)
   .grid-2
-    p.footer--legal 
+    p 
       | Contact: 
       a(href=email) hello.giolara@gmail.com
-  .grid-2
-    p.footer--legal
+  .grid-3
+    p
       | Say hi, 
       a(href="https://twitter.com/GiovanniDeAndre") @GiovanniDeAndre
+  .grid-3
+    ul.footer--social
+      li Follow me @
+      each link in links
+        li 
+          a(href=link.href aria-label=link.id)= link.id
+            //- svg
+            //-   use(xlink:href="#" + link.id)
   
   
 //- scripts
