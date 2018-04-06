@@ -8,20 +8,11 @@ $dark-theme: #212121;
 $dark-theme-text: #FAFAFA;
 $light-theme: #FAFAFA;
 $light-theme-text: #000;
-$hover-color: #104d92;
 $dark-grey: #333333;
 $slategray: #EBEBEB;
 $grey: #FAFAFA;
 $snow: #FFF;
-$icecube: #1565C0;
-$badass: #BADA55;
-$fire: #F44336;
-$teal: #008080;
-$pink: #d81b60;
-$green: #006064;
-$lightgreen: #4CAF50;
-$slateteal: #3D4D65;
-$february: #ff5722;
+
 // Sizing/Spacing
 $gutter: 1.618em;
 $apart: $gutter / 2;
@@ -32,35 +23,3 @@ $kernel: 0.25em;
 $brand-kernel: 0.085em;
 $width: 900px;
 // Helpers
-@mixin gradient($angle, $color1, $percentage, $color2, $alpha) {
-  background-image: linear-gradient($angle, $color1 $percentage, rgba($color2, $alpha));
-}
-
-@mixin box-shadow {
-  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
-}
-
-@mixin style-card($fillColor) {
-  @include gradient(45deg, $fillColor, 45%, $fillColor, .7);
-  @if (lightness($fillColor) > 40) {
-    color: $background-color;
-  }
-  @else {
-    color: $grey;
-  }
-}
-
-$colors : (
-  jan: #1a7cfc,
-  feb: #9b233b,
-  march: #1762d9,
-  april: #765,
-  may: #987,
-  june: #002366,
-  july: #191970,
-  aug: #f5de50,
-  sept: #f56,
-  oct: #c2185b,
-  nov: #bada55,
-  dec: #cc0000
-);

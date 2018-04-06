@@ -1,26 +1,22 @@
 //- footer
-footer.footer.u-pad-top
-  .container
-      //- .group
-        .grid-2
-          .brand-logo_grey
-            a(href="#home" aria-label="logo") 
-                  svg
-                    use(xlink:href="#logo-grey")
-      .grid-4
-        span.footer--blurb Contact me @
-        ul.u-list-inline.footer--social
-          each link in links
-            li 
-              a(style="color:white" href=link.href aria-label=link.id) 
-                svg
-                  use(xlink:href="#" + link.id)
-      .grid-4
-        p.footer--legal
-          | Say hi, 
-          a(href="https://twitter.com/GiovanniDeAndre")
-            <strong>@GiovanniDeAndre</strong>
-     
+footer.footer.group
+  .grid-4
+    ul.footer--social
+      li.footer--legal Follow me @
+      each link in links
+        li 
+          a(style="color:white" href=link.href aria-label=link.id) 
+            svg
+              use(xlink:href="#" + link.id)
+  .grid-2
+    p.footer--legal 
+      | Contact: 
+      a(href=email) hello.giolara@gmail.com
+  .grid-2
+    p.footer--legal
+      | Say hi, 
+      a(href="https://twitter.com/GiovanniDeAndre") @GiovanniDeAndre
+  
   
 //- scripts
 //- script(type="application/javascript", src=pathToJs)

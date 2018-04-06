@@ -4,30 +4,34 @@
 /*
 * Reset styles
 */
-html.wf-active {
-  font-family: "Roboto"; }
-
 html {
   font-size: 100%; }
 
 body {
-  background-color: #FFF;
-  font-family: "Roboto";
-  font-weight: 300;
-  color: #333333; }
+  background-color: #0D0D0D;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: normal;
+  color: #fff; }
 
-.wf-active h1,
-.wf-active h2,
-.wf-active h3 {
-  font-family: "Playfair Display", serif, Georgia, "Times New Roman", Times, serif; }
+.wf-playfairdisplay-n4-active body {
+  font-family: "Playfair Display", serif;
+  font-weight: 400; }
 
-.wf-active .hero-sub-heading {
-  font-family: "Roboto"; }
+.wf-playfairdisplay-i4-active a {
+  font-style: italic;
+  font-weight: 400; }
+
+.wf-playfairdisplay-n9-active .poster--type {
+  font-weight: 900;
+  font-family: "Playfair Display", serif; }
+
+.wf-active {
+  font-family: "Playfair Display", serif; }
 
 .poster {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.99);
-  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
   -webkit-transition: all .9s ease .1s;
   -o-transition: all .9s ease .1s;
   transition: all .9s ease .1s; }
@@ -40,8 +44,8 @@ body {
     height: 100%;
     width: 100%;
     height: 100%; }
-  .poster--content {
-    min-height: 10em;
+  .poster--wrapper {
+    min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -52,90 +56,87 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     text-shadow: 0 1px 1px #000; }
-    .poster--content span {
+    .poster--wrapper span {
       float: right;
       font-weight: 400; }
+  .poster--content {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff; }
   .poster--type {
     color: #fff;
     font-weight: 700; }
-  .poster footer {
-    background-color: rgba(0, 0, 0, 0.45);
-    color: #fff;
-    font-family: "Playfair Display", serif;
-    font-size: 12px;
-    text-align: center; }
-    .poster footer a {
-      color: #eee; }
+  .poster p {
+    padding-bottom: 3.236em; }
+
+.button-secondary {
+  color: #fff;
+  border-color: #fff; }
+  .button-secondary:hover {
+    background-color: rgba(13, 13, 13, 0.75); }
 
 @media (min-width: 0) {
   .poster:before {
-    background: url("build/images/jeremy-bishop.jpg") no-repeat center;
-    background-color: rgba(51, 51, 51, 0.7);
+    background: url("build/images/jeremy-bishop.jpg") no-repeat center 0;
+    background-color: rgba(13, 13, 13, 0.55);
     background-blend-mode: multiply;
-    -webkit-filter: grayscale(50%) blur(6px);
-    filter: grayscale(50%) blur(6px);
     background-size: cover; } }
 
 @media (min-width: 736px) {
   .poster:before {
-    background: url("build/images/jeremy-bishop-x.jpg") no-repeat center;
-    background-color: rgba(51, 51, 51, 0.7);
+    background: url("build/images/jeremy-bishop-x.jpg") no-repeat center 0;
+    background-color: rgba(13, 13, 13, 0.55);
     background-blend-mode: multiply;
-    -webkit-filter: grayscale(50%) blur(6px);
-    filter: grayscale(50%) blur(6px);
     background-size: cover; } }
 
 @media (min-width: 1024px) {
   .poster:before {
-    background: url("build/images/jeremy-bishop-1x.jpg") no-repeat center;
-    background-color: rgba(51, 51, 51, 0.7);
+    background: url("build/images/jeremy-bishop-1x.jpg") no-repeat center 0;
+    background-color: rgba(13, 13, 13, 0.55);
     background-blend-mode: multiply;
-    -webkit-filter: grayscale(50%) blur(6px);
-    filter: grayscale(50%) blur(6px);
     background-size: cover; } }
 
 @media (min-width: 1440px) {
   .poster:before {
-    background: url("build/images/jeremy-bishop-2x.jpg") no-repeat center;
-    background-color: rgba(51, 51, 51, 0.7);
+    background: url("build/images/jeremy-bishop-2x.jpg") no-repeat center 0;
+    background-color: rgba(13, 13, 13, 0.55);
     background-blend-mode: multiply;
-    -webkit-filter: grayscale(50%) blur(6px);
-    filter: grayscale(50%) blur(6px);
     background-size: cover; } }
 
 .nopb {
   padding-bottom: 0; }
 
-.section, .section_ligthslate {
-  padding: 4.854em 0 8.09em; }
-  .section_ligthslate {
-    background-color: #FAFAFA; }
-  .section--heading {
-    padding-bottom: 3.236em;
-    color: #3D4D65;
-    font-weight: 900;
-    text-align: center;
-    text-transform: capitalize; }
-
 .footer {
-  background-color: #FAFAFA; }
+  padding-top: 100px;
+  color: #fff; }
+  .footer a {
+    color: #979797;
+    font-style: italic;
+    -webkit-transition: all .45s ease;
+    -o-transition: all .45s ease;
+    transition: all .45s ease; }
+    .footer a:hover {
+      color: #ddd; }
   .footer--social {
-    color: #333333;
-    float: left; }
+    float: none; }
     .footer--social li {
-      margin: 0 3.236em 0 0; }
+      float: left;
+      margin: 0 4.045em 0 0; }
+      .footer--social li:last-of-type {
+        margin-right: 0; }
       .footer--social li svg {
-        width: 1.2944em;
-        height: 1.2944em;
-        fill: #ddd; }
-      .footer--social li a {
-        -webkit-transition: all .45s ease-in;
-        -o-transition: all .45s ease-in;
-        transition: all .45s ease-in; }
-        .footer--social li a:hover svg {
-          fill: #fff; }
+        width: .95em;
+        height: .95em;
+        fill: #979797;
+        -webkit-transition: all .45s ease;
+        -o-transition: all .45s ease;
+        transition: all .45s ease; }
+        .footer--social li svg:hover {
+          fill: #ddd; }
   .footer--legal {
-    font-size: 1em; }
+    font-size: .85em;
+    float: none; }
   .footer--blurb {
     float: left;
     margin-right: 3.236em;
