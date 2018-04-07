@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: $background-color;
+  background-color: #000;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: normal;
   color: #fff;
@@ -37,11 +37,23 @@ body {
   font-family: $font-custome;
 }
 
+.line {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 96px;
+    background-color: #fff;
+  }
+}
+
 // POSTER
 .poster {
   position: relative;
-  background-color: rgba(#000, 0.55);
-  min-height: 100vh;
+  background-color: rgba($background-color, .99);
   transition: all .9s ease .1s;
   &:before {
     content: "";
@@ -54,46 +66,70 @@ body {
     height: 100%;
   }
   &--wrapper {
-    min-height: 100vh;
+    min-height: 662px;
     display: flex;
     align-items: center;
     justify-content: center;
-    span {
-      float: right;
-      font-weight: 400;
-    }
   }
   &--content {
     width: 100vw;
+    height: 335px;
     margin: 0 auto;
-    text-align: center;
-    color: #fff;
+  }
+  &--header {
+    max-width: 645px;
+    margin: 0 auto;
   }
   &--type {
+    text-align: center;
     text-shadow: 0 1px 1px rgb(27, 27, 27);
     color: #fff;
     font-weight: 700;
-    padding-top: $gutter/2;
-    padding-bottom: 0;
+    padding: 8px 0 8px;
+    font-size: 96px;
+    line-height: 1;
   }
-  .sub-type {
+  &--small-type {
+    padding: 0;
     font-style: italic;
-    padding-bottom: $gutter*2;
-    padding-top: $gutter;
+    font-size: 14px;
   }
 }
 
+.button {
+  margin-top: 72px;
+}
+
 .button-secondary {
+  min-width: 250px;
+  padding: 24px 36px;
+  font-size: 14px;
   color: #fff;
   border-color: #fff;
+  margin-bottom: 0;
+  transition: all .35s ease;
   &:hover {
-    background-color: rgba($background-color, .75);
+    background-color: rgba($background-color, .95);
+  }
+}
+
+.plus {
+  position: relative;
+  margin-right: 1em;
+  &:before {
+    content: "+";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #979797;
+    font-weight: normal;
   }
 }
 
 @mixin background-img($img) {
   background: url($img) no-repeat center 0;
-  background-color: rgba($background-color, .55);
+  background-color: rgba($background-color, .75);
   background-blend-mode: multiply;
   background-size: cover;
 }
@@ -137,44 +173,70 @@ body {
 
 // Footer 
 .footer {
-  padding-top: 100px;
+  padding-top: 96px;
   color: #fff;
   font-size: .875em;
   p,
   li,
   a {
-    font-size: .875em;
+    font-size: 12px;
+  }
+  p>a {
+    margin-left: $gutter;
   }
   a {
     color: #979797;
     font-style: italic;
     transition: all .45s ease;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      left: 10%;
+      height: 1px;
+      top: 24px;
+      bottom: 0;
+      background-color: #ddd;
+      opacity: 0;
+      transition: all .35s ease;
+    }
     &:hover {
       color: #ddd;
-    }
-  }
-  &--social {
-    float: none;
-    li {
-      float: left;
-      margin: 0 $gutter*2.5 0 0;
-      &:last-of-type {
-        margin-right: 0;
+      &:before {
+        opacity: 1;
       }
     }
   }
+  li {
+    display: inline;
+    margin: 0 $gutter*2.5 0 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
-.svg {
-  position: absolute;
-  top: 5%;
-  bottom: 0;
-  left: 5%;
-  width: 90%;
-  height: 90vh;
+@media (min-width:736px) {
+  .grid-third {
+    width: 33.333333% - 2.02254%;
+  }
+}
+
+.footer.container {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @media (max-width:425px) {
+  .poster--type {
+    font-size: 72px;
+    text-align: left;
+  }
+  .poster--small-type{
+    text-align: left;
+  }
+ 
   .footer--social li {
     margin: 0;
     padding-bottom: $gutter;

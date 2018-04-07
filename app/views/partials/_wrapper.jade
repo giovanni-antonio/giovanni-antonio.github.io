@@ -21,19 +21,21 @@ html(lang="en")
     //- include ../sections/_projects.jade
     //- include ../sections/_contact.jade
     
-    main.poster
-      .svg 
-        <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 1281 668" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><g><g opacity="0.1"><path d="M0.5,667.5l1280,-667" style="fill:none;stroke:#f9fafa;stroke-width:1px;"/><path d="M1280.5,667.5l-1280,-667" style="fill:none;stroke:#f9fafa;stroke-width:1px;"/><path d="M0.5,667.5l640,-667" style="fill:none;stroke:#f9fafa;stroke-width:1px;"/><path d="M640.5,667.5l-640,-667" style="fill:none;stroke:#f9fafa;stroke-width:1px;"/><path d="M640.5,667.5l640,-667" style="fill:none;stroke:#f9fafa;stroke-width:1px;"/><path d="M1280.5,667.5l-640,-667" style="fill:none;stroke:#f9fafa;stroke-width:1px;"/></g></g></svg>
+    .poster
       .container.poster--wrapper
         .poster--content
           .group
             .grid-8
-              h2.poster--type Hi, I'm Giovanni Lara
-              p.sub-type Front End Developer
-              .button 
+              .poster--header
+                p.poster--small-type.u-align-left Hola, I'm 
+                h2.poster--type Giovanni Lara
+                p.poster--small-type.u-align-right Front End Developer
+                  span.line
+              .button.u-align-center 
                 a(href=linkToContactForm).button-secondary Hire me
           <!-- Footer -->
           include _foot.jade
+      //- .gradient
     //- Photo by Jeremy Bishop on Unsplash
     //- .back-home 
       //- a(href="#home") &uarr;

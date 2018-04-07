@@ -8,7 +8,7 @@ html {
   font-size: 100%; }
 
 body {
-  background-color: #0D0D0D;
+  background-color: #000;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: normal;
   color: #fff; }
@@ -28,10 +28,20 @@ body {
 .wf-active {
   font-family: "Playfair Display", serif; }
 
+.line {
+  position: relative; }
+  .line:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 96px;
+    background-color: #fff; }
+
 .poster {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.55);
-  min-height: 100vh;
+  background-color: rgba(13, 13, 13, 0.99);
   -webkit-transition: all .9s ease .1s;
   -o-transition: all .9s ease .1s;
   transition: all .9s ease .1s; }
@@ -45,7 +55,7 @@ body {
     width: 100%;
     height: 100%; }
   .poster--wrapper {
-    min-height: 100vh;
+    min-height: 662px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -55,56 +65,79 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .poster--wrapper span {
-      float: right;
-      font-weight: 400; }
   .poster--content {
     width: 100vw;
-    margin: 0 auto;
-    text-align: center;
-    color: #fff; }
+    height: 335px;
+    margin: 0 auto; }
+  .poster--header {
+    max-width: 645px;
+    margin: 0 auto; }
   .poster--type {
+    text-align: center;
     text-shadow: 0 1px 1px #1b1b1b;
     color: #fff;
     font-weight: 700;
-    padding-top: 0.809em;
-    padding-bottom: 0; }
-  .poster .sub-type {
+    padding: 8px 0 8px;
+    font-size: 96px;
+    line-height: 1; }
+  .poster--small-type {
+    padding: 0;
     font-style: italic;
-    padding-bottom: 3.236em;
-    padding-top: 1.618em; }
+    font-size: 14px; }
+
+.button {
+  margin-top: 72px; }
 
 .button-secondary {
+  min-width: 250px;
+  padding: 24px 36px;
+  font-size: 14px;
   color: #fff;
-  border-color: #fff; }
+  border-color: #fff;
+  margin-bottom: 0;
+  -webkit-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease; }
   .button-secondary:hover {
-    background-color: rgba(13, 13, 13, 0.75); }
+    background-color: rgba(13, 13, 13, 0.95); }
+
+.plus {
+  position: relative;
+  margin-right: 1em; }
+  .plus:before {
+    content: "+";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #979797;
+    font-weight: normal; }
 
 @media (min-width: 0) {
   .poster:before {
     background: url("build/images/jeremy-bishop.jpg") no-repeat center 0;
-    background-color: rgba(13, 13, 13, 0.55);
+    background-color: rgba(13, 13, 13, 0.75);
     background-blend-mode: multiply;
     background-size: cover; } }
 
 @media (min-width: 736px) {
   .poster:before {
     background: url("build/images/jeremy-bishop-x.jpg") no-repeat center 0;
-    background-color: rgba(13, 13, 13, 0.55);
+    background-color: rgba(13, 13, 13, 0.75);
     background-blend-mode: multiply;
     background-size: cover; } }
 
 @media (min-width: 1024px) {
   .poster:before {
     background: url("build/images/jeremy-bishop-1x.jpg") no-repeat center 0;
-    background-color: rgba(13, 13, 13, 0.55);
+    background-color: rgba(13, 13, 13, 0.75);
     background-blend-mode: multiply;
     background-size: cover; } }
 
 @media (min-width: 1440px) {
   .poster:before {
     background: url("build/images/jeremy-bishop-2x.jpg") no-repeat center 0;
-    background-color: rgba(13, 13, 13, 0.55);
+    background-color: rgba(13, 13, 13, 0.75);
     background-blend-mode: multiply;
     background-size: cover; } }
 
@@ -112,38 +145,59 @@ body {
   padding-bottom: 0; }
 
 .footer {
-  padding-top: 100px;
+  padding-top: 96px;
   color: #fff;
   font-size: .875em; }
   .footer p,
   .footer li,
   .footer a {
-    font-size: .875em; }
+    font-size: 12px; }
+  .footer p > a {
+    margin-left: 1.618em; }
   .footer a {
     color: #979797;
     font-style: italic;
     -webkit-transition: all .45s ease;
     -o-transition: all .45s ease;
-    transition: all .45s ease; }
+    transition: all .45s ease;
+    position: relative; }
+    .footer a:before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      left: 10%;
+      height: 1px;
+      top: 24px;
+      bottom: 0;
+      background-color: #ddd;
+      opacity: 0;
+      -webkit-transition: all .35s ease;
+      -o-transition: all .35s ease;
+      transition: all .35s ease; }
     .footer a:hover {
       color: #ddd; }
-  .footer--social {
-    float: none; }
-    .footer--social li {
-      float: left;
-      margin: 0 4.045em 0 0; }
-      .footer--social li:last-of-type {
-        margin-right: 0; }
+      .footer a:hover:before {
+        opacity: 1; }
+  .footer li {
+    display: inline;
+    margin: 0 4.045em 0 0; }
+    .footer li:last-of-type {
+      margin-right: 0; }
 
-.svg {
-  position: absolute;
-  top: 5%;
-  bottom: 0;
-  left: 5%;
-  width: 90%;
-  height: 90vh; }
+@media (min-width: 736px) {
+  .grid-third {
+    width: 31.31079%; } }
+
+.footer.container {
+  padding-top: 0;
+  padding-bottom: 0; }
 
 @media (max-width: 425px) {
+  .poster--type {
+    font-size: 72px;
+    text-align: left; }
+  .poster--small-type {
+    text-align: left; }
   .footer--social li {
     margin: 0;
     padding-bottom: 1.618em;

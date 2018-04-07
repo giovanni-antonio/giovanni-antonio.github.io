@@ -1,21 +1,27 @@
 //- footer
 footer.footer.group
-  .grid-2
+
+  .grid-third
     p 
-      | Contact: 
+      span.plus
+      | Contact
       a(href=email) hello.giolara@gmail.com
-  .grid-3
+  .grid-third
     p
+      span.plus
       | Say hi, 
       a(href="https://twitter.com/GiovanniDeAndre") @GiovanniDeAndre
-  .grid-3
-    ul.footer--social
-      li Follow me @
-      each link in links
-        li 
-          a(href=link.href aria-label=link.id)= link.id
-            //- svg
-            //-   use(xlink:href="#" + link.id)
+  .grid-third
+    ul
+      li
+        span.plus 
+        span Follow me @
+      li 
+        a(href="https://github.com/gioalo") GitHub
+      li 
+        a(href="http://codepen.io/Giovanni") CodePen 
+      li 
+        a(href="https://www.instagram.com/giokirito/") Instagram
   
   
 //- scripts
