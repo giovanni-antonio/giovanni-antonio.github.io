@@ -42,6 +42,7 @@ body {
 .poster {
   position: relative;
   background-color: rgba(13, 13, 13, 0.99);
+  height: 100vh;
   -webkit-transition: all .9s ease .1s;
   -o-transition: all .9s ease .1s;
   transition: all .9s ease .1s; }

@@ -54,6 +54,7 @@ body {
 .poster {
   position: relative;
   background-color: rgba($background-color, .99);
+  height: 100vh;
   transition: all .9s ease .1s;
   &:before {
     content: "";
