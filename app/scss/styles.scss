@@ -7,15 +7,40 @@
 * Reset styles
 */
 
+// Variables
+$font-body: "Roboto";
+$font-custome :'Playfair Display',
+serif;
+// Colors
+$background-color: #000;
+$dark-theme: #000;
+$dark-theme-text: #FAFAFA;
+$light-theme: #FAFAFA;
+$light-theme-text: #000;
+$dark-grey: #333333;
+$slategray: #EBEBEB;
+$grey: #FAFAFA;
+$snow: #FFF;
+// Sizing/Spacing
+$gutter: 1.618em;
+// Helpers
 html {
   font-size: 100%;
 }
 
 body {
-  background-color: #000;
+  background-color: $snow;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: normal;
   color: #fff;
+}
+
+a {
+  color: #000;
+}
+
+.wf-active body {
+  font-family: $font-custome;
 }
 
 .wf-playfairdisplay-n4-active body {
@@ -23,88 +48,18 @@ body {
   font-weight: 400;
 }
 
-.wf-playfairdisplay-i4-active a {
-  font-style: italic;
-  font-weight: 400;
-}
+// .wf-playfairdisplay-i4-active {
+//   font-style: italic;
+//   font-weight: 400;
+// }
 
-.wf-playfairdisplay-n9-active .poster--type {
+.wf-playfairdisplay-n9-active .page__headline {
   font-weight: 900;
   font-family: $font-custome;
 }
 
-.wf-active {
-  font-family: $font-custome;
-}
-
-.line {
-  position: relative;
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 1px;
-    width: 96px;
-    background-color: #fff;
-  }
-}
-
-// POSTER
-.poster {
-  position: relative;
-  background-color: rgba($background-color, .99);
-  height: 100vh;
-  transition: all .9s ease .1s;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    height: 100%;
-  }
-  &--wrapper {
-    min-height: 662px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  &--content {
-    width: 100vw;
-    height: 335px;
-    margin: 0 auto;
-  }
-  &--header {
-    max-width: 645px;
-    margin: 0 auto;
-  }
-  &--type {
-    text-align: center;
-    text-shadow: 0 1px 1px rgb(27, 27, 27);
-    color: #fff;
-    font-weight: 700;
-    padding: 8px 0 8px;
-    font-size: 96px;
-    line-height: 1;
-  }
-  &--small-type {
-    padding: 0;
-    font-style: italic;
-    font-size: 14px;
-  }
-}
-
-.button {
-  margin-top: 72px;
-}
-
 .button-secondary {
-  min-width: 250px;
-  padding: 24px 36px;
-  font-size: 14px;
+  margin-top: 2em;
   color: #fff;
   border-color: #fff;
   margin-bottom: 0;
@@ -114,20 +69,86 @@ body {
   }
 }
 
-.plus {
-  position: relative;
-  margin-right: 1em;
-  &:before {
-    content: "+";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: #979797;
-    font-weight: normal;
+// PAGE
+.page {
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 520px;
+    background-color: $dark-theme;
+    position: relative;
+    z-index: 1;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &__content {
+    padding: 2em;
+  }
+  &__small-type {
+    padding: 0;
+    font-style: italic;
+  }
+  &__headline {
+    padding: 0;
+    color: #fff;
+  }
+  &__foot {
+    font-size: 13.333px;
+    min-height: 40px;
+    padding: 2.5em 0 0;
+    p {
+      padding-bottom: 0;
+      float: left;
+    }
+    &-contact {
+      display: inline-block;
+      padding-right: 3em;
+      
+      ul {
+        float: left;
+        li {
+          float: left;
+          a {
+            display: block;
+            padding: 1em 0 1em;
+            padding-right: 3em;
+            color: #424242;
+            position: relative;
+            &:before{
+              content: "";
+              position: absolute;
+              bottom: 5px;
+              height: 1px;
+              width: 100%;
+              left: 0;
+              background-color: transparent;
+              transition: all .35s ease;
+            }
+            &:hover{
+              color: #000;
+              &:before{
+                background-color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
-
+@media (max-width:48em) {
+  .page__main{
+    min-height: 300px;
+  }
+}
 @mixin background-img($img) {
   background: url($img) no-repeat center 0;
   background-color: rgba($background-color, .75);
@@ -137,7 +158,7 @@ body {
 
 // IMAGES
 @media (min-width:0) {
-  .poster {
+  .page__main {
     &:before {
       @include background-img("build/images/jeremy-bishop.jpg");
     }
@@ -145,7 +166,7 @@ body {
 }
 
 @media (min-width:736px) {
-  .poster {
+  .page__main {
     &:before {
       @include background-img("build/images/jeremy-bishop-x.jpg");
     }
@@ -153,7 +174,7 @@ body {
 }
 
 @media (min-width:1024px) {
-  .poster {
+  .page__main {
     &:before {
       @include background-img("build/images/jeremy-bishop-1x.jpg");
     }
@@ -165,84 +186,5 @@ body {
     &:before {
       @include background-img("build/images/jeremy-bishop-2x.jpg");
     }
-  }
-}
-
-.nopb {
-  padding-bottom: 0;
-}
-
-// Footer 
-.footer {
-  padding-top: 96px;
-  color: #fff;
-  font-size: .875em;
-  p,
-  li,
-  a {
-    font-size: 12px;
-  }
-  p>a {
-    margin-left: $gutter;
-  }
-  a {
-    color: #979797;
-    font-style: italic;
-    transition: all .45s ease;
-    position: relative;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 80%;
-      left: 10%;
-      height: 1px;
-      top: 24px;
-      bottom: 0;
-      background-color: #ddd;
-      opacity: 0;
-      transition: all .35s ease;
-    }
-    &:hover {
-      color: #ddd;
-      &:before {
-        opacity: 1;
-      }
-    }
-  }
-  li {
-    display: inline;
-    margin: 0 $gutter*2.5 0 0;
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-}
-
-@media (min-width:736px) {
-  .grid-third {
-    width: 33.333333% - 2.02254%;
-  }
-}
-
-.footer.container {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-@media (max-width:425px) {
-  .poster--type {
-    font-size: 72px;
-    text-align: left;
-  }
-  .poster--small-type{
-    text-align: left;
-  }
- 
-  .footer--social li {
-    margin: 0;
-    padding-bottom: $gutter;
-    text-align: center;
-    float: none;
-    display: block;
   }
 }

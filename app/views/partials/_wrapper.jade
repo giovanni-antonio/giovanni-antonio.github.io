@@ -10,37 +10,32 @@ doctype html
 html(lang="en")
   include _head.jade
   //- body
-  body
-    //- include _svg-icons.jade
-    //- #home.u-pad-bottom-double
-    //-   .container
-    //-     include ../sections/_header.jade
-    //-     include ../sections/_about.jade
-    //- <!-- Main Page -->
-    //- include ../sections/_cv.jade
-    //- include ../sections/_projects.jade
-    //- include ../sections/_contact.jade
-    
-    .poster
-      .container.poster--wrapper
-        .poster--content
-          .group
-            .grid-8
-              .poster--header
-                p.poster--small-type.u-align-left Hola, I'm 
-                h2.poster--type Giovanni Lara
-                p.poster--small-type.u-align-right Front End Developer
-                  span.line
-              .button.u-align-center 
-                a(href=linkToContactForm).button-secondary Hire me
-          <!-- Footer -->
-          include _foot.jade
-      //- .gradient
+  body  
+    .container  
+      .page
+        .page__main
+          .page__content
+            p.page__small-type Hola, I'm 
+            h1.page__headline Giovanni Lara
+            p.page__small-type.u-align-right Front End Developer
+              span.line
+            .button.u-align-center 
+              a(href=linkToContactForm).button-secondary Hire me
+        footer.page__foot
+          .page__foot-contact
+            ul
+              li
+                a(href=email) Get in touch, hello.giolara@gmail.com
+              li 
+                a(href="https://twitter.com/GiovanniDeAndre") Say hi, @GiovanniDeAndre
+              li
+                a(href="https://github.com/gioalo") GitHub
+              li 
+                a(href="http://codepen.io/Giovanni") CodePen 
+              li 
+                a(href="https://www.instagram.com/giokirito/") Instagram
+        //- include _foot.jade
+ 
     //- Photo by Jeremy Bishop on Unsplash
-    //- .back-home 
-      //- a(href="#home") &uarr;
-    <!-- End Footer -->
-    <!-- End Main Page -->
-    <!-- Main Content -->
     include _scripts.jade
     
