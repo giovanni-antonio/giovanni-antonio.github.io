@@ -1,190 +1,96 @@
-/*
-*  Custome Styles
-*/
-
-@import "settings";
-/*
-* Reset styles
-*/
-
-// Variables
-$font-body: "Roboto";
-$font-custome :'Playfair Display',
+$color-primary: #0A0B10;
+$color-secondary: #fff;
+$color-brand: #0023FF;
+$color-grey: #595959;
+$link-color: $color-brand;
+$link-hover: darken($link-color, 10%);
+$font-family: "Poppins",
 serif;
-// Colors
-$background-color: #000;
-$dark-theme: #000;
-$dark-theme-text: #FAFAFA;
-$light-theme: #FAFAFA;
-$light-theme-text: #000;
-$dark-grey: #333333;
-$slategray: #EBEBEB;
-$grey: #FAFAFA;
-$snow: #FFF;
-// Sizing/Spacing
-$gutter: 1.618em;
-// Helpers
-html {
-  font-size: 100%;
-}
-
-body {
-  background-color: $snow;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: normal;
-  color: #fff;
-}
-
-a {
-  color: #000;
+.wf-poppins-n9-active .page__headline {
+  font-weight: 900;
 }
 
 .wf-active body {
-  font-family: $font-custome;
+  font-family: $font-family;
 }
 
-.wf-playfairdisplay-n4-active body {
-  font-family: $font-custome;
-  font-weight: 400;
+body {
+  color: $color-primary;
+  font-family: $font-family;
+  background-color: $color-secondary;
 }
 
-// .wf-playfairdisplay-i4-active {
-//   font-style: italic;
-//   font-weight: 400;
-// }
-
-.wf-playfairdisplay-n9-active .page__headline {
-  font-weight: 900;
-  font-family: $font-custome;
-}
-
-.button-secondary {
-  margin-top: 2em;
-  color: #fff;
-  border-color: #fff;
-  margin-bottom: 0;
+a {
+  color: $link-color;
   transition: all .35s ease;
+  border-bottom: 1px solid $link-color;
   &:hover {
-    background-color: rgba($background-color, .95);
+    color: $link-hover;
   }
 }
 
-// PAGE
 .page {
-  &__main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 520px;
-    background-color: $dark-theme;
-    position: relative;
-    z-index: 1;
-    &:before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      z-index: -1;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  padding: 10px;
+  header,
+  footer {
+    width: 100%;
+    padding: 39px 0 0;
   }
-  &__content {
-    padding: 2em;
+  footer {
+    padding-bottom: 39px;
   }
-  &__small-type {
-    padding: 0;
-    font-style: italic;
+  &__brand-logo {
+    height: 48px;
+    width: 48px;
   }
   &__headline {
-    padding: 0;
-    color: #fff;
+    font-weight: 900;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
-  &__foot {
-    font-size: 13.333px;
-    min-height: 40px;
-    padding: 2.5em 0 0;
-    p {
-      padding-bottom: 0;
-      float: left;
-    }
-    &-contact {
+  &__intro {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.519;
+    padding-top: 39px;
+  }
+  &__hire {
+    margin-top: 1em;
+  }
+  &__btn {
+    display: block;
+    padding: 1em;
+    max-width: 240px;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 30px 70px 0 rgba($color: #000000, $alpha: 0.1);
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-bottom: none;
+  }
+  ul {
+    width: 100%;
+    margin-top: 2em;
+    li {
       display: inline-block;
-      padding-right: 3em;
-      
-      ul {
-        float: left;
-        li {
-          float: left;
-          a {
-            display: block;
-            padding: 1em 0 1em;
-            padding-right: 3em;
-            color: #424242;
-            position: relative;
-            &:before{
-              content: "";
-              position: absolute;
-              bottom: 5px;
-              height: 1px;
-              width: 100%;
-              left: 0;
-              background-color: transparent;
-              transition: all .35s ease;
-            }
-            &:hover{
-              color: #000;
-              &:before{
-                background-color: #000;
-              }
-            }
-          }
-        }
+      a {
+        display: block;
+        padding: 0.75em 3em 0.75em 0;
+        border-bottom: none;
       }
     }
   }
 }
-@media (max-width:48em) {
-  .page__main{
-    min-height: 300px;
-  }
-}
-@mixin background-img($img) {
-  background: url($img) no-repeat center 0;
-  background-color: rgba($background-color, .75);
-  background-blend-mode: multiply;
-  background-size: cover;
-}
 
-// IMAGES
-@media (min-width:0) {
-  .page__main {
-    &:before {
-      @include background-img("build/images/jeremy-bishop.jpg");
-    }
-  }
-}
-
-@media (min-width:736px) {
-  .page__main {
-    &:before {
-      @include background-img("build/images/jeremy-bishop-x.jpg");
-    }
-  }
-}
-
-@media (min-width:1024px) {
-  .page__main {
-    &:before {
-      @include background-img("build/images/jeremy-bishop-1x.jpg");
-    }
-  }
-}
-
-@media (min-width:1440px) {
-  .poster {
-    &:before {
-      @include background-img("build/images/jeremy-bishop-2x.jpg");
-    }
+@media screen and (max-width:1024px) {
+  .page {
+    width: 90%;
   }
 }
