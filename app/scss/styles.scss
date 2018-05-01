@@ -4,7 +4,7 @@ $color-brand: #0023FF;
 $color-grey: #595959;
 $link-color: $color-brand;
 $link-hover: darken($link-color, 10%);
-$font-family: "Poppins",
+$font-family: "Roboto",
 serif;
 .wf-poppins-n9-active .page__headline {
   font-weight: 900;
@@ -16,7 +16,6 @@ serif;
 
 body {
   color: $color-primary;
-  font-family: $font-family;
   background-color: $color-secondary;
 }
 
@@ -44,6 +43,9 @@ a {
   }
   footer {
     padding-bottom: 39px;
+  }
+  p strong {
+    font-weight: 900;
   }
   &__brand-logo {
     height: 48px;
@@ -84,6 +86,7 @@ a {
         display: block;
         padding: 0.75em 3em 0.75em 0;
         border-bottom: none;
+        font-weight: normal;
       }
     }
   }

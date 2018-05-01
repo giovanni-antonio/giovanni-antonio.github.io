@@ -2,11 +2,10 @@
   font-weight: 900; }
 
 .wf-active body {
-  font-family: "Poppins", serif; }
+  font-family: "Roboto", serif; }
 
 body {
   color: #0A0B10;
-  font-family: "Poppins", serif;
   background-color: #fff; }
 
 a {
@@ -35,6 +34,8 @@ a {
     padding: 39px 0 0; }
   .page footer {
     padding-bottom: 39px; }
+  .page p strong {
+    font-weight: 900; }
   .page__brand-logo {
     height: 48px;
     width: 48px; }
@@ -69,7 +70,8 @@ a {
       .page ul li a {
         display: block;
         padding: 0.75em 3em 0.75em 0;
-        border-bottom: none; }
+        border-bottom: none;
+        font-weight: normal; }
 
 @media screen and (max-width: 1024px) {
   .page {
