@@ -48,3 +48,8 @@ fonts
 sass-command-line
 assets/scss
 dev.index.html
+
+# App
+app/*
+
+
