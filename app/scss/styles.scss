@@ -80,6 +80,10 @@ a {
     text-transform: capitalize;
     font-weight: 700;
     border-bottom: none;
+    transition: all 0.3s ease;
+    &:hover{
+      box-shadow: 0 8px 35px 0 rgba($color: #000000, $alpha: 0.1);
+    }
   }
   ul {
     width: 100%;
