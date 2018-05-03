@@ -31,7 +31,7 @@ a {
   .page header,
   .page footer {
     width: 100%;
-    padding: 39px 0 0; }
+    padding: 20px 0 0; }
   .page footer {
     padding-bottom: 39px; }
   .page p strong {
@@ -42,7 +42,10 @@ a {
   .page__headline {
     font-weight: 900;
     margin-bottom: 0;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    line-height: 1; }
+    .page__headline--small {
+      font-size: 25.8885px; }
   .page__intro {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
@@ -71,7 +74,8 @@ a {
         display: block;
         padding: 0.75em 3em 0.75em 0;
         border-bottom: none;
-        font-weight: normal; }
+        font-weight: normal;
+        font-size: larger; }
 
 @media screen and (max-width: 1024px) {
   .page {
