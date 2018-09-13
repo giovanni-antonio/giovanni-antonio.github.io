@@ -53,3 +53,6 @@ dev.index.html
 app/*
 
 
+src/*
+
+index.min.html
