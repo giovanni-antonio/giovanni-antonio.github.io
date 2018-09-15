@@ -22,7 +22,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  font: 16px/1.6 "Roboto", -apple-system,BlinkMackSystemFont,Roboto,Segoe UI,Oxygen,Ubuntu,Catarell,Fira Sans,Droid Sans,Helvetica Neue;
+  font: 300 16px/1.6 "Roboto", -apple-system, BlinkMackSystemFont, Roboto, Segoe UI, Oxygen, Ubuntu, Catarell, Fira Sans, Droid Sans, Helvetica Neue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -46,17 +46,16 @@ h2 {
 }
 
 h1 {
-  font-size: 2.369em;
+  font-size: 1.777em;
 }
 
 h2 {
-  font-size: 1.777em;
+  font-size: 1.333em;
   margin: 0 0 50px;
 }
 
 p {
   margin: 0 0 50px;
-  max-width: 800px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -67,18 +66,19 @@ p {
 }
 
 .daylight {
-  width: 10%;
+  position: absolute;
+  right: 0;
+  padding: inherit;
+  width: auto;
   text-align: center;
   font-size: 12px;
-  position: absolute;
-  left: 1em;
   cursor: pointer;
 }
 
 .theme-mode {
-  width: 24px;
-  height: 24px;
-  border: 1.5px solid #000;
+  width: 1em;
+  height: 1em;
+  border: 1px solid #000;
   border-radius: 100%;
   position: relative;
   overflow: hidden;
@@ -86,11 +86,6 @@ p {
   transition: 0.3s;
   cursor: pointer;
   margin: 0.75em auto;
-}
-
-.dark, .light {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 .theme-mode::after {
@@ -106,6 +101,42 @@ p {
   z-index: 1;
 }
 
+.dark,
+.light {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.brand {
+  position: absolute;
+  left: 0;
+  padding: inherit;
+  width: auto;
+  font-size: 1.333em;
+  color: #000;
+  font-weight: 900;
+}
+
+.brand span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.brand:hover span {
+  opacity: 0;
+  visibility: hidden;
+  font-size: 0;
+  text-indent: -50%;
+}
+
+.g-headline {
+  text-align: center;
+  max-width: 20em;
+  margin: auto;
+  padding: 120px 0;
+}
+
+/* Theme */
 .dark-mode .theme-mode {
   background: #bdbdbd;
   border-color: #bdbdbd;
@@ -142,7 +173,7 @@ body.dark-mode {
 }
 
 .dark-mode .contact-list a:hover {
-  color: #ddd;
+  color: #f5f5f5;
 }
 
 .dark-mode .dark {
@@ -155,48 +186,7 @@ body.dark-mode {
   text-decoration: underline;
 }
 
-.brand {
-  position: absolute;
-  left: 40%;
-  right: 40%;
-  text-align: center;
-  width: 20%;
-  font-size: 1.777em;
-  color: #000;
-  font-weight: 900;
-}
-
-.brand span {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.brand:hover span {
-  opacity: 0;
-  visibility: hidden;
-  font-size: 0;
-  text-indent: -50%;
-}
-
-.g-headline {
-  text-align: center;
-  max-width: 900px;
-  margin: auto;
-  padding: 120px 0;
-}
-
-span.wave {
-  text-decoration: none;
-  -webkit-transform: rotateX(25deg);
-          transform: rotateX(25deg);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
 @media screen and (max-width: 600px) {
-  .daylight {
-    width: 20%;
-  }
   .g-headline {
     padding: 80px 0;
   }
@@ -206,6 +196,7 @@ span.wave {
   text-decoration: underline;
 }
 
+/* Layut */
 .g-head,
 .g-foot {
   min-height: 80px;
@@ -227,11 +218,11 @@ span.wave {
 
 .flex--center {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .flex--container {
@@ -240,8 +231,8 @@ span.wave {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100%;
   max-width: 1280px;
   padding: 0 1em;
@@ -252,14 +243,14 @@ span.wave {
 .flex--row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 /* section */
 
 .g-section p {
-  max-width: 400px;
+  max-width: 30em;
   margin: auto;
 }
 
@@ -295,7 +286,6 @@ a.btn--black {
   background-color: #000;
 }
 
-
 /* foot */
 
 .g-foot h2 {
@@ -304,13 +294,13 @@ a.btn--black {
 
 .contact-list {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   padding: 1.333em 0;
 }
@@ -318,8 +308,8 @@ a.btn--black {
 .contact-list li {
   display: inline-block;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 calc(100% / 5 - 10em);
-          flex: 1 1 calc(100% / 5 - 10em);
+  -ms-flex: 1 1 calc(100% / 5 - 10em);
+  flex: 1 1 calc(100% / 5 - 10em);
 }
 
 @media screen and (max-width: 800px) {
@@ -328,8 +318,8 @@ a.btn--black {
     text-align: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .contact-list h2 {
