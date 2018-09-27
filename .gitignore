@@ -36,7 +36,6 @@ prepros.cfg
 ehthumbs.db
 Thumbs.db
 config.txt
-DATA.JSON
 *.xlsx
 # Grunt modules #
 #################
